@@ -18,12 +18,44 @@ namespace DoAnCK
         private SQLiteHelper dbHelper;
         private bool useDatabase = false;
 
+        // constructor của lớp KhoHang
+        public KhoHang()
+        {
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CuaHang.db");
+            if (File.Exists(dbPath))
+            {
+                InitSQLite(dbPath);
+            }
+        }
+
+
         // Phương thức khởi tạo kết nối SQLite
         public void InitSQLite(string dbFilePath)
         {
-            dbHelper = new SQLiteHelper(dbFilePath);
-            useDatabase = true;
+            try
+            {
+                dbHelper = new SQLiteHelper(dbFilePath);
+
+                // Kiểm tra kết nối
+                if (dbHelper.TestConnection())
+                {
+                    useDatabase = true;
+
+                    // Đảm bảo các bảng cần thiết đã được tạo
+                    dbHelper.CheckTablesBeforeMigration();
+                }
+                else
+                {
+                    useDatabase = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                useDatabase = false;
+                throw new Exception("Không thể kết nối đến SQLite: " + ex.Message, ex);
+            }
         }
+
         public bool kha_dung(QuanLyNhapXuat qlnx)
         {
             for (int i = 0; i < qlnx.ds_hang_hoa.Count; i++)

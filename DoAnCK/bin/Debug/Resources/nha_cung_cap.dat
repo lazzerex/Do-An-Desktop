@@ -14,8 +14,20 @@
   </NhaCungCap>
   <NhaCungCap>
     <IdNcc>NCC003</IdNcc>
-    <TenNcc>Tập đoàn Vinamilk</TenNcc>
+    <TenNcc>Tập đoàn Vinas</TenNcc>
     <SdtNcc>0566544233</SdtNcc>
     <DiaChiNcc>Bình Chánh</DiaChiNcc>
+  </NhaCungCap>
+  <NhaCungCap>
+    <IdNcc />
+    <TenNcc />
+    <SdtNcc />
+    <DiaChiNcc />
+  </NhaCungCap>
+  <NhaCungCap>
+    <IdNcc />
+    <TenNcc />
+    <SdtNcc />
+    <DiaChiNcc />
   </NhaCungCap>
 </ArrayOfNhaCungCap>
