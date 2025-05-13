@@ -1,4 +1,5 @@
 ﻿using DoAnCK;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -111,17 +112,33 @@ namespace DoAnCK
         {
             if (fromDatabase && dbHelper != null)
             {
+                // Đọc dữ liệu từ SQLite
                 dbHelper.LoadDataFromSQLiteToKhoHang(this);
             }
             else
             {
-                // Code hiện tại để load dữ liệu từ tệp XML
-                ds_hang_hoa = LoadDanhSach<HangHoa>("Resources/hang_hoa.dat");
-                ds_ncc = LoadDanhSach<NhaCungCap>("Resources/nha_cung_cap.dat");
-                ds_cua_hang = LoadDanhSach<CuaHang>("Resources/cua_hang.dat");
-                ds_hoa_don_nhap = LoadDanhSach<HoaDonNhap>("Resources/hoa_don_nhap.dat");
-                ds_hoa_don_xuat = LoadDanhSach<HoaDonXuat>("Resources/hoa_don_xuat.dat");
-                ds_nhan_vien = LoadDanhSach<NhanVien>("Resources/nhan_vien.dat");
+                // Đọc dữ liệu từ file .dat
+                try
+                {
+                    ds_hang_hoa = LoadDanhSach<HangHoa>("Resources/hang_hoa.dat");
+                    ds_ncc = LoadDanhSach<NhaCungCap>("Resources/nha_cung_cap.dat");
+                    ds_cua_hang = LoadDanhSach<CuaHang>("Resources/cua_hang.dat");
+                    ds_hoa_don_nhap = LoadDanhSach<HoaDonNhap>("Resources/hoa_don_nhap.dat");
+                    ds_hoa_don_xuat = LoadDanhSach<HoaDonXuat>("Resources/hoa_don_xuat.dat");
+                    ds_nhan_vien = LoadDanhSach<NhanVien>("Resources/nhan_vien.dat");
+                }
+                catch (Exception ex)
+                {
+                    // Nếu không đọc được từ file .dat, thử đọc từ SQLite
+                    if (dbHelper != null)
+                    {
+                        dbHelper.LoadDataFromSQLiteToKhoHang(this);
+                    }
+                    else
+                    {
+                        throw ex;
+                    }
+                }
             }
         }
 

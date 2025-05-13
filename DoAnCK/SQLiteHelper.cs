@@ -117,6 +117,19 @@ namespace DoAnCK
             ExecuteNonQuery(query);
         }
 
+        public void CreateCuaHangTable()
+        {
+            string query = @"
+    CREATE TABLE IF NOT EXISTS CuaHang (
+        id_ch TEXT PRIMARY KEY,
+        ten_ch TEXT NOT NULL,
+        sdt_ch TEXT,
+        dia_chi_ch TEXT
+    );";
+
+            ExecuteNonQuery(query);
+        }
+
         public void CreateChiTietHoaDonTable()
         {
             string query = @"
@@ -214,44 +227,102 @@ namespace DoAnCK
         // Phương thức để chuyển đổi từ XML sang SQLite
         public void MigrateFromXmlToSQLite(KhoHang khoHang)
         {
-            // Tạo tất cả bảng cần thiết
-            CreateNhaCungCapTable();
-            CreateNhanVienTable();
-            CreateHangHoaTable();
-            CreateHoaDonTable();
-            CreateChiTietHoaDonTable();
-
-            // Nhập dữ liệu từ các danh sách trong KhoHang
-            foreach (var ncc in khoHang.ds_ncc)
+            try
             {
-                InsertNhaCungCap(ncc);
+                // Tạo tất cả bảng cần thiết
+                CreateNhaCungCapTable();
+                CreateNhanVienTable();
+                CreateCuaHangTable(); // Đảm bảo gọi phương thức này
+                CreateHangHoaTable();
+                CreateHoaDonTable();
+                CreateChiTietHoaDonTable();
+
+                // Nhập dữ liệu từ các danh sách trong KhoHang
+                foreach (var ch in khoHang.ds_cua_hang)
+                {
+                    InsertCuaHang(ch);
+                }
+
+                foreach (var ncc in khoHang.ds_ncc)
+                {
+                    InsertNhaCungCap(ncc);
+                }
+
+                foreach (var nv in khoHang.ds_nhan_vien)
+                {
+                    InsertNhanVien(nv);
+                }
+
+                foreach (var hh in khoHang.ds_hang_hoa)
+                {
+                    InsertHangHoa(hh);
+                }
+
+                foreach (var hdn in khoHang.ds_hoa_don_nhap)
+                {
+                    InsertHoaDon(hdn);
+                }
+
+                foreach (var hdx in khoHang.ds_hoa_don_xuat)
+                {
+                    InsertHoaDon(hdx);
+                }
             }
-
-            foreach (var nv in khoHang.ds_nhan_vien)
+            catch (Exception ex)
             {
-                InsertNhanVien(nv);
-            }
-
-            foreach (var ch in khoHang.ds_cua_hang)
-            {
-                InsertCuaHang(ch);
-            }
-
-            foreach (var hh in khoHang.ds_hang_hoa)
-            {
-                InsertHangHoa(hh);
-            }
-
-            foreach (var hdn in khoHang.ds_hoa_don_nhap)
-            {
-                InsertHoaDon(hdn);
-            }
-
-            foreach (var hdx in khoHang.ds_hoa_don_xuat)
-            {
-                InsertHoaDon(hdx);
+                throw new Exception($"Lỗi khi chuyển dữ liệu: {ex.Message}", ex);
             }
         }
+
+        public bool TableExists(string tableName)
+        {
+            string query = $"SELECT count(*) FROM sqlite_master WHERE type='table' AND name='{tableName}'";
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+        public void CheckTablesBeforeMigration()
+        {
+            string[] requiredTables = { "CuaHang", "NhaCungCap", "NhanVien", "HangHoa", "HoaDon", "ChiTietHoaDon" };
+
+            foreach (string tableName in requiredTables)
+            {
+                if (!TableExists(tableName))
+                {
+                    // Tạo bảng nếu chưa tồn tại
+                    switch (tableName)
+                    {
+                        case "CuaHang":
+                            CreateCuaHangTable();
+                            break;
+                        case "NhaCungCap":
+                            CreateNhaCungCapTable();
+                            break;
+                        case "NhanVien":
+                            CreateNhanVienTable();
+                            break;
+                        case "HangHoa":
+                            CreateHangHoaTable();
+                            break;
+                        case "HoaDon":
+                            CreateHoaDonTable();
+                            break;
+                        case "ChiTietHoaDon":
+                            CreateChiTietHoaDonTable();
+                            break;
+                    }
+                }
+            }
+        }
+
+
 
         // Phương thức để load dữ liệu từ SQLite vào KhoHang
         public void LoadDataFromSQLiteToKhoHang(KhoHang khoHang)
