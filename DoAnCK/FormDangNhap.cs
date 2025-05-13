@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace DoAnCK
@@ -42,5 +43,19 @@ namespace DoAnCK
             }
         }
         #endregion
+
+        private void btnCheckSQLite_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
+                FormSQLiteInfo formInfo = new FormSQLiteInfo(dbPath);
+                formInfo.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

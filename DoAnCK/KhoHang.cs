@@ -14,6 +14,15 @@ namespace DoAnCK
         public List<HoaDonNhap> ds_hoa_don_nhap = new List<HoaDonNhap>();
         public List<HoaDonXuat> ds_hoa_don_xuat = new List<HoaDonXuat>();
 
+        private SQLiteHelper dbHelper;
+        private bool useDatabase = false;
+
+        // Phương thức khởi tạo kết nối SQLite
+        public void InitSQLite(string dbFilePath)
+        {
+            dbHelper = new SQLiteHelper(dbFilePath);
+            useDatabase = true;
+        }
         public bool kha_dung(QuanLyNhapXuat qlnx)
         {
             for (int i = 0; i < qlnx.ds_hang_hoa.Count; i++)
@@ -61,18 +70,23 @@ namespace DoAnCK
 
         public void LuuDanhSachCH()
         {
+            // Lưu vào XML như hiện tại
             LuuDanhSach("Resources/cua_hang.dat", ds_cua_hang);
-        }
 
-        public void LuuDanhSachNCC()
-        {
-            LuuDanhSach("Resources/nha_cung_cap.dat", ds_ncc);
+            // Lưu vào SQLite nếu đã kết nối
+            if (useDatabase && dbHelper != null)
+            {
+                foreach (CuaHang ch in ds_cua_hang)
+                {
+                    dbHelper.InsertCuaHang(ch);
+                }
+            }
         }
 
         public void ThemHoaDonNhap(HoaDonNhap hoaDon)
         {
             ds_hoa_don_nhap.Add(hoaDon);
-            LuuDanhSachHDN();
+            LuuDanhSachHDN(); // Sẽ lưu vào cả XML và SQLite
         }
 
         public void ThemHoaDonXuat(HoaDonXuat hoaDon)
@@ -93,14 +107,30 @@ namespace DoAnCK
             LuuDanhSachHH();
         }
 
-        public void LoadData()
+        public void LoadData(bool fromDatabase = false)
         {
-            ds_hang_hoa = LoadDanhSach<HangHoa>("Resources/hang_hoa.dat");
-            ds_ncc = LoadDanhSach<NhaCungCap>("Resources/nha_cung_cap.dat");
-            ds_cua_hang = LoadDanhSach<CuaHang>("Resources/cua_hang.dat");
-            ds_hoa_don_nhap = LoadDanhSach<HoaDonNhap>("Resources/hoa_don_nhap.dat");
-            ds_hoa_don_xuat = LoadDanhSach<HoaDonXuat>("Resources/hoa_don_xuat.dat");
-            ds_nhan_vien = LoadDanhSach<NhanVien>("Resources/nhan_vien.dat");
+            if (fromDatabase && dbHelper != null)
+            {
+                dbHelper.LoadDataFromSQLiteToKhoHang(this);
+            }
+            else
+            {
+                // Code hiện tại để load dữ liệu từ tệp XML
+                ds_hang_hoa = LoadDanhSach<HangHoa>("Resources/hang_hoa.dat");
+                ds_ncc = LoadDanhSach<NhaCungCap>("Resources/nha_cung_cap.dat");
+                ds_cua_hang = LoadDanhSach<CuaHang>("Resources/cua_hang.dat");
+                ds_hoa_don_nhap = LoadDanhSach<HoaDonNhap>("Resources/hoa_don_nhap.dat");
+                ds_hoa_don_xuat = LoadDanhSach<HoaDonXuat>("Resources/hoa_don_xuat.dat");
+                ds_nhan_vien = LoadDanhSach<NhanVien>("Resources/nhan_vien.dat");
+            }
+        }
+
+        public void SaveToDatabase()
+        {
+            if (dbHelper != null)
+            {
+                dbHelper.MigrateFromXmlToSQLite(this);
+            }
         }
 
         private HangHoa FindHangHoaById(string id)
@@ -114,6 +144,32 @@ namespace DoAnCK
             }
             return null;
         }
+        public void LuuDanhSachNV()
+        {
+            // Lưu vào XML
+            LuuDanhSach("Resources/nhan_vien.dat", ds_nhan_vien);
+
+            // Lưu vào SQLite nếu đã kết nối
+            if (useDatabase && dbHelper != null)
+            {
+                foreach (NhanVien nv in ds_nhan_vien)
+                {
+                    dbHelper.InsertNhanVien(nv);
+                }
+            }
+        }
+        public void LuuDanhSachNCC()
+        {
+            LuuDanhSach("Resources/nha_cung_cap.dat", ds_ncc);
+
+            if (useDatabase && dbHelper != null)
+            {
+                foreach (var ncc in ds_ncc)
+                {
+                    dbHelper.InsertNhaCungCap(ncc);
+                }
+            }
+        }
 
         private void LuuDanhSach(string filePath, object data)
         {
@@ -126,17 +182,45 @@ namespace DoAnCK
 
         private void LuuDanhSachHH()
         {
+            // Lưu vào XML như hiện tại
             LuuDanhSach("Resources/hang_hoa.dat", ds_hang_hoa);
-        }
 
+            // Lưu vào SQLite nếu đã kết nối
+            if (useDatabase && dbHelper != null)
+            {
+                foreach (HangHoa hh in ds_hang_hoa)
+                {
+                    dbHelper.InsertHangHoa(hh);
+                }
+            }
+        }
         private void LuuDanhSachHDX()
         {
+            // Lưu vào XML như hiện tại
             LuuDanhSach("Resources/hoa_don_xuat.dat", ds_hoa_don_xuat);
-        }
 
+            // Lưu vào SQLite nếu đã kết nối
+            if (useDatabase && dbHelper != null)
+            {
+                foreach (HoaDonXuat hdx in ds_hoa_don_xuat)
+                {
+                    dbHelper.InsertHoaDon(hdx);
+                }
+            }
+        }
         private void LuuDanhSachHDN()
         {
+            // Lưu vào XML như hiện tại
             LuuDanhSach("Resources/hoa_don_nhap.dat", ds_hoa_don_nhap);
+
+            // Lưu vào SQLite nếu đã kết nối
+            if (useDatabase && dbHelper != null)
+            {
+                foreach (HoaDonNhap hdn in ds_hoa_don_nhap)
+                {
+                    dbHelper.InsertHoaDon(hdn);
+                }
+            }
         }
 
         private List<T> LoadDanhSach<T>(string filePath)

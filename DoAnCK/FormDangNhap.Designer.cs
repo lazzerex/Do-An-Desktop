@@ -39,6 +39,7 @@
             this.DangNhap_bt = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnCheckSQLite = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +49,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(156, 206);
+            this.label1.Location = new System.Drawing.Point(117, 167);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.Size = new System.Drawing.Size(114, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên đăng nhập:";
             // 
@@ -60,9 +62,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(156, 287);
+            this.label2.Location = new System.Drawing.Point(117, 233);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 19);
+            this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật khẩu:";
             // 
@@ -78,10 +81,10 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(256, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(192, 51);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 141);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -99,12 +102,12 @@
             this.TenDangNhap_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TenDangNhap_tb.Font = new System.Drawing.Font("Arial", 10F);
             this.TenDangNhap_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TenDangNhap_tb.Location = new System.Drawing.Point(146, 230);
-            this.TenDangNhap_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TenDangNhap_tb.Location = new System.Drawing.Point(110, 187);
+            this.TenDangNhap_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TenDangNhap_tb.Name = "TenDangNhap_tb";
             this.TenDangNhap_tb.PlaceholderText = "";
             this.TenDangNhap_tb.SelectedText = "";
-            this.TenDangNhap_tb.Size = new System.Drawing.Size(367, 38);
+            this.TenDangNhap_tb.Size = new System.Drawing.Size(275, 31);
             this.TenDangNhap_tb.TabIndex = 8;
             // 
             // MatKhau__tb
@@ -120,13 +123,13 @@
             this.MatKhau__tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.MatKhau__tb.Font = new System.Drawing.Font("Arial", 10F);
             this.MatKhau__tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MatKhau__tb.Location = new System.Drawing.Point(144, 311);
-            this.MatKhau__tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MatKhau__tb.Location = new System.Drawing.Point(108, 253);
+            this.MatKhau__tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MatKhau__tb.Name = "MatKhau__tb";
             this.MatKhau__tb.PasswordChar = '*';
             this.MatKhau__tb.PlaceholderText = "";
             this.MatKhau__tb.SelectedText = "";
-            this.MatKhau__tb.Size = new System.Drawing.Size(367, 38);
+            this.MatKhau__tb.Size = new System.Drawing.Size(275, 31);
             this.MatKhau__tb.TabIndex = 9;
             // 
             // DangNhap_bt
@@ -144,9 +147,10 @@
             this.DangNhap_bt.ForeColor = System.Drawing.Color.Black;
             this.DangNhap_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.DangNhap_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.DangNhap_bt.Location = new System.Drawing.Point(231, 368);
+            this.DangNhap_bt.Location = new System.Drawing.Point(173, 299);
+            this.DangNhap_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DangNhap_bt.Name = "DangNhap_bt";
-            this.DangNhap_bt.Size = new System.Drawing.Size(178, 42);
+            this.DangNhap_bt.Size = new System.Drawing.Size(134, 34);
             this.DangNhap_bt.TabIndex = 10;
             this.DangNhap_bt.Text = "Đăng Nhập";
             this.DangNhap_bt.Click += new System.EventHandler(this.DangNhap_bt_Click);
@@ -157,9 +161,10 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(582, 40);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(436, 32);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(142, 348);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(106, 283);
             this.guna2GradientPanel1.TabIndex = 11;
             // 
             // guna2GradientPanel2
@@ -168,17 +173,34 @@
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(-58, 40);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(-44, 32);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(132, 348);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(99, 283);
             this.guna2GradientPanel2.TabIndex = 12;
+            // 
+            // btnCheckSQLite
+            // 
+            this.btnCheckSQLite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckSQLite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckSQLite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckSQLite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCheckSQLite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCheckSQLite.ForeColor = System.Drawing.Color.White;
+            this.btnCheckSQLite.Location = new System.Drawing.Point(84, 51);
+            this.btnCheckSQLite.Name = "btnCheckSQLite";
+            this.btnCheckSQLite.Size = new System.Drawing.Size(66, 27);
+            this.btnCheckSQLite.TabIndex = 13;
+            this.btnCheckSQLite.Text = "Kiểm tra SQLite";
+            this.btnCheckSQLite.Click += new System.EventHandler(this.btnCheckSQLite_Click);
             // 
             // FormDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(653, 463);
+            this.ClientSize = new System.Drawing.Size(490, 376);
+            this.Controls.Add(this.btnCheckSQLite);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.DangNhap_bt);
@@ -188,7 +210,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -207,5 +229,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton DangNhap_bt;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Guna.UI2.WinForms.Guna2Button btnCheckSQLite;
     }
 }
