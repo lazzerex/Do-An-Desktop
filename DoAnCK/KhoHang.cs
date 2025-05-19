@@ -1,4 +1,5 @@
 ﻿using DoAnCK;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -13,6 +14,46 @@ namespace DoAnCK
         public List<NhaCungCap> ds_ncc = new List<NhaCungCap>();
         public List<HoaDonNhap> ds_hoa_don_nhap = new List<HoaDonNhap>();
         public List<HoaDonXuat> ds_hoa_don_xuat = new List<HoaDonXuat>();
+
+        private SQLiteHelper dbHelper;
+        private bool useDatabase = false;
+
+        // constructor của lớp KhoHang
+        public KhoHang()
+        {
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CuaHang.db");
+            if (File.Exists(dbPath))
+            {
+                InitSQLite(dbPath);
+            }
+        }
+
+        // Phương thức khởi tạo kết nối SQLite
+        public void InitSQLite(string dbFilePath)
+        {
+            try
+            {
+                dbHelper = new SQLiteHelper(dbFilePath);
+
+                // Kiểm tra kết nối
+                if (dbHelper.TestConnection())
+                {
+                    useDatabase = true;
+
+                    // Đảm bảo các bảng cần thiết đã được tạo
+                    dbHelper.CheckTablesBeforeMigration();
+                }
+                else
+                {
+                    useDatabase = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                useDatabase = false;
+                throw new Exception("Không thể kết nối đến SQLite: " + ex.Message, ex);
+            }
+        }
 
         public bool kha_dung(QuanLyNhapXuat qlnx)
         {
@@ -61,12 +102,38 @@ namespace DoAnCK
 
         public void LuuDanhSachCH()
         {
-            LuuDanhSach("Resources/cua_hang.dat", ds_cua_hang);
-        }
+            bool luuSQLiteThanhCong = false;
 
-        public void LuuDanhSachNCC()
-        {
-            LuuDanhSach("Resources/nha_cung_cap.dat", ds_ncc);
+            // Ưu tiên lưu vào SQLite trước
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    foreach (CuaHang ch in ds_cua_hang)
+                    {
+                        dbHelper.InsertCuaHang(ch);
+                    }
+                    luuSQLiteThanhCong = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào SQLite: {ex.Message}");
+                    luuSQLiteThanhCong = false;
+                }
+            }
+
+            // Nếu không lưu được vào SQLite hoặc không dùng SQLite, lưu vào XML
+            if (!luuSQLiteThanhCong)
+            {
+                try
+                {
+                    LuuDanhSach("Resources/cua_hang.dat", ds_cua_hang);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu cửa hàng: {ex.Message}", ex);
+                }
+            }
         }
 
         public void ThemHoaDonNhap(HoaDonNhap hoaDon)
@@ -93,7 +160,51 @@ namespace DoAnCK
             LuuDanhSachHH();
         }
 
-        public void LoadData()
+        public void LoadData(bool fromDatabase = false)
+        {
+            if (fromDatabase && dbHelper != null)
+            {
+                try
+                {
+                    // Ưu tiên đọc từ SQLite
+                    dbHelper.LoadDataFromSQLiteToKhoHang(this);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi đọc từ SQLite: {ex.Message}. Thử đọc từ file XML...");
+                    LoadFromXml();
+                }
+            }
+            else
+            {
+                try
+                {
+                    // Vẫn ưu tiên đọc từ SQLite nếu có thể
+                    if (useDatabase && dbHelper != null)
+                    {
+                        dbHelper.LoadDataFromSQLiteToKhoHang(this);
+                    }
+                    else
+                    {
+                        LoadFromXml();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Nếu không đọc được từ SQLite, thử đọc từ XML
+                    try
+                    {
+                        LoadFromXml();
+                    }
+                    catch
+                    {
+                        throw ex; // Nếu cả hai cách đều thất bại, ném ngoại lệ gốc
+                    }
+                }
+            }
+        }
+
+        private void LoadFromXml()
         {
             ds_hang_hoa = LoadDanhSach<HangHoa>("Resources/hang_hoa.dat");
             ds_ncc = LoadDanhSach<NhaCungCap>("Resources/nha_cung_cap.dat");
@@ -102,6 +213,84 @@ namespace DoAnCK
             ds_hoa_don_xuat = LoadDanhSach<HoaDonXuat>("Resources/hoa_don_xuat.dat");
             ds_nhan_vien = LoadDanhSach<NhanVien>("Resources/nhan_vien.dat");
         }
+
+        public void SaveToDatabase()
+        {
+            if (dbHelper != null)
+            {
+                try
+                {
+                    // Lưu tất cả dữ liệu vào SQLite
+                    foreach (CuaHang ch in ds_cua_hang)
+                    {
+                        dbHelper.InsertCuaHang(ch);
+                    }
+
+                    foreach (NhaCungCap ncc in ds_ncc)
+                    {
+                        dbHelper.InsertNhaCungCap(ncc);
+                    }
+
+                    foreach (NhanVien nv in ds_nhan_vien)
+                    {
+                        dbHelper.InsertNhanVien(nv);
+                    }
+
+                    foreach (HangHoa hh in ds_hang_hoa)
+                    {
+                        dbHelper.InsertHangHoa(hh);
+                    }
+
+                    foreach (HoaDonNhap hdn in ds_hoa_don_nhap)
+                    {
+                        dbHelper.InsertHoaDon(hdn);
+                    }
+
+                    foreach (HoaDonXuat hdx in ds_hoa_don_xuat)
+                    {
+                        dbHelper.InsertHoaDon(hdx);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào cơ sở dữ liệu: {ex.Message}");
+                    // Có thể thêm code để lưu vào XML nếu lưu vào Database thất bại
+                    try
+                    {
+                        // Lưu tất cả dữ liệu vào các file XML
+                        LuuDanhSach("Resources/cua_hang.dat", ds_cua_hang);
+                        LuuDanhSach("Resources/nha_cung_cap.dat", ds_ncc);
+                        LuuDanhSach("Resources/nhan_vien.dat", ds_nhan_vien);
+                        LuuDanhSach("Resources/hang_hoa.dat", ds_hang_hoa);
+                        LuuDanhSach("Resources/hoa_don_nhap.dat", ds_hoa_don_nhap);
+                        LuuDanhSach("Resources/hoa_don_xuat.dat", ds_hoa_don_xuat);
+                        Console.WriteLine("Đã lưu dữ liệu vào XML do không thể lưu vào cơ sở dữ liệu");
+                    }
+                    catch (Exception innerEx)
+                    {
+                        throw new Exception($"Không thể lưu dữ liệu (cả SQLite và XML): {innerEx.Message}", innerEx);
+                    }
+                }
+            }
+            else
+            {
+                // Nếu không có kết nối đến SQLite, lưu vào XML
+                try
+                {
+                    LuuDanhSach("Resources/cua_hang.dat", ds_cua_hang);
+                    LuuDanhSach("Resources/nha_cung_cap.dat", ds_ncc);
+                    LuuDanhSach("Resources/nhan_vien.dat", ds_nhan_vien);
+                    LuuDanhSach("Resources/hang_hoa.dat", ds_hang_hoa);
+                    LuuDanhSach("Resources/hoa_don_nhap.dat", ds_hoa_don_nhap);
+                    LuuDanhSach("Resources/hoa_don_xuat.dat", ds_hoa_don_xuat);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu vào XML: {ex.Message}", ex);
+                }
+            }
+        }
+
 
         private HangHoa FindHangHoaById(string id)
         {
@@ -115,6 +304,78 @@ namespace DoAnCK
             return null;
         }
 
+        public void LuuDanhSachNV()
+        {
+            bool luuSQLiteThanhCong = false;
+
+            // Ưu tiên lưu vào SQLite trước
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    foreach (NhanVien nv in ds_nhan_vien)
+                    {
+                        dbHelper.InsertNhanVien(nv);
+                    }
+                    luuSQLiteThanhCong = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào SQLite: {ex.Message}");
+                    luuSQLiteThanhCong = false;
+                }
+            }
+
+            // Nếu không lưu được vào SQLite hoặc không dùng SQLite, lưu vào XML
+            if (!luuSQLiteThanhCong)
+            {
+                try
+                {
+                    LuuDanhSach("Resources/nhan_vien.dat", ds_nhan_vien);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu nhân viên: {ex.Message}", ex);
+                }
+            }
+        }
+
+        public void LuuDanhSachNCC()
+        {
+            bool luuSQLiteThanhCong = false;
+
+            // Ưu tiên lưu vào SQLite trước
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    foreach (var ncc in ds_ncc)
+                    {
+                        dbHelper.InsertNhaCungCap(ncc);
+                    }
+                    luuSQLiteThanhCong = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào SQLite: {ex.Message}");
+                    luuSQLiteThanhCong = false;
+                }
+            }
+
+            // Nếu không lưu được vào SQLite hoặc không dùng SQLite, lưu vào XML
+            if (!luuSQLiteThanhCong)
+            {
+                try
+                {
+                    LuuDanhSach("Resources/nha_cung_cap.dat", ds_ncc);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu nhà cung cấp: {ex.Message}", ex);
+                }
+            }
+        }
+
         private void LuuDanhSach(string filePath, object data)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -126,17 +387,110 @@ namespace DoAnCK
 
         private void LuuDanhSachHH()
         {
-            LuuDanhSach("Resources/hang_hoa.dat", ds_hang_hoa);
+            bool luuSQLiteThanhCong = false;
+
+            // Ưu tiên lưu vào SQLite trước
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    foreach (HangHoa hh in ds_hang_hoa)
+                    {
+                        dbHelper.InsertHangHoa(hh);
+                    }
+                    luuSQLiteThanhCong = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào SQLite: {ex.Message}");
+                    luuSQLiteThanhCong = false;
+                }
+            }
+
+            // Nếu không lưu được vào SQLite hoặc không dùng SQLite, lưu vào XML
+            if (!luuSQLiteThanhCong)
+            {
+                try
+                {
+                    LuuDanhSach("Resources/hang_hoa.dat", ds_hang_hoa);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu hàng hóa: {ex.Message}", ex);
+                }
+            }
         }
 
         private void LuuDanhSachHDX()
         {
-            LuuDanhSach("Resources/hoa_don_xuat.dat", ds_hoa_don_xuat);
+            bool luuSQLiteThanhCong = false;
+
+            // Ưu tiên lưu vào SQLite trước
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    foreach (HoaDonXuat hdx in ds_hoa_don_xuat)
+                    {
+                        dbHelper.InsertHoaDon(hdx);
+                    }
+                    luuSQLiteThanhCong = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào SQLite: {ex.Message}");
+                    luuSQLiteThanhCong = false;
+                }
+            }
+
+            // Nếu không lưu được vào SQLite hoặc không dùng SQLite, lưu vào XML
+            if (!luuSQLiteThanhCong)
+            {
+                try
+                {
+                    LuuDanhSach("Resources/hoa_don_xuat.dat", ds_hoa_don_xuat);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu hóa đơn xuất: {ex.Message}", ex);
+                }
+            }
         }
 
         private void LuuDanhSachHDN()
         {
-            LuuDanhSach("Resources/hoa_don_nhap.dat", ds_hoa_don_nhap);
+            bool luuSQLiteThanhCong = false;
+
+            // Ưu tiên lưu vào SQLite trước
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    foreach (HoaDonNhap hdn in ds_hoa_don_nhap)
+                    {
+                        dbHelper.InsertHoaDon(hdn);
+                    }
+                    luuSQLiteThanhCong = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi lưu vào SQLite: {ex.Message}");
+                    luuSQLiteThanhCong = false;
+                }
+            }
+
+            // Nếu không lưu được vào SQLite hoặc không dùng SQLite, lưu vào XML
+            if (!luuSQLiteThanhCong)
+            {
+                try
+                {
+                    LuuDanhSach("Resources/hoa_don_nhap.dat", ds_hoa_don_nhap);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Không thể lưu dữ liệu hóa đơn nhập: {ex.Message}", ex);
+                }
+            }
         }
 
         private List<T> LoadDanhSach<T>(string filePath)

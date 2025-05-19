@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,10 +11,25 @@ namespace DoAnCK
         {
             InitializeComponent();
             Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
+            // Khởi tạo SQLite
+            string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
+            KhoHang kho = new KhoHang();
+            kho.InitSQLite(dbPath);
+
+            // Tạo các bảng nếu chưa tồn tại
+            SQLiteHelper dbHelper = new SQLiteHelper(dbPath);
+            dbHelper.CreateNhaCungCapTable();
+            dbHelper.CreateNhanVienTable();
+            dbHelper.CreateHangHoaTable();
+            dbHelper.CreateHoaDonTable();
+            dbHelper.CreateChiTietHoaDonTable();
+
+
             OpenChildForm(new FormTrangChu());
             ShowLoginForm();
             nhapxuat.Visible = false;
         }
+
 
         private NhanVien current_nv;
         private void ShowLoginForm()
@@ -63,7 +79,19 @@ namespace DoAnCK
         }
 
         private bool hoadonExpand = false;
-
+        private void btnCheckSQLite_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
+                FormSQLiteInfo formInfo = new FormSQLiteInfo(dbPath);
+                formInfo.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #region Event
 
         private async void HoaDon_bt_Click(object sender, EventArgs e)
