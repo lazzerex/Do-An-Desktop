@@ -72,7 +72,7 @@
             this.ThemAnh_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ThemAnh_bt.FillColor = System.Drawing.Color.Transparent;
             this.ThemAnh_bt.Font = new System.Drawing.Font("Arial", 9F);
-            this.ThemAnh_bt.ForeColor = System.Drawing.Color.DimGray;
+            this.ThemAnh_bt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ThemAnh_bt.Location = new System.Drawing.Point(470, 39);
             this.ThemAnh_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ThemAnh_bt.Name = "ThemAnh_bt";
@@ -314,8 +314,8 @@
             this.guna2GradientPanel1.Controls.Add(this.label6);
             this.guna2GradientPanel1.Controls.Add(this.IdHangHoa_tb);
             this.guna2GradientPanel1.Controls.Add(this.Themhang_bt);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(799, 449);

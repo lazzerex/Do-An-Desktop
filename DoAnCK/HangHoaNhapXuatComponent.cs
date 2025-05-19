@@ -36,7 +36,7 @@ namespace DoAnCK
         }
         private void Mouse_Leave(object sender, EventArgs e)
         {
-            guna2GradientPanel1.FillColor = Color.FromArgb(192, 255, 192);
+            guna2GradientPanel1.FillColor = Color.FromArgb(169, 183, 172);
         }
 
         private void Mouse_Click(object sender, EventArgs e)
