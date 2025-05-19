@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHoaDonNhap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HoaDonNhap>
+    <IdHoaDon>HDN1</IdHoaDon>
+    <NgayTaoDon>2025-03-27T20:31:24.9695671+07:00</NgayTaoDon>
+    <Qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="ThoiTrang">
+          <Id>TR04</Id>
+          <TenHang>AC Milan retro</TenHang>
+          <SoLuong>10</SoLuong>
+          <DonGia>270000</DonGia>
+          <Img>.\Resources\hang hoa img\thoi trang\Ac Milan Retro.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="GiaDung">
+          <Id>GD05</Id>
+          <TenHang>Ly thủy tinh</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>40000</DonGia>
+          <Img>.\Resources\hang hoa img\gia dung\ly.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="ThoiTrang">
+          <Id>TR02</Id>
+          <TenHang>Manchester United retro</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>270000</DonGia>
+          <Img>.\Resources\hang hoa img\thoi trang\Manchester United Retro.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="GiaDung">
+          <Id>GD03</Id>
+          <TenHang>Đũa sứ Nhật Bản</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>30000</DonGia>
+          <Img>.\Resources\hang hoa img\gia dung\dua_su.jpg</Img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </Qlnx>
+    <NvLap>
+      <IdNv>NV0001</IdNv>
+      <TenNv>Lee Min Hoo</TenNv>
+      <Tuoi>19</Tuoi>
+      <GioiTinh>true</GioiTinh>
+      <DiaChiNv>Sài Gòn</DiaChiNv>
+      <Username>nv0001</Username>
+      <Password>123456789</Password>
+    </NvLap>
+    <TongTien>3040000</TongTien>
+    <NhaCungCap>
+      <IdNcc>NCC002</IdNcc>
+      <TenNcc>Công ty cổ phẩn Mai Nam</TenNcc>
+      <SdtNcc>0784324426</SdtNcc>
+      <DiaChiNcc>Thủ Đức</DiaChiNcc>
+    </NhaCungCap>
+  </HoaDonNhap>
+  <HoaDonNhap>
+    <IdHoaDon>HDN2</IdHoaDon>
+    <NgayTaoDon>2025-03-28T09:51:27.3057582+07:00</NgayTaoDon>
+    <Qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT01</Id>
+          <TenHang>Iphone 16</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>100000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\iphone.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT02</Id>
+          <TenHang>Laptop Dell XPS</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>20000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\laptop.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT03</Id>
+          <TenHang>Tai nghe Sony</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>3000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\tai_nghe.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT04</Id>
+          <TenHang>Máy ảnh Canon</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>2500000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\may_anh.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT08</Id>
+          <TenHang>Máy lạnh</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>5000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\may_lanh.jpg</Img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </Qlnx>
+    <NvLap>
+      <IdNv>NV0001</IdNv>
+      <TenNv>Lee Min Hoo</TenNv>
+      <Tuoi>19</Tuoi>
+      <GioiTinh>true</GioiTinh>
+      <DiaChiNv>Sài Gòn</DiaChiNv>
+      <Username>nv0001</Username>
+      <Password>123456789</Password>
+    </NvLap>
+    <TongTien>130500000</TongTien>
+    <NhaCungCap>
+      <IdNcc>NCC003</IdNcc>
+      <TenNcc>Tập đoàn Vinamilk</TenNcc>
+      <SdtNcc>0566544233</SdtNcc>
+      <DiaChiNcc>Bình Chánh</DiaChiNcc>
+    </NhaCungCap>
+  </HoaDonNhap>
+  <HoaDonNhap>
+    <IdHoaDon>HDN3</IdHoaDon>
+    <NgayTaoDon>2025-03-30T07:16:21.191199+07:00</NgayTaoDon>
+    <Qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT01</Id>
+          <TenHang>Iphone 16</TenHang>
+          <SoLuong>2</SoLuong>
+          <DonGia>100000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\iphone.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT02</Id>
+          <TenHang>Laptop Dell XPS</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>20000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\laptop.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT03</Id>
+          <TenHang>Tai nghe Sony</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>3000000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\tai_nghe.jpg</Img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <Id>DT04</Id>
+          <TenHang>Máy ảnh Canon</TenHang>
+          <SoLuong>1</SoLuong>
+          <DonGia>2500000</DonGia>
+          <Img>.\Resources\hang hoa img\dien tu\may_anh.jpg</Img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </Qlnx>
+    <NvLap>
+      <IdNv>NV0001</IdNv>
+      <TenNv>Lee Min Hoo</TenNv>
+      <Tuoi>19</Tuoi>
+      <GioiTinh>true</GioiTinh>
+      <DiaChiNv>Sài Gòn</DiaChiNv>
+      <Username>nv0001</Username>
+      <Password>123456789</Password>
+    </NvLap>
+    <TongTien>225500000</TongTien>
+    <NhaCungCap>
+      <IdNcc>NCC001</IdNcc>
+      <TenNcc>Tập đoàn Vingroup</TenNcc>
+      <SdtNcc>0153654356</SdtNcc>
+      <DiaChiNcc>Bình Dương</DiaChiNcc>
+    </NhaCungCap>
+  </HoaDonNhap>
+</ArrayOfHoaDonNhap>

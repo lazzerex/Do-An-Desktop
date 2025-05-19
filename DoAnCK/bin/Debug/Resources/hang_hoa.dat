@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHangHoa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HangHoa xsi:type="DienTu">
+    <Id>DT01</Id>
+    <TenHang>Iphone 16</TenHang>
+    <SoLuong>35</SoLuong>
+    <DonGia>100000000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\iphone.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT02</Id>
+    <TenHang>Laptop Dell XPS</TenHang>
+    <SoLuong>22</SoLuong>
+    <DonGia>20000000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\laptop.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT03</Id>
+    <TenHang>Tai nghe Sony</TenHang>
+    <SoLuong>14</SoLuong>
+    <DonGia>3000000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\tai_nghe.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT04</Id>
+    <TenHang>Máy ảnh Canon</TenHang>
+    <SoLuong>17</SoLuong>
+    <DonGia>2500000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\may_anh.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT05</Id>
+    <TenHang>Loa thông minh</TenHang>
+    <SoLuong>10</SoLuong>
+    <DonGia>1500000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\loa.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT06</Id>
+    <TenHang>Galaxy Watch 5</TenHang>
+    <SoLuong>9</SoLuong>
+    <DonGia>5000000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\galaxy_watch.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT07</Id>
+    <TenHang>iPad Pro M2</TenHang>
+    <SoLuong>5</SoLuong>
+    <DonGia>6000000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\ipad.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="DienTu">
+    <Id>DT08</Id>
+    <TenHang>Máy lạnh</TenHang>
+    <SoLuong>6</SoLuong>
+    <DonGia>5000000</DonGia>
+    <Img>.\Resources\hang hoa img\dien tu\may_lanh.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD01</Id>
+    <TenHang>Bàn Gỗ Ăn Cơm</TenHang>
+    <SoLuong>15</SoLuong>
+    <DonGia>70000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\ban_go.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD02</Id>
+    <TenHang>Bát sứ ăn cơm</TenHang>
+    <SoLuong>21</SoLuong>
+    <DonGia>20000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\bat_su.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD03</Id>
+    <TenHang>Đũa sứ Nhật Bản</TenHang>
+    <SoLuong>32</SoLuong>
+    <DonGia>30000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\dua_su.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD04</Id>
+    <TenHang>Dao chống dính</TenHang>
+    <SoLuong>5</SoLuong>
+    <DonGia>50000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\dao.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD05</Id>
+    <TenHang>Ly thủy tinh</TenHang>
+    <SoLuong>32</SoLuong>
+    <DonGia>40000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\ly.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD06</Id>
+    <TenHang>Ghế sân vườn</TenHang>
+    <SoLuong>6</SoLuong>
+    <DonGia>100000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\ghe.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD07</Id>
+    <TenHang>Máy xay sinh tố</TenHang>
+    <SoLuong>11</SoLuong>
+    <DonGia>50000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\may_xay.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="GiaDung">
+    <Id>GD08</Id>
+    <TenHang>Chảo chống dính</TenHang>
+    <SoLuong>5</SoLuong>
+    <DonGia>300000</DonGia>
+    <Img>.\Resources\hang hoa img\gia dung\chao.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="ThoiTrang">
+    <Id>TR01</Id>
+    <TenHang>Áo Đấu liverpool</TenHang>
+    <SoLuong>5</SoLuong>
+    <DonGia>270000</DonGia>
+    <Img>.\Resources\hang hoa img\thoi trang\Maillot-Liverpool-Domicile-2006-2007-Torres-2-.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="ThoiTrang">
+    <Id>TR02</Id>
+    <TenHang>Manchester United retro</TenHang>
+    <SoLuong>5</SoLuong>
+    <DonGia>270000</DonGia>
+    <Img>.\Resources\hang hoa img\thoi trang\Manchester United Retro.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="ThoiTrang">
+    <Id>TR03</Id>
+    <TenHang>Chealse retro</TenHang>
+    <SoLuong>5</SoLuong>
+    <DonGia>270000</DonGia>
+    <Img>.\Resources\hang hoa img\thoi trang\Chealse retro.jpg</Img>
+  </HangHoa>
+  <HangHoa xsi:type="ThoiTrang">
+    <Id>TR04</Id>
+    <TenHang>AC Milan retro</TenHang>
+    <SoLuong>10</SoLuong>
+    <DonGia>270000</DonGia>
+    <Img>.\Resources\hang hoa img\thoi trang\Ac Milan Retro.jpg</Img>
+  </HangHoa>
+</ArrayOfHangHoa>

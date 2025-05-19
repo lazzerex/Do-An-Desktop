@@ -1,0 +1,96 @@
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\bin\Debug\DoAnCK.exe.config
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\bin\Debug\DoAnCK.exe
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\bin\Debug\DoAnCK.pdb
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormGiaoDienChinh.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormCuaHang.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormDangNhap.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormHoaDon.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormPhieuHoaDon.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormNhaCungCap.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormNhapXuat.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormHangHoa.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.FormTrangChu.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.HangHoaNhapXuatComponent.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.HangHoaTrangChuComponent.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.Properties.Resources.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnOOP.csproj.GenerateResource.cache
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnOOP.csproj.Up2Date
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.exe
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.pdb
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.HoaDon2Component.resources
+C:\Users\Admin\Music\OOP-project-master\DoAnCK\obj\Debug\DoAnCK.HangHoaDuocChonComponent.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\bin\Debug\DoAnCK.exe.config
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\bin\Debug\DoAnCK.exe
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\bin\Debug\DoAnCK.pdb
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.HoaDon2Component.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormGiaoDienChinh.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormCuaHang.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormDangNhap.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormHoaDon.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormPhieuHoaDon.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormNhaCungCap.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormNhapXuat.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormHangHoa.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.FormTrangChu.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.HangHoaDuocChonComponent.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.HangHoaNhapXuatComponent.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.HangHoaTrangChuComponent.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.Properties.Resources.resources
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnOOP.csproj.GenerateResource.cache
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnOOP.csproj.Up2Date
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.exe
+C:\Users\Admin\Music\OOP-project-master - Copy\DoAnCK\obj\Debug\DoAnCK.pdb
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\bin\Debug\DoAnCK.exe.config
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\bin\Debug\DoAnCK.exe
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\bin\Debug\DoAnCK.pdb
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\bin\Debug\Guna.UI2.dll
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HoaDon2Component.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormGiaoDienChinh.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormCuaHang.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormDangNhap.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormHoaDon.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormPhieuHoaDon.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormNhaCungCap.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormNhapXuat.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormHangHoa.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormTrangChu.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HangHoaDuocChonComponent.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HangHoaNhapXuatComponent.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HangHoaTrangChuComponent.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.Properties.Resources.resources
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.GenerateResource.cache
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.Up2Date
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.exe
+E:\[OOP-Fix1]\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.pdb
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\bin\Debug\DoAnCK.exe.config
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\bin\Debug\DoAnCK.exe
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\bin\Debug\DoAnCK.pdb
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HoaDon2Component.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormGiaoDienChinh.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormCuaHang.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormDangNhap.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormHoaDon.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormPhieuHoaDon.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormNhaCungCap.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormNhapXuat.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormHangHoa.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.FormTrangChu.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HangHoaDuocChonComponent.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HangHoaNhapXuatComponent.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.HangHoaTrangChuComponent.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnOOP.csproj.Up2Date
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.exe
+C:\Users\Admin\OneDrive\Desktop\OOP-fix-2\DoAnCK\obj\Debug\DoAnCK.pdb
