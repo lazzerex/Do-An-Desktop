@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNhaCungCap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NhaCungCap>
+    <IdNcc>NCC001</IdNcc>
+    <TenNcc>Tập đoàn Vingroup</TenNcc>
+    <SdtNcc>0153654356</SdtNcc>
+    <DiaChiNcc>Bình Dương</DiaChiNcc>
+  </NhaCungCap>
+  <NhaCungCap>
+    <IdNcc>NCC002</IdNcc>
+    <TenNcc>Công ty cổ phẩn Mai Nam</TenNcc>
+    <SdtNcc>0784324426</SdtNcc>
+    <DiaChiNcc>Thủ Đức</DiaChiNcc>
+  </NhaCungCap>
+  <NhaCungCap>
+    <IdNcc>NCC003</IdNcc>
+    <TenNcc>Tập đoàn Vinamilk</TenNcc>
+    <SdtNcc>0566544233</SdtNcc>
+    <DiaChiNcc>Bình Chánh</DiaChiNcc>
+  </NhaCungCap>
+</ArrayOfNhaCungCap>

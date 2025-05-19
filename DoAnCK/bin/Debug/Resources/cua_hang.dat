@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCuaHang xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CuaHang>
+    <IdCh>CH0001</IdCh>
+    <TenCh>Công ty TNHH Nam Bình</TenCh>
+    <SdtCh>098467718</SdtCh>
+    <DiaChiCh>Phú Nhuận</DiaChiCh>
+  </CuaHang>
+  <CuaHang>
+    <IdCh>CH0002</IdCh>
+    <TenCh>Test</TenCh>
+    <SdtCh>0356789102</SdtCh>
+    <DiaChiCh>Tân Bình</DiaChiCh>
+  </CuaHang>
+</ArrayOfCuaHang>
