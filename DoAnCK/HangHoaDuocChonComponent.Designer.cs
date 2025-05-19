@@ -109,7 +109,7 @@
             this.soluong_tb.TextChanged += new System.EventHandler(this.soluong_tb_TextChanged);
             this.soluong_tb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soluong_tb_KeyPress);
             // 
-            // HangHoaLoComponent
+            // HangHoaDuocChonComponent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.thanhtien_lbl);
             this.Controls.Add(this.ten_lbl);
             this.Controls.Add(this.id_lbl);
-            this.Name = "HangHoaLoComponent";
+            this.Name = "HangHoaDuocChonComponent";
             this.Size = new System.Drawing.Size(394, 26);
             this.ResumeLayout(false);
             this.PerformLayout();

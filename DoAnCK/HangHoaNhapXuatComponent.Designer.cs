@@ -43,7 +43,7 @@
             this.soluong_lbl.BackColor = System.Drawing.Color.Transparent;
             this.soluong_lbl.Font = new System.Drawing.Font("Arial", 7F);
             this.soluong_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.soluong_lbl.Location = new System.Drawing.Point(79, 162);
+            this.soluong_lbl.Location = new System.Drawing.Point(84, 162);
             this.soluong_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.soluong_lbl.Name = "soluong_lbl";
             this.soluong_lbl.Size = new System.Drawing.Size(28, 15);
@@ -97,12 +97,13 @@
             this.guna2GradientPanel1.Controls.Add(this.hanghoa_img);
             this.guna2GradientPanel1.Controls.Add(this.dongia_lbl);
             this.guna2GradientPanel1.Controls.Add(this.ten_lbl);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 20;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(136, 182);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(143, 188);
             this.guna2GradientPanel1.TabIndex = 2;
             this.guna2GradientPanel1.Click += new System.EventHandler(this.Mouse_Click);
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
@@ -114,7 +115,7 @@
             this.hanghoa_img.BackColor = System.Drawing.Color.Transparent;
             this.hanghoa_img.BorderRadius = 20;
             this.hanghoa_img.ImageRotate = 0F;
-            this.hanghoa_img.Location = new System.Drawing.Point(3, 3);
+            this.hanghoa_img.Location = new System.Drawing.Point(7, 7);
             this.hanghoa_img.Name = "hanghoa_img";
             this.hanghoa_img.Size = new System.Drawing.Size(130, 118);
             this.hanghoa_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

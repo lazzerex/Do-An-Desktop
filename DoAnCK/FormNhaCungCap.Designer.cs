@@ -293,8 +293,9 @@
             // 
             this.guna2GradientPanel1.BorderRadius = 20;
             this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1229, 77);
@@ -317,13 +318,13 @@
             // 
             this.DanhSachNhaCungCap_dgv.AllowUserToAddRows = false;
             this.DanhSachNhaCungCap_dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.DanhSachNhaCungCap_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DanhSachNhaCungCap_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -335,15 +336,15 @@
             this.SDTNCC,
             this.DCNCC});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DanhSachNhaCungCap_dgv.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DanhSachNhaCungCap_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.DanhSachNhaCungCap_dgv.Location = new System.Drawing.Point(0, 83);
+            this.DanhSachNhaCungCap_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.DanhSachNhaCungCap_dgv.Location = new System.Drawing.Point(0, 79);
             this.DanhSachNhaCungCap_dgv.Name = "DanhSachNhaCungCap_dgv";
             this.DanhSachNhaCungCap_dgv.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -357,31 +358,30 @@
             this.DanhSachNhaCungCap_dgv.RowHeadersVisible = false;
             this.DanhSachNhaCungCap_dgv.RowHeadersWidth = 51;
             this.DanhSachNhaCungCap_dgv.RowTemplate.Height = 24;
-            this.DanhSachNhaCungCap_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect;
-            this.DanhSachNhaCungCap_dgv.Size = new System.Drawing.Size(1229, 305);
+            this.DanhSachNhaCungCap_dgv.Size = new System.Drawing.Size(1229, 325);
             this.DanhSachNhaCungCap_dgv.TabIndex = 30;
-            this.DanhSachNhaCungCap_dgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Cyan;
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.DanhSachNhaCungCap_dgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Dark;
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.HeaderStyle.Height = 25;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.ReadOnly = true;
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.Height = 24;
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.DanhSachNhaCungCap_dgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.DanhSachNhaCungCap_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhSachNhaCungCap_dgv_CellClick);
             // 
             // IDNCC
@@ -429,11 +429,12 @@
             this.guna2GradientPanel2.Controls.Add(this.SdtNhaCungCap_tb);
             this.guna2GradientPanel2.Controls.Add(this.IdNhaCungCap_tb);
             this.guna2GradientPanel2.Controls.Add(this.TenNhaCungCap_tb);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 394);
+            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 410);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1229, 239);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1229, 227);
             this.guna2GradientPanel2.TabIndex = 31;
             // 
             // FormNhaCungCap

@@ -48,13 +48,13 @@
             // 
             this.DanhSachHoaDon_dgv.AllowUserToAddRows = false;
             this.DanhSachHoaDon_dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.DanhSachHoaDon_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DanhSachHoaDon_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -67,15 +67,15 @@
             this.idnccch_hd,
             this.tongtien_hd});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DanhSachHoaDon_dgv.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DanhSachHoaDon_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.DanhSachHoaDon_dgv.Location = new System.Drawing.Point(0, 109);
+            this.DanhSachHoaDon_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.DanhSachHoaDon_dgv.Location = new System.Drawing.Point(0, 83);
             this.DanhSachHoaDon_dgv.Name = "DanhSachHoaDon_dgv";
             this.DanhSachHoaDon_dgv.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -89,30 +89,30 @@
             this.DanhSachHoaDon_dgv.RowHeadersVisible = false;
             this.DanhSachHoaDon_dgv.RowHeadersWidth = 51;
             this.DanhSachHoaDon_dgv.RowTemplate.Height = 24;
-            this.DanhSachHoaDon_dgv.Size = new System.Drawing.Size(1229, 523);
+            this.DanhSachHoaDon_dgv.Size = new System.Drawing.Size(1229, 552);
             this.DanhSachHoaDon_dgv.TabIndex = 7;
-            this.DanhSachHoaDon_dgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Cyan;
-            this.DanhSachHoaDon_dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.DanhSachHoaDon_dgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Dark;
+            this.DanhSachHoaDon_dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.DanhSachHoaDon_dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DanhSachHoaDon_dgv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DanhSachHoaDon_dgv.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DanhSachHoaDon_dgv.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.DanhSachHoaDon_dgv.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DanhSachHoaDon_dgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            this.DanhSachHoaDon_dgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DanhSachHoaDon_dgv.ThemeStyle.HeaderStyle.Height = 25;
             this.DanhSachHoaDon_dgv.ThemeStyle.ReadOnly = true;
-            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.Height = 24;
-            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.DanhSachHoaDon_dgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.DanhSachHoaDon_dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhSachHoaDon_dgv_CellDoubleClick);
             // 
             // id_hd
@@ -152,12 +152,14 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.BorderRadius = 20;
             this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 2);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1229, 101);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1229, 77);
             this.guna2GradientPanel1.TabIndex = 8;
             // 
             // label1
@@ -166,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 32);
+            this.label1.Location = new System.Drawing.Point(399, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(434, 33);
             this.label1.TabIndex = 0;

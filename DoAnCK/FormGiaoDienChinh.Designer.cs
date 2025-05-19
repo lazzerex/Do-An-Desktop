@@ -61,7 +61,7 @@
             this.NhanVien_lb.AutoSize = true;
             this.NhanVien_lb.BackColor = System.Drawing.Color.Transparent;
             this.NhanVien_lb.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.NhanVien_lb.ForeColor = System.Drawing.Color.Gray;
+            this.NhanVien_lb.ForeColor = System.Drawing.Color.Black;
             this.NhanVien_lb.Location = new System.Drawing.Point(29, 19);
             this.NhanVien_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NhanVien_lb.Name = "NhanVien_lb";
@@ -74,7 +74,7 @@
             this.Ngay_lb.AutoSize = true;
             this.Ngay_lb.BackColor = System.Drawing.Color.Transparent;
             this.Ngay_lb.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.Ngay_lb.ForeColor = System.Drawing.Color.Gray;
+            this.Ngay_lb.ForeColor = System.Drawing.Color.Black;
             this.Ngay_lb.Location = new System.Drawing.Point(29, 65);
             this.Ngay_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ngay_lb.Name = "Ngay_lb";
@@ -87,8 +87,8 @@
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.BorderRadius = 20;
             this.guna2GradientPanel2.Controls.Add(this.nhapxuat);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(162, 45);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
@@ -116,7 +116,7 @@
             this.HoaDonXuat_bt.BorderColor = System.Drawing.Color.Transparent;
             this.HoaDonXuat_bt.BorderRadius = 15;
             this.HoaDonXuat_bt.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.HoaDonXuat_bt.CheckedState.FillColor2 = System.Drawing.Color.Cyan;
+            this.HoaDonXuat_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.HoaDonXuat_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.HoaDonXuat_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.HoaDonXuat_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -125,10 +125,10 @@
             this.HoaDonXuat_bt.FillColor = System.Drawing.Color.Transparent;
             this.HoaDonXuat_bt.FillColor2 = System.Drawing.Color.Transparent;
             this.HoaDonXuat_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoaDonXuat_bt.ForeColor = System.Drawing.Color.Gray;
+            this.HoaDonXuat_bt.ForeColor = System.Drawing.Color.Black;
             this.HoaDonXuat_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.HoaDonXuat_bt.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.HoaDonXuat_bt.HoverState.FillColor2 = System.Drawing.Color.Cyan;
+            this.HoaDonXuat_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.HoaDonXuat_bt.Image = ((System.Drawing.Image)(resources.GetObject("HoaDonXuat_bt.Image")));
             this.HoaDonXuat_bt.ImageOffset = new System.Drawing.Point(0, 5);
             this.HoaDonXuat_bt.ImageSize = new System.Drawing.Size(50, 50);
@@ -148,7 +148,7 @@
             this.HoaDonNhap_bt.BorderColor = System.Drawing.Color.Transparent;
             this.HoaDonNhap_bt.BorderRadius = 15;
             this.HoaDonNhap_bt.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.HoaDonNhap_bt.CheckedState.FillColor2 = System.Drawing.Color.Cyan;
+            this.HoaDonNhap_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.HoaDonNhap_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.HoaDonNhap_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.HoaDonNhap_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -157,10 +157,10 @@
             this.HoaDonNhap_bt.FillColor = System.Drawing.Color.Transparent;
             this.HoaDonNhap_bt.FillColor2 = System.Drawing.Color.Transparent;
             this.HoaDonNhap_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoaDonNhap_bt.ForeColor = System.Drawing.Color.Gray;
+            this.HoaDonNhap_bt.ForeColor = System.Drawing.Color.Black;
             this.HoaDonNhap_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.HoaDonNhap_bt.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.HoaDonNhap_bt.HoverState.FillColor2 = System.Drawing.Color.Cyan;
+            this.HoaDonNhap_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.HoaDonNhap_bt.Image = ((System.Drawing.Image)(resources.GetObject("HoaDonNhap_bt.Image")));
             this.HoaDonNhap_bt.ImageOffset = new System.Drawing.Point(0, 5);
             this.HoaDonNhap_bt.ImageSize = new System.Drawing.Size(50, 50);
@@ -176,7 +176,7 @@
             // 
             this.panelBody.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBody.BackColor = System.Drawing.Color.White;
+            this.panelBody.BackColor = System.Drawing.Color.Transparent;
             this.panelBody.Location = new System.Drawing.Point(20, 124);
             this.panelBody.Margin = new System.Windows.Forms.Padding(4);
             this.panelBody.Name = "panelBody";
@@ -186,8 +186,8 @@
             // NhapHang_bt
             // 
             this.NhapHang_bt.BorderRadius = 15;
-            this.NhapHang_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.NhapHang_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.NhapHang_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.NhapHang_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.NhapHang_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.NhapHang_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.NhapHang_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -196,10 +196,10 @@
             this.NhapHang_bt.FillColor = System.Drawing.Color.White;
             this.NhapHang_bt.FillColor2 = System.Drawing.Color.White;
             this.NhapHang_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NhapHang_bt.ForeColor = System.Drawing.Color.Gray;
+            this.NhapHang_bt.ForeColor = System.Drawing.Color.Black;
             this.NhapHang_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.NhapHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.NhapHang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.NhapHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.NhapHang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.NhapHang_bt.Image = ((System.Drawing.Image)(resources.GetObject("NhapHang_bt.Image")));
             this.NhapHang_bt.ImageOffset = new System.Drawing.Point(0, 15);
             this.NhapHang_bt.ImageSize = new System.Drawing.Size(50, 50);
@@ -213,8 +213,8 @@
             // TrangChu_bt
             // 
             this.TrangChu_bt.BorderRadius = 15;
-            this.TrangChu_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TrangChu_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TrangChu_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.TrangChu_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.TrangChu_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.TrangChu_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.TrangChu_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -223,10 +223,10 @@
             this.TrangChu_bt.FillColor = System.Drawing.Color.White;
             this.TrangChu_bt.FillColor2 = System.Drawing.Color.White;
             this.TrangChu_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrangChu_bt.ForeColor = System.Drawing.Color.Gray;
+            this.TrangChu_bt.ForeColor = System.Drawing.Color.Black;
             this.TrangChu_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.TrangChu_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TrangChu_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TrangChu_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.TrangChu_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.TrangChu_bt.Image = ((System.Drawing.Image)(resources.GetObject("TrangChu_bt.Image")));
             this.TrangChu_bt.ImageOffset = new System.Drawing.Point(0, 6);
             this.TrangChu_bt.ImageSize = new System.Drawing.Size(32, 32);
@@ -240,8 +240,8 @@
             // XuatHang_bt
             // 
             this.XuatHang_bt.BorderRadius = 15;
-            this.XuatHang_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.XuatHang_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.XuatHang_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.XuatHang_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.XuatHang_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.XuatHang_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.XuatHang_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -250,10 +250,10 @@
             this.XuatHang_bt.FillColor = System.Drawing.Color.White;
             this.XuatHang_bt.FillColor2 = System.Drawing.Color.White;
             this.XuatHang_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XuatHang_bt.ForeColor = System.Drawing.Color.Gray;
+            this.XuatHang_bt.ForeColor = System.Drawing.Color.Black;
             this.XuatHang_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.XuatHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.XuatHang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.XuatHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.XuatHang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.XuatHang_bt.Image = ((System.Drawing.Image)(resources.GetObject("XuatHang_bt.Image")));
             this.XuatHang_bt.ImageOffset = new System.Drawing.Point(0, 15);
             this.XuatHang_bt.ImageSize = new System.Drawing.Size(50, 50);
@@ -267,8 +267,8 @@
             // CuaHang_bt
             // 
             this.CuaHang_bt.BorderRadius = 15;
-            this.CuaHang_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.CuaHang_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CuaHang_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.CuaHang_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.CuaHang_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.CuaHang_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.CuaHang_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -277,10 +277,10 @@
             this.CuaHang_bt.FillColor = System.Drawing.Color.White;
             this.CuaHang_bt.FillColor2 = System.Drawing.Color.White;
             this.CuaHang_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CuaHang_bt.ForeColor = System.Drawing.Color.Gray;
+            this.CuaHang_bt.ForeColor = System.Drawing.Color.Black;
             this.CuaHang_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.CuaHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.CuaHang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CuaHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.CuaHang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.CuaHang_bt.Image = ((System.Drawing.Image)(resources.GetObject("CuaHang_bt.Image")));
             this.CuaHang_bt.ImageOffset = new System.Drawing.Point(0, 15);
             this.CuaHang_bt.ImageSize = new System.Drawing.Size(50, 50);
@@ -294,8 +294,8 @@
             // HoaDon_bt
             // 
             this.HoaDon_bt.BorderRadius = 15;
-            this.HoaDon_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.HoaDon_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.HoaDon_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.HoaDon_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.HoaDon_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.HoaDon_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.HoaDon_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -304,10 +304,10 @@
             this.HoaDon_bt.FillColor = System.Drawing.Color.White;
             this.HoaDon_bt.FillColor2 = System.Drawing.Color.White;
             this.HoaDon_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoaDon_bt.ForeColor = System.Drawing.Color.Gray;
+            this.HoaDon_bt.ForeColor = System.Drawing.Color.Black;
             this.HoaDon_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.HoaDon_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.HoaDon_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.HoaDon_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.HoaDon_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.HoaDon_bt.Image = ((System.Drawing.Image)(resources.GetObject("HoaDon_bt.Image")));
             this.HoaDon_bt.ImageOffset = new System.Drawing.Point(0, 20);
             this.HoaDon_bt.ImageSize = new System.Drawing.Size(65, 65);
@@ -337,8 +337,8 @@
             // NhaCungCap_bt
             // 
             this.NhaCungCap_bt.BorderRadius = 15;
-            this.NhaCungCap_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.NhaCungCap_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.NhaCungCap_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.NhaCungCap_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.NhaCungCap_bt.DisabledState.BorderColor = System.Drawing.Color.White;
             this.NhaCungCap_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
             this.NhaCungCap_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -347,10 +347,10 @@
             this.NhaCungCap_bt.FillColor = System.Drawing.Color.White;
             this.NhaCungCap_bt.FillColor2 = System.Drawing.Color.White;
             this.NhaCungCap_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NhaCungCap_bt.ForeColor = System.Drawing.Color.Gray;
+            this.NhaCungCap_bt.ForeColor = System.Drawing.Color.Black;
             this.NhaCungCap_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.NhaCungCap_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.NhaCungCap_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.NhaCungCap_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.NhaCungCap_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.NhaCungCap_bt.Image = ((System.Drawing.Image)(resources.GetObject("NhaCungCap_bt.Image")));
             this.NhaCungCap_bt.ImageOffset = new System.Drawing.Point(0, 15);
             this.NhaCungCap_bt.ImageSize = new System.Drawing.Size(50, 50);
@@ -394,8 +394,8 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox1);
             this.guna2GradientPanel3.Controls.Add(this.NhanVien_lb);
             this.guna2GradientPanel3.Controls.Add(this.Ngay_lb);
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel3.Location = new System.Drawing.Point(49, 3);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
@@ -415,7 +415,7 @@
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // Form
+            // FormGiaoDienChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -426,7 +426,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form";
+            this.Name = "FormGiaoDienChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2GradientPanel2.ResumeLayout(false);
             this.nhapxuat.ResumeLayout(false);
