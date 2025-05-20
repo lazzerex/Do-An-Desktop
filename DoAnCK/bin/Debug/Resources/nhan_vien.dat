@@ -1,39 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfNhanVien xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NhanVien>
-    <IdNv>NV0001</IdNv>
-    <TenNv>Lee Min Hoo</TenNv>
-    <Tuoi>19</Tuoi>
+    <IdNv>AD20250520202749</IdNv>
+    <TenNv>Admin</TenNv>
+    <Tuoi>30</Tuoi>
     <GioiTinh>true</GioiTinh>
-    <DiaChiNv>Sài Gòn</DiaChiNv>
-    <Username>nv0001</Username>
-    <Password>123456789</Password>
-  </NhanVien>
-  <NhanVien>
-    <IdNv>NV0002</IdNv>
-    <TenNv>Cristiano Ronaldo</TenNv>
-    <Tuoi>37</Tuoi>
-    <GioiTinh>false</GioiTinh>
-    <DiaChiNv>Sài Gòn</DiaChiNv>
-    <Username>nv0002</Username>
-    <Password>123456789</Password>
-  </NhanVien>
-  <NhanVien>
-    <IdNv>NV0003</IdNv>
-    <TenNv>Lionel Messi</TenNv>
-    <Tuoi>35</Tuoi>
-    <GioiTinh>true</GioiTinh>
-    <DiaChiNv>Sài Gòn</DiaChiNv>
-    <Username>nv0003</Username>
-    <Password>123456789</Password>
-  </NhanVien>
-  <NhanVien>
-    <IdNv>NV0004</IdNv>
-    <TenNv>Nguyễn Công Phượng</TenNv>
-    <Tuoi>35</Tuoi>
-    <GioiTinh>true</GioiTinh>
-    <DiaChiNv>Sài Gòn</DiaChiNv>
-    <Username>nv0004</Username>
-    <Password>123456789</Password>
+    <DiaChiNv>Địa chỉ Admin</DiaChiNv>
+    <Username>admin</Username>
+    <Password>admin123</Password>
+    <IsAdmin>true</IsAdmin>
   </NhanVien>
 </ArrayOfNhanVien>

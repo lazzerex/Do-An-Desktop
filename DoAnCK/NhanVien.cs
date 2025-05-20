@@ -11,6 +11,7 @@ public class NhanVien : ISerializable
     private string dia_chi_nv;
     private string username;
     private string password;
+    private bool is_admin;
 
     public string IdNv
     {
@@ -54,9 +55,15 @@ public class NhanVien : ISerializable
         set { password = value; }
     }
 
+    public bool IsAdmin
+    {
+        get { return is_admin; }
+        set { is_admin = value; }
+    }
+
     public NhanVien() { }
 
-    public NhanVien(string id_nv, string ten_nv, uint tuoi, bool gioi_tinh, string dia_chi_nv, string username, string password)
+    public NhanVien(string id_nv, string ten_nv, uint tuoi, bool gioi_tinh, string dia_chi_nv, string username, string password, bool is_admin = false)
     {
         this.id_nv = id_nv;
         this.ten_nv = ten_nv;
@@ -65,6 +72,7 @@ public class NhanVien : ISerializable
         this.dia_chi_nv = dia_chi_nv;
         this.username = username;
         this.password = password;
+        this.is_admin = is_admin;
     }
 
     public void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -75,7 +83,8 @@ public class NhanVien : ISerializable
         info.AddValue("gioi_tinh", gioi_tinh);
         info.AddValue("dia_chi_nv", dia_chi_nv);
         info.AddValue("username", username);
-        info.AddValue("password", password);        
+        info.AddValue("password", password);
+        info.AddValue("is_admin", is_admin);
     }
 
     private NhanVien(SerializationInfo info, StreamingContext context)
@@ -87,5 +96,15 @@ public class NhanVien : ISerializable
         dia_chi_nv = info.GetString("dia_chi_nv");
         username = info.GetString("username");
         password = info.GetString("password");
+        is_admin = info.GetBoolean("is_admin");
+
+        try
+        {
+            is_admin = info.GetBoolean("is_admin");
+        }
+        catch
+        {
+            is_admin = false; // Default value if not found
+        }
     }
 }

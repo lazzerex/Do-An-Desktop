@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace DoAnCK
@@ -52,6 +53,38 @@ namespace DoAnCK
             {
                 useDatabase = false;
                 throw new Exception("Không thể kết nối đến SQLite: " + ex.Message, ex);
+            }
+        }
+
+        public void TaoTaiKhoanAdmin()
+        {
+            // Kiểm tra xem đã có tài khoản admin nào chưa
+            NhanVien adminNV = ds_nhan_vien.Find(nv => nv.IsAdmin);
+
+            // Nếu chưa có admin nào, tạo một tài khoản admin mặc định
+            if (adminNV == null)
+            {
+                // Tạo ID ngẫu nhiên cho admin
+                string id = "AD" + DateTime.Now.ToString("yyyyMMddHHmmss");
+
+                // Tạo tài khoản admin
+                NhanVien admin = new NhanVien(
+                    id,
+                    "Admin",
+                    30,
+                    true,
+                    "Địa chỉ Admin",
+                    "admin",
+                    "admin123",
+                    true // Đặt quyền admin
+                );
+
+                // Thêm vào danh sách và lưu
+                ds_nhan_vien.Add(admin);
+                LuuDanhSachNV();
+
+                //MessageBox.Show("Đã tạo tài khoản Admin mặc định.\nTên đăng nhập: admin\nMật khẩu: admin123\nVui lòng đổi mật khẩu sau khi đăng nhập lần đầu!",
+                //    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

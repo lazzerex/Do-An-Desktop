@@ -14,19 +14,6 @@ namespace DoAnCK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Kiểm tra xem người dùng có muốn kiểm tra SQLite không
-            string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
-            if (File.Exists(dbPath))
-            {
-                DialogResult result = MessageBox.Show("Bạn có muốn kiểm tra kết nối SQLite không?",
-                    "Kiểm tra SQLite", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    Application.Run(new FormSQLiteInfo(dbPath));
-                    return;
-                }
-            }
 
             try
             {
@@ -36,7 +23,6 @@ namespace DoAnCK
             {
                 return;
             }
-
         }
     }
 }

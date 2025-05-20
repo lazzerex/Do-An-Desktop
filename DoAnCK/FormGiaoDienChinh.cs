@@ -11,25 +11,22 @@ namespace DoAnCK
         {
             InitializeComponent();
             Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
-            // Khởi tạo SQLite
+
+            // Khởi tạo SQLite nhưng không tạo bảng tự động
             string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
             KhoHang kho = new KhoHang();
             kho.InitSQLite(dbPath);
 
-            // Tạo các bảng nếu chưa tồn tại
-            SQLiteHelper dbHelper = new SQLiteHelper(dbPath);
-            dbHelper.CreateNhaCungCapTable();
-            dbHelper.CreateNhanVienTable();
-            dbHelper.CreateHangHoaTable();
-            dbHelper.CreateHoaDonTable();
-            dbHelper.CreateChiTietHoaDonTable();
-
+            // Tạo tài khoản admin nếu chưa có
+            kho.TaoTaiKhoanAdmin();
 
             OpenChildForm(new FormTrangChu());
             ShowLoginForm();
             nhapxuat.Visible = false;
         }
 
+
+        private System.Windows.Forms.Button btnAdmin;
 
         private NhanVien current_nv;
         private void ShowLoginForm()
@@ -47,7 +44,43 @@ namespace DoAnCK
                     Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
                     OpenChildForm(new FormTrangChu());
                     current_nv = formDangNhap.current_nv;
+
+                    // Hiển thị nút Admin và các nút SQLite nếu người dùng là admin
+                    if (current_nv.IsAdmin)
+                    {
+                        btnAdmin.Visible = true;
+                        btnLoadData.Visible = true;
+                        btnCheckSQLite.Visible = true;
+                        btnCreateTables.Visible = true;
+                    }
+                    else
+                    {
+                        btnAdmin.Visible = false;
+                        btnLoadData.Visible = false;
+                        btnCheckSQLite.Visible = false;
+                        btnCreateTables.Visible = false;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenChildForm(new FormQuanLyAdmin(current_nv));
+                // Bỏ check tất cả các nút menu khác
+                TrangChu_bt.Checked = false;
+                NhapHang_bt.Checked = false;
+                XuatHang_bt.Checked = false;
+                CuaHang_bt.Checked = false;
+                NhaCungCap_bt.Checked = false;
+                HoaDonNhap_bt.Checked = false;
+                HoaDonXuat_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -91,6 +124,11 @@ namespace DoAnCK
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
         #region Event
 
@@ -267,7 +305,50 @@ namespace DoAnCK
             }
         }
 
+        // Sự kiện Load Data
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
+                KhoHang kho = new KhoHang();
+                kho.InitSQLite(dbPath);
+                kho.LoadData(true); // Tải dữ liệu từ SQLite
+                MessageBox.Show("Đã tải dữ liệu từ SQLite thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Sự kiện Create Tables - chuyển code từ constructor sang đây
+        private void btnCreateTables_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
+                SQLiteHelper dbHelper = new SQLiteHelper(dbPath);
+
+                // Tạo các bảng nếu chưa tồn tại
+                dbHelper.CreateNhaCungCapTable();
+                dbHelper.CreateNhanVienTable();
+                dbHelper.CreateHangHoaTable();
+                dbHelper.CreateHoaDonTable();
+                dbHelper.CreateChiTietHoaDonTable();
+                dbHelper.CreateCuaHangTable();
+
+                MessageBox.Show("Đã tạo/cập nhật các bảng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tạo bảng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
+
+
     }
 }
 
