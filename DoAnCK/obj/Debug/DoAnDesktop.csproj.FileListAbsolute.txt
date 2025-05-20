@@ -52,3 +52,5 @@ D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnDesktop.csproj
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnDesk.41993D8B.Up2Date
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.exe
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.pdb
+D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormQuanLyAdmin.resources
+D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormThongTinNhanVien.resources

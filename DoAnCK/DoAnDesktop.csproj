@@ -58,11 +58,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormQuanLyAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyAdmin.Designer.cs">
+      <DependentUpon>FormQuanLyAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSQLiteInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSQLiteInfo.Designer.cs">
       <DependentUpon>FormSQLiteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon2Component.cs">
       <SubType>UserControl</SubType>
@@ -157,8 +169,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteHelper.cs" />
+    <EmbeddedResource Include="FormQuanLyAdmin.resx">
+      <DependentUpon>FormQuanLyAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSQLiteInfo.resx">
       <DependentUpon>FormSQLiteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinNhanVien.resx">
+      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon2Component.resx">
       <DependentUpon>HoaDon2Component.cs</DependentUpon>

@@ -25,11 +25,16 @@ namespace DoAnCK
             dbHelper.CreateChiTietHoaDonTable();
 
 
+            // Tạo tài khoản admin nếu chưa có
+            kho.TaoTaiKhoanAdmin();
+
+
             OpenChildForm(new FormTrangChu());
             ShowLoginForm();
             nhapxuat.Visible = false;
         }
 
+        private System.Windows.Forms.Button btnAdmin;
 
         private NhanVien current_nv;
         private void ShowLoginForm()
@@ -47,7 +52,30 @@ namespace DoAnCK
                     Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
                     OpenChildForm(new FormTrangChu());
                     current_nv = formDangNhap.current_nv;
+
+                    // Hiển thị nút Admin nếu người dùng là admin
+                    btnAdmin.Visible = current_nv.IsAdmin;
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenChildForm(new FormQuanLyAdmin(current_nv));
+                // Bỏ check tất cả các nút menu khác
+                TrangChu_bt.Checked = false;
+                NhapHang_bt.Checked = false;
+                XuatHang_bt.Checked = false;
+                CuaHang_bt.Checked = false;
+                NhaCungCap_bt.Checked = false;
+                HoaDonNhap_bt.Checked = false;
+                HoaDonXuat_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -91,6 +119,11 @@ namespace DoAnCK
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
         #region Event
 
@@ -268,6 +301,8 @@ namespace DoAnCK
         }
 
         #endregion
+
+
     }
 }
 

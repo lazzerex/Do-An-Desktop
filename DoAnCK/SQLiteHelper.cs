@@ -5,6 +5,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System.Windows.Forms;
 
 namespace DoAnCK
 {
@@ -77,7 +78,8 @@ namespace DoAnCK
                 gioi_tinh INTEGER,
                 dia_chi_nv TEXT,
                 username TEXT UNIQUE,
-                password TEXT
+                password TEXT,
+                is_admin INTEGER DEFAULT 0
             );";
 
             ExecuteNonQuery(query);
@@ -155,14 +157,14 @@ namespace DoAnCK
             ExecuteNonQuery(query);
         }
 
-        public void InsertNhanVien(NhanVien nv)
-        {
-            string query = $@"
-            INSERT OR REPLACE INTO NhanVien (id_nv, ten_nv, tuoi, gioi_tinh, dia_chi_nv, username, password)
-            VALUES ('{nv.IdNv}', '{nv.TenNv}', {nv.Tuoi}, {(nv.GioiTinh ? 1 : 0)}, '{nv.DiaChiNv}', '{nv.Username}', '{nv.Password}');";
+public void InsertNhanVien(NhanVien nv)
+{
+    string query = $@"
+    INSERT OR REPLACE INTO NhanVien (id_nv, ten_nv, tuoi, gioi_tinh, dia_chi_nv, username, password, is_admin)
+    VALUES ('{nv.IdNv}', '{nv.TenNv}', {nv.Tuoi}, {(nv.GioiTinh ? 1 : 0)}, '{nv.DiaChiNv}', '{nv.Username}', '{nv.Password}', {(nv.IsAdmin ? 1 : 0)});";
 
-            ExecuteNonQuery(query);
-        }
+    ExecuteNonQuery(query);
+}
 
         public void InsertCuaHang(CuaHang ch)
         {
@@ -359,10 +361,35 @@ namespace DoAnCK
                 khoHang.ds_ncc.Add(ncc);
             }
         }
-
         private void LoadNhanVien(KhoHang khoHang)
         {
             khoHang.ds_nhan_vien.Clear();
+
+            // Kiểm tra xem cột is_admin có tồn tại không
+            bool isAdminColumnExists = false;
+            DataTable tableInfo = GetTableStructure("NhanVien");
+            foreach (DataRow row in tableInfo.Rows)
+            {
+                if (row["name"].ToString().ToLower() == "is_admin")
+                {
+                    isAdminColumnExists = true;
+                    break;
+                }
+            }
+
+            // Nếu cột is_admin chưa tồn tại, thêm vào
+            if (!isAdminColumnExists)
+            {
+                try
+                {
+                    ExecuteNonQuery("ALTER TABLE NhanVien ADD COLUMN is_admin INTEGER DEFAULT 0;");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi thêm cột is_admin: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
             DataTable dataTable = ExecuteQuery("SELECT * FROM NhanVien");
 
             foreach (DataRow row in dataTable.Rows)
@@ -375,10 +402,27 @@ namespace DoAnCK
                 string username = row["username"].ToString();
                 string password = row["password"].ToString();
 
-                NhanVien nv = new NhanVien(id, ten, tuoi, gioiTinh, diaChi, username, password);
+                // Đọc trường is_admin nếu có
+                bool isAdmin = false;
+                if (isAdminColumnExists && row["is_admin"] != DBNull.Value)
+                {
+                    isAdmin = Convert.ToBoolean(Convert.ToInt32(row["is_admin"]));
+                }
+
+                NhanVien nv = new NhanVien();
+                nv.IdNv = id;
+                nv.TenNv = ten;
+                nv.Tuoi = tuoi;
+                nv.GioiTinh = gioiTinh;
+                nv.DiaChiNv = diaChi;
+                nv.Username = username;
+                nv.Password = password;
+                nv.IsAdmin = isAdmin;
+
                 khoHang.ds_nhan_vien.Add(nv);
             }
         }
+
 
         private void LoadCuaHang(KhoHang khoHang)
         {
