@@ -39,9 +39,6 @@
             this.DangNhap_bt = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnCheckSQLite = new Guna.UI2.WinForms.Guna2Button();
-            this.btnChuyenDuLieu = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTaoBang = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +81,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(192, 51);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +147,7 @@
             this.DangNhap_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
             this.DangNhap_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.DangNhap_bt.Location = new System.Drawing.Point(173, 299);
-            this.DangNhap_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DangNhap_bt.Margin = new System.Windows.Forms.Padding(2);
             this.DangNhap_bt.Name = "DangNhap_bt";
             this.DangNhap_bt.Size = new System.Drawing.Size(134, 34);
             this.DangNhap_bt.TabIndex = 10;
@@ -164,7 +161,7 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(436, 32);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(106, 283);
             this.guna2GradientPanel1.TabIndex = 11;
@@ -176,55 +173,10 @@
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(-44, 32);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(99, 283);
             this.guna2GradientPanel2.TabIndex = 12;
-            // 
-            // btnCheckSQLite
-            // 
-            this.btnCheckSQLite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCheckSQLite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCheckSQLite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCheckSQLite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCheckSQLite.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCheckSQLite.ForeColor = System.Drawing.Color.White;
-            this.btnCheckSQLite.Location = new System.Drawing.Point(12, 2);
-            this.btnCheckSQLite.Name = "btnCheckSQLite";
-            this.btnCheckSQLite.Size = new System.Drawing.Size(66, 25);
-            this.btnCheckSQLite.TabIndex = 13;
-            this.btnCheckSQLite.Text = "Check";
-            this.btnCheckSQLite.Click += new System.EventHandler(this.btnCheckSQLite_Click);
-            // 
-            // btnChuyenDuLieu
-            // 
-            this.btnChuyenDuLieu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChuyenDuLieu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChuyenDuLieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChuyenDuLieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChuyenDuLieu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChuyenDuLieu.ForeColor = System.Drawing.Color.White;
-            this.btnChuyenDuLieu.Location = new System.Drawing.Point(84, 2);
-            this.btnChuyenDuLieu.Name = "btnChuyenDuLieu";
-            this.btnChuyenDuLieu.Size = new System.Drawing.Size(66, 26);
-            this.btnChuyenDuLieu.TabIndex = 14;
-            this.btnChuyenDuLieu.Text = "Load Data";
-            this.btnChuyenDuLieu.Click += new System.EventHandler(this.btnChuyenDuLieu_Click);
-            // 
-            // btnTaoBang
-            // 
-            this.btnTaoBang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaoBang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaoBang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTaoBang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTaoBang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTaoBang.ForeColor = System.Drawing.Color.White;
-            this.btnTaoBang.Location = new System.Drawing.Point(156, 2);
-            this.btnTaoBang.Name = "btnTaoBang";
-            this.btnTaoBang.Size = new System.Drawing.Size(66, 25);
-            this.btnTaoBang.TabIndex = 15;
-            this.btnTaoBang.Text = "Create";
-            this.btnTaoBang.Click += new System.EventHandler(this.btnTaoBang_Click);
             // 
             // FormDangNhap
             // 
@@ -232,9 +184,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(490, 376);
-            this.Controls.Add(this.btnTaoBang);
-            this.Controls.Add(this.btnChuyenDuLieu);
-            this.Controls.Add(this.btnCheckSQLite);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.DangNhap_bt);
@@ -244,7 +193,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -263,8 +212,5 @@
         private Guna.UI2.WinForms.Guna2GradientButton DangNhap_bt;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2Button btnCheckSQLite;
-        private Guna.UI2.WinForms.Guna2Button btnChuyenDuLieu;
-        private Guna.UI2.WinForms.Guna2Button btnTaoBang;
     }
 }

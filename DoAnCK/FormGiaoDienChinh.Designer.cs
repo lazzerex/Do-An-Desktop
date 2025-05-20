@@ -20,6 +20,10 @@
             base.Dispose(disposing);
         }
 
+        private System.Windows.Forms.Button btnLoadData;
+        private System.Windows.Forms.Button btnCheckSQLite;
+        private System.Windows.Forms.Button btnCreateTables;
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -433,7 +437,7 @@
             // btnAdmin
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.Turquoise;
-            this.btnAdmin.Location = new System.Drawing.Point(350, 28);
+            this.btnAdmin.Location = new System.Drawing.Point(170, 3);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(120, 40);
             this.btnAdmin.TabIndex = 6;
@@ -464,6 +468,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
+            // Nút Load Data
+            this.btnLoadData = new System.Windows.Forms.Button();
+            this.btnLoadData.Location = new System.Drawing.Point(600, 25);
+            this.btnLoadData.Name = "btnLoadData";
+            this.btnLoadData.Size = new System.Drawing.Size(80, 40);
+            this.btnLoadData.TabIndex = 5;
+            this.btnLoadData.Text = "Load Data";
+            this.btnLoadData.UseVisualStyleBackColor = true;
+            this.btnLoadData.Visible = false;
+            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
+            this.guna2GradientPanel3.Controls.Add(this.btnLoadData);
+
+            // Nút Check SQLite
+            this.btnCheckSQLite = new System.Windows.Forms.Button();
+            this.btnCheckSQLite.Location = new System.Drawing.Point(690, 25);
+            this.btnCheckSQLite.Name = "btnCheckSQLite";
+            this.btnCheckSQLite.Size = new System.Drawing.Size(90, 40);
+            this.btnCheckSQLite.TabIndex = 6;
+            this.btnCheckSQLite.Text = "Check SQLite";
+            this.btnCheckSQLite.UseVisualStyleBackColor = true;
+            this.btnCheckSQLite.Visible = false;
+            this.btnCheckSQLite.Click += new System.EventHandler(this.btnCheckSQLite_Click);
+            this.guna2GradientPanel3.Controls.Add(this.btnCheckSQLite);
+
+            // Nút Create Tables
+            this.btnCreateTables = new System.Windows.Forms.Button();
+            this.btnCreateTables.Location = new System.Drawing.Point(510, 25);
+            this.btnCreateTables.Name = "btnCreateTables";
+            this.btnCreateTables.Size = new System.Drawing.Size(80, 40);
+            this.btnCreateTables.TabIndex = 7;
+            this.btnCreateTables.Text = "Create Tables";
+            this.btnCreateTables.UseVisualStyleBackColor = true;
+            this.btnCreateTables.Visible = false;
+            this.btnCreateTables.Click += new System.EventHandler(this.btnCreateTables_Click);
+            this.guna2GradientPanel3.Controls.Add(this.btnCreateTables);
         }
 
         #endregion
