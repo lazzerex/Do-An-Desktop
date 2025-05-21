@@ -5,9 +5,12 @@ namespace DoAnCK
 {
     public partial class FormNhaCungCap : System.Windows.Forms.Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
         private int index;
-
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public FormNhaCungCap()
         {
             InitializeComponent();
@@ -62,9 +65,24 @@ namespace DoAnCK
             try
             {
                 index = DanhSachNhaCungCap_dgv.CurrentCell.RowIndex;
+                NhaCungCap nccToDelete = kho.ds_ncc[index];
+
                 kho.ds_ncc.RemoveAt(index);
                 DanhSachNhaCungCap_dgv.Rows.RemoveAt(index);
                 kho.LuuDanhSachNCC();
+
+                // Thêm log khi xóa nhà cung cấp
+                if (kho.CurrentNhanVien != null)
+                {
+                    try
+                    {
+                        Logger.LogXoaNhaCungCap(kho.CurrentNhanVien, nccToDelete);
+                    }
+                    catch (Exception logEx)
+                    {
+                        Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -89,6 +107,14 @@ namespace DoAnCK
                     return;
                 }
 
+                // Lưu trữ thông tin cũ trước khi cập nhật
+                NhaCungCap oldNCC = new NhaCungCap(
+                    kho.ds_ncc[index].IdNcc,
+                    kho.ds_ncc[index].TenNcc,
+                    kho.ds_ncc[index].SdtNcc,
+                    kho.ds_ncc[index].DiaChiNcc
+                );
+
                 DataGridViewRow selectedRow = DanhSachNhaCungCap_dgv.Rows[index];
                 selectedRow.Cells[0].Value = IdNhaCungCap_tb.Text;
                 selectedRow.Cells[1].Value = TenNhaCungCap_tb.Text;
@@ -103,6 +129,19 @@ namespace DoAnCK
 
                 DanhSachNhaCungCap_dgv.Refresh();
                 kho.LuuDanhSachNCC();
+
+                // Thêm log khi cập nhật thông tin nhà cung cấp
+                if (kho.CurrentNhanVien != null)
+                {
+                    try
+                    {
+                        Logger.LogSuaThongTinNCC(kho.CurrentNhanVien, oldNCC, nccToUpdate);
+                    }
+                    catch (Exception logEx)
+                    {
+                        Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                    }
+                }
 
                 MessageBox.Show("Cập nhật thành công!", "Thông báo");
                 ResetTextBoxes();
@@ -129,14 +168,24 @@ namespace DoAnCK
                     DanhSachNhaCungCap_dgv.Rows.Add(id, ten, sdt, diaChi);
 
                     kho.LuuDanhSachNCC();
+
+                    // Thêm log khi thêm nhà cung cấp mới
+                    if (kho.CurrentNhanVien != null)
+                    {
+                        try
+                        {
+                            Logger.LogThemNhaCungCap(kho.CurrentNhanVien, ncc);
+                        }
+                        catch (Exception logEx)
+                        {
+                            Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                        }
+                    }
+
                     MessageBox.Show("Đã lưu thành công!", "Thông báo");
 
                     isAddingMode = false;
                     ResetTextBoxes();
-                }
-                else
-                {
-                    MessageBox.Show("Hãy nhấn nút Thêm trước khi lưu!", "Thông báo");
                 }
             }
             catch (Exception ex)

@@ -6,10 +6,15 @@ namespace DoAnCK
 {
     public partial class FormHangHoa : System.Windows.Forms.Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
         private HangHoa hh;
         private string img_filepath;
         private FormTrangChu formTrangChu;
+
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
 
         public FormHangHoa(HangHoa hh, FormTrangChu formTrangChu)
         {
@@ -144,6 +149,7 @@ namespace DoAnCK
 
                             kho.them_hh(hh);
                         }
+
 
                         formTrangChu.Reload_flp();
                         this.Close();

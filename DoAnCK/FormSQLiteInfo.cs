@@ -14,6 +14,11 @@ namespace DoAnCK
             InitializeComponent();
             dbHelper = new SQLiteHelper(dbFilePath);
         }
+        private KhoHang kho = KhoHang.Instance;
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
 
         private void FormSQLiteInfo_Load(object sender, EventArgs e)
         {

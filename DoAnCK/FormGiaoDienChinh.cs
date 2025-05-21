@@ -7,6 +7,11 @@ namespace DoAnCK
 {
     public partial class FormGiaoDienChinh : System.Windows.Forms.Form
     {
+        private KhoHang kho = KhoHang.Instance;
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public FormGiaoDienChinh()
         {
             InitializeComponent();
@@ -239,6 +244,8 @@ namespace DoAnCK
         {
             try
             {
+                FormCuaHang formCuaHang = new FormCuaHang();
+                formCuaHang.SetCurrentNhanVien(currentNhanVien);
                 OpenChildForm(new FormCuaHang());
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;

@@ -10,7 +10,7 @@ namespace DoAnCK
     public partial class FormXemLog : Form
     {
         private SQLiteHelper dbHelper;
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
 
         public FormXemLog()
         {
@@ -26,6 +26,11 @@ namespace DoAnCK
             {
                 MessageBox.Show("Không thể khởi tạo kết nối cơ sở dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
         }
 
         private void FormXemLog_Load(object sender, EventArgs e)

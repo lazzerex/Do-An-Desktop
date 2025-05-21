@@ -60,7 +60,7 @@ namespace DoAnCK
                 _dbHelper.InsertLog(nv.IdNv, "Đăng xuất", $"Nhân viên {nv.TenNv} đã đăng xuất");
             }
         }
-
+        //
         public static void LogNhapHang(NhanVien nv, HoaDonNhap hoaDon)
         {
             if (IsInitialized() && nv != null)
@@ -68,7 +68,9 @@ namespace DoAnCK
                 string details = $"Mã hóa đơn: {hoaDon.IdHoaDon}, Tổng tiền: {hoaDon.TongTien}, NCC: {hoaDon.NhaCungCap.TenNcc}";
                 _dbHelper.InsertLog(nv.IdNv, "Nhập hàng", $"Nhân viên {nv.TenNv} đã nhập hàng", details);
             }
+
         }
+
 
         public static void LogXuatHang(NhanVien nv, HoaDonXuat hoaDon)
         {
@@ -79,10 +81,10 @@ namespace DoAnCK
             }
         }
 
-
+        //
         public static void LogThemNhaCungCap(NhanVien nv, NhaCungCap ncc)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã NCC: {ncc.IdNcc}, Tên NCC: {ncc.TenNcc}";
                 _dbHelper.InsertLog(nv.IdNv, "Thêm NCC", $"Nhân viên {nv.TenNv} đã thêm nhà cung cấp mới", details);
@@ -91,7 +93,7 @@ namespace DoAnCK
 
         public static void LogXoaNhaCungCap(NhanVien nv, NhaCungCap ncc)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã NCC: {ncc.IdNcc}, Tên NCC: {ncc.TenNcc}";
                 _dbHelper.InsertLog(nv.IdNv, "Xóa NCC", $"Nhân viên {nv.TenNv} đã xóa nhà cung cấp", details);
@@ -100,7 +102,7 @@ namespace DoAnCK
 
         public static void LogThemCuaHang(NhanVien nv, CuaHang ch)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã CH: {ch.IdCh}, Tên CH: {ch.TenCh}";
                 _dbHelper.InsertLog(nv.IdNv, "Thêm cửa hàng", $"Nhân viên {nv.TenNv} đã thêm cửa hàng mới", details);
@@ -109,7 +111,7 @@ namespace DoAnCK
 
         public static void LogXoaCuaHang(NhanVien nv, CuaHang ch)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã CH: {ch.IdCh}, Tên CH: {ch.TenCh}";
                 _dbHelper.InsertLog(nv.IdNv, "Xóa cửa hàng", $"Nhân viên {nv.TenNv} đã xóa cửa hàng", details);
@@ -118,7 +120,7 @@ namespace DoAnCK
 
         public static void LogThemHangHoa(NhanVien nv, HangHoa hh)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã HH: {hh.Id}, Tên HH: {hh.TenHang}, Số lượng: {hh.SoLuong}, Đơn giá: {hh.DonGia}";
                 _dbHelper.InsertLog(nv.IdNv, "Thêm hàng hóa", $"Nhân viên {nv.TenNv} đã thêm hàng hóa mới", details);
@@ -127,7 +129,7 @@ namespace DoAnCK
 
         public static void LogXoaHangHoa(NhanVien nv, HangHoa hh)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã HH: {hh.Id}, Tên HH: {hh.TenHang}";
                 _dbHelper.InsertLog(nv.IdNv, "Xóa hàng hóa", $"Nhân viên {nv.TenNv} đã xóa hàng hóa", details);
@@ -136,7 +138,7 @@ namespace DoAnCK
 
         public static void LogGeneric(NhanVien nv, string activityType, string description, string details = "")
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 _dbHelper.InsertLog(nv.IdNv, activityType, description, details);
             }
@@ -146,7 +148,7 @@ namespace DoAnCK
 
         public static void LogSuaHangHoa(NhanVien nv, HangHoa oldHH, HangHoa newHH)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã HH: {newHH.Id}, " +
                     $"Tên hàng: từ '{oldHH.TenHang}' thành '{newHH.TenHang}', " +
@@ -158,7 +160,7 @@ namespace DoAnCK
 
         public static void LogThemNhanVien(NhanVien admin, NhanVien newNV)
         {
-            if (_dbHelper != null && admin != null)
+            if (IsInitialized() && admin != null)
             {
                 string details = $"Mã NV: {newNV.IdNv}, Tên NV: {newNV.TenNv}, Username: {newNV.Username}, Là Admin: {(newNV.IsAdmin ? "Có" : "Không")}";
                 _dbHelper.InsertLog(admin.IdNv, "Thêm nhân viên", $"Admin {admin.TenNv} đã thêm nhân viên mới", details);
@@ -167,7 +169,7 @@ namespace DoAnCK
 
         public static void LogXoaNhanVien(NhanVien admin, NhanVien deletedNV)
         {
-            if (_dbHelper != null && admin != null)
+            if (IsInitialized() && admin != null)
             {
                 string details = $"Mã NV: {deletedNV.IdNv}, Tên NV: {deletedNV.TenNv}, Username: {deletedNV.Username}";
                 _dbHelper.InsertLog(admin.IdNv, "Xóa nhân viên", $"Admin {admin.TenNv} đã xóa nhân viên", details);
@@ -176,7 +178,7 @@ namespace DoAnCK
 
         public static void LogCapNhatQuyen(NhanVien admin, NhanVien targetNV, bool isNowAdmin)
         {
-            if (_dbHelper != null && admin != null)
+            if (IsInitialized() && admin != null)
             {
                 string details = $"Mã NV: {targetNV.IdNv}, Tên NV: {targetNV.TenNv}, Trạng thái quyền: {(isNowAdmin ? "Cấp quyền Admin" : "Hủy quyền Admin")}";
                 _dbHelper.InsertLog(admin.IdNv, "Cập nhật quyền", $"Admin {admin.TenNv} đã {(isNowAdmin ? "cấp" : "hủy")} quyền admin cho nhân viên {targetNV.TenNv}", details);
@@ -185,7 +187,7 @@ namespace DoAnCK
 
         public static void LogSuaThongTinNCC(NhanVien nv, NhaCungCap oldNCC, NhaCungCap newNCC)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã NCC: {newNCC.IdNcc}, " +
                     $"Tên: từ '{oldNCC.TenNcc}' thành '{newNCC.TenNcc}', " +
@@ -197,7 +199,7 @@ namespace DoAnCK
 
         public static void LogSuaThongTinCH(NhanVien nv, CuaHang oldCH, CuaHang newCH)
         {
-            if (_dbHelper != null && nv != null)
+            if (IsInitialized() && nv != null)
             {
                 string details = $"Mã CH: {newCH.IdCh}, " +
                     $"Tên: từ '{oldCH.TenCh}' thành '{newCH.TenCh}', " +

@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace DoAnCK
 {
+
     public partial class FormQuanLyAdmin : Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
         private NhanVien currentNhanVien;
 
         public FormQuanLyAdmin(NhanVien nhanVien)
@@ -23,7 +24,12 @@ namespace DoAnCK
             LoadDanhSachNhanVien();
         }
 
-        
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
+
+
         private void LoadDanhSachNhanVien()
         {
             dataGridViewNhanVien.Rows.Clear();
@@ -93,8 +99,22 @@ namespace DoAnCK
 
                     if (result == DialogResult.Yes)
                     {
+                        // Lưu lại nhân viên bị xóa để ghi log
+                        NhanVien deletedNV = nv;
+
                         kho.ds_nhan_vien.Remove(nv);
                         kho.LuuDanhSachNV();
+
+                        // Thêm log khi xóa nhân viên
+                        try
+                        {
+                            Logger.LogXoaNhanVien(currentNhanVien, deletedNV);
+                        }
+                        catch (Exception logEx)
+                        {
+                            Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                        }
+
                         LoadDanhSachNhanVien();
                         MessageBox.Show($"Đã xóa nhân viên {nv.TenNv}");
                     }

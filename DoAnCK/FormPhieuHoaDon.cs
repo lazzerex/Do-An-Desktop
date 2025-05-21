@@ -9,7 +9,11 @@ namespace DoAnCK
         {
             InitializeComponent();
         }
-
+        private KhoHang kho = KhoHang.Instance;
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public void them_dshh(QuanLyNhapXuat qlnx)
         {
             try

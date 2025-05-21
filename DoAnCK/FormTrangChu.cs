@@ -8,13 +8,17 @@ namespace DoAnCK
 {
     public partial class FormTrangChu : System.Windows.Forms.Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
         public FormTrangChu()
         {
             InitializeComponent();
             kho.LoadData();
         }
 
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public void Reload_flp()
         {
             try

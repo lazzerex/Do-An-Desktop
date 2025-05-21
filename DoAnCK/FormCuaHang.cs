@@ -5,7 +5,7 @@ namespace DoAnCK
 {
     public partial class FormCuaHang : System.Windows.Forms.Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
         private int index;
         private CuaHang ch;
         private bool isAddingMode = false;
@@ -45,31 +45,57 @@ namespace DoAnCK
             ResetTextBoxes();
             ToggleTextBoxState(true);
         }
-
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         private void XoaCuaHang_bt_Click(object sender, EventArgs e)
+{
+    try
+    {
+        index = DanhSachCuaHang_dgv.CurrentCell.RowIndex;
+        CuaHang chToDelete = kho.ds_cua_hang[index];
+        
+        kho.ds_cua_hang.RemoveAt(index);
+        DanhSachCuaHang_dgv.Rows.RemoveAt(index);
+        kho.LuuDanhSachCH();
+        
+        // Thêm log khi xóa cửa hàng
+        if (kho.CurrentNhanVien != null)
         {
             try
             {
-                index = DanhSachCuaHang_dgv.CurrentCell.RowIndex;
-                kho.ds_cua_hang.RemoveAt(index);
-                DanhSachCuaHang_dgv.Rows.RemoveAt(index);
-                kho.LuuDanhSachCH();
+                Logger.LogXoaCuaHang(kho.CurrentNhanVien, chToDelete);
             }
-            catch (Exception ex)
+            catch (Exception logEx)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Lỗi ghi log: " + logEx.Message);
             }
         }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+}
 
         private void CapNhap_bt_Click(object sender, EventArgs e)
         {
             try
             {
-                if (index < 0 || index >= kho.ds_ncc.Count)
+                if (index < 0 || index >= kho.ds_cua_hang.Count)
                 {
-                    MessageBox.Show("Vui lòng chọn một cửa hàng để cập nhật!", "Thông báo");
+                    MessageBox.Show("Vui lòng chọn một nhà cung cấp để cập nhật!", "Thông báo");
                     return;
                 }
+
+                // Lưu thông tin cũ trước khi cập nhật
+                NhaCungCap oldNCC = new NhaCungCap(
+                    kho.ds_ncc[index].IdNcc,
+                    kho.ds_ncc[index].TenNcc,
+                    kho.ds_ncc[index].SdtNcc,
+                    kho.ds_ncc[index].DiaChiNcc
+                );
 
                 DataGridViewRow selectedRow = DanhSachCuaHang_dgv.Rows[index];
                 selectedRow.Cells[0].Value = IdCuaHang_tb.Text;
@@ -77,14 +103,27 @@ namespace DoAnCK
                 selectedRow.Cells[2].Value = SdtCuaHang_tb.Text;
                 selectedRow.Cells[3].Value = DiaChi_tb.Text;
 
-                CuaHang chToUpdate = kho.ds_cua_hang[index];
-                chToUpdate.IdCh = IdCuaHang_tb.Text;
-                chToUpdate.TenCh = TenCuaHang_tb.Text;
-                chToUpdate.SdtCh = SdtCuaHang_tb.Text;
-                chToUpdate.DiaChiCh = DiaChi_tb.Text;
+                NhaCungCap nccToUpdate = kho.ds_ncc[index];
+                nccToUpdate.IdNcc = IdCuaHang_tb.Text;
+                nccToUpdate.TenNcc = TenCuaHang_tb.Text;
+                nccToUpdate.SdtNcc = SdtCuaHang_tb.Text;
+                nccToUpdate.DiaChiNcc = DiaChi_tb.Text;
 
                 DanhSachCuaHang_dgv.Refresh();
-                kho.LuuDanhSachCH();
+                kho.LuuDanhSachNCC();
+
+                // Thêm log khi cập nhật thông tin nhà cung cấp
+                if (kho.CurrentNhanVien != null)
+                {
+                    try
+                    {
+                        Logger.LogSuaThongTinNCC(kho.CurrentNhanVien, oldNCC, nccToUpdate);
+                    }
+                    catch (Exception logEx)
+                    {
+                        Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                    }
+                }
 
                 MessageBox.Show("Cập nhật thành công!", "Thông báo");
                 ResetTextBoxes();
@@ -111,6 +150,19 @@ namespace DoAnCK
                     DanhSachCuaHang_dgv.Rows.Add(id, ten, sdt, diaChi);
 
                     kho.LuuDanhSachCH();
+
+                    // Thêm log khi thêm cửa hàng mới
+                    if (kho.CurrentNhanVien != null)
+                    {
+                        try
+                        {
+                            Logger.LogThemCuaHang(kho.CurrentNhanVien, ch);
+                        }
+                        catch (Exception logEx)
+                        {
+                            Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                        }
+                    }
 
                     MessageBox.Show("Đã lưu thành công!", "Thông báo");
 

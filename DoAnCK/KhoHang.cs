@@ -9,6 +9,19 @@ namespace DoAnCK
 {
     public class KhoHang
     {
+
+        
+        private static KhoHang _instance;
+        public static KhoHang Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new KhoHang();
+                return _instance;
+            }
+        }
+
         public List<HangHoa> ds_hang_hoa = new List<HangHoa>();
         public List<NhanVien> ds_nhan_vien = new List<NhanVien>();
         public List<CuaHang> ds_cua_hang = new List<CuaHang>();
@@ -37,6 +50,9 @@ namespace DoAnCK
             try
             {
                 dbHelper = new SQLiteHelper(dbFilePath);
+
+                // Khởi tạo Logger sớm
+                Logger.Initialize(dbFilePath);
 
                 // Kiểm tra kết nối
                 if (dbHelper.TestConnection())
@@ -398,6 +414,8 @@ namespace DoAnCK
                     throw new Exception($"Không thể lưu dữ liệu nhân viên: {ex.Message}", ex);
                 }
             }
+            
+            
         }
 
         public void LuuDanhSachNCC()
@@ -434,6 +452,8 @@ namespace DoAnCK
                     throw new Exception($"Không thể lưu dữ liệu nhà cung cấp: {ex.Message}", ex);
                 }
             }
+
+       
         }
 
         private void LuuDanhSach(string filePath, object data)

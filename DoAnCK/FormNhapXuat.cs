@@ -6,10 +6,14 @@ namespace DoAnCK
     public partial class FormNhapXuat : System.Windows.Forms.Form
     {
         private bool isnhap;
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
         private QuanLyNhapXuat qlnx = new QuanLyNhapXuat();
         private NhanVien currentNhanVien = new NhanVien();
 
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public FormNhapXuat(NhanVien currentNhanVien, bool isnhap)
         {
             InitializeComponent();
@@ -17,12 +21,15 @@ namespace DoAnCK
             // Khởi tạo kho hàng
             kho.LoadData();
 
+            kho.CurrentNhanVien = currentNhanVien;
+            this.currentNhanVien = currentNhanVien;
+
             // Khởi tạo Logger nếu chưa được khởi tạo
             string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
             Logger.Initialize(dbPath);
 
             this.isnhap = isnhap;
-            this.currentNhanVien = currentNhanVien;
+           
         }
 
         public void them_hh_lo(HangHoa hh)
@@ -240,16 +247,16 @@ namespace DoAnCK
 
                         kho.ThemHoaDonNhap(hoaDonNhap);
 
-                        // Ghi log hoạt động nhập hàng
-                        try
-                        {
-                            Logger.LogNhapHang(currentNhanVien, hoaDonNhap);
-                        }
-                        catch (Exception logEx)
-                        {
-                            // Xử lý im lặng để không làm gián đoạn luồng chính
-                            Console.WriteLine("Lỗi ghi log: " + logEx.Message);
-                        }
+                        //// Ghi log hoạt động nhập hàng
+                        //try
+                        //{
+                        //    Logger.LogNhapHang(currentNhanVien, hoaDonNhap);
+                        //}
+                        //catch (Exception logEx)
+                        //{
+                        //    // Xử lý im lặng để không làm gián đoạn luồng chính
+                        //    Console.WriteLine("Lỗi ghi log: " + logEx.Message);
+                        //}
 
                         FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                         formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
@@ -293,16 +300,7 @@ namespace DoAnCK
 
                             kho.ThemHoaDonXuat(hoaDonXuat);
 
-                            // Ghi log hoạt động xuất hàng
-                            try
-                            {
-                                Logger.LogXuatHang(currentNhanVien, hoaDonXuat);
-                            }
-                            catch (Exception logEx)
-                            {
-                                // Xử lý im lặng để không làm gián đoạn luồng chính
-                                Console.WriteLine("Lỗi ghi log: " + logEx.Message);
-                            }
+
 
                             FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                             formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";

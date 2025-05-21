@@ -9,7 +9,10 @@ namespace DoAnCK
         private bool isnhap;
 
         private int index;
-
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public FormHoaDon(bool isnhap)
         {
             InitializeComponent();

@@ -6,7 +6,12 @@ namespace DoAnCK
 {
     public partial class FormDangNhap : System.Windows.Forms.Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
+
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
 
         public NhanVien current_nv;
 

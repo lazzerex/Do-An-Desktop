@@ -319,21 +319,18 @@ public void InsertNhanVien(NhanVien nv)
 
         public List<string> GetActivityTypes()
         {
-            string query = @"
-        SELECT DISTINCT activity_type
-        FROM ActivityLog
-        ORDER BY activity_type";
-
+            List<string> types = new List<string>();
+            string query = "SELECT DISTINCT activity_type FROM ActivityLog ORDER BY activity_type";
+       
             DataTable dataTable = ExecuteQuery(query);
-            List<string> activityTypes = new List<string>();
-
             foreach (DataRow row in dataTable.Rows)
             {
-                activityTypes.Add(row["activity_type"].ToString());
+                types.Add(row["activity_type"].ToString());
             }
-
-            return activityTypes;
+       
+            return types;
         }
+
 
         // Phương thức để chuyển đổi từ XML sang SQLite
         public void MigrateFromXmlToSQLite(KhoHang khoHang)
