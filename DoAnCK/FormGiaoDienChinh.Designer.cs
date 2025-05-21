@@ -24,6 +24,8 @@
         private System.Windows.Forms.Button btnCheckSQLite;
         private System.Windows.Forms.Button btnCreateTables;
 
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -52,6 +54,9 @@
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnLoadData = new System.Windows.Forms.Button();
+            this.btnCheckSQLite = new System.Windows.Forms.Button();
+            this.btnCreateTables = new System.Windows.Forms.Button();
             this.guna2GradientPanel2.SuspendLayout();
             this.nhapxuat.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -410,6 +415,9 @@
             this.guna2GradientPanel3.Controls.Add(this.NhanVien_lb);
             this.guna2GradientPanel3.Controls.Add(this.Ngay_lb);
             this.guna2GradientPanel3.Controls.Add(this.btnAdmin);
+            this.guna2GradientPanel3.Controls.Add(this.btnLoadData);
+            this.guna2GradientPanel3.Controls.Add(this.btnCheckSQLite);
+            this.guna2GradientPanel3.Controls.Add(this.btnCreateTables);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -446,6 +454,39 @@
             this.btnAdmin.Visible = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
+            // btnLoadData
+            // 
+            this.btnLoadData.Location = new System.Drawing.Point(600, 25);
+            this.btnLoadData.Name = "btnLoadData";
+            this.btnLoadData.Size = new System.Drawing.Size(80, 40);
+            this.btnLoadData.TabIndex = 5;
+            this.btnLoadData.Text = "Load Data";
+            this.btnLoadData.UseVisualStyleBackColor = true;
+            this.btnLoadData.Visible = false;
+            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
+            // 
+            // btnCheckSQLite
+            // 
+            this.btnCheckSQLite.Location = new System.Drawing.Point(690, 25);
+            this.btnCheckSQLite.Name = "btnCheckSQLite";
+            this.btnCheckSQLite.Size = new System.Drawing.Size(90, 40);
+            this.btnCheckSQLite.TabIndex = 6;
+            this.btnCheckSQLite.Text = "Check SQLite";
+            this.btnCheckSQLite.UseVisualStyleBackColor = true;
+            this.btnCheckSQLite.Visible = false;
+            this.btnCheckSQLite.Click += new System.EventHandler(this.btnCheckSQLite_Click);
+            // 
+            // btnCreateTables
+            // 
+            this.btnCreateTables.Location = new System.Drawing.Point(510, 25);
+            this.btnCreateTables.Name = "btnCreateTables";
+            this.btnCreateTables.Size = new System.Drawing.Size(80, 40);
+            this.btnCreateTables.TabIndex = 7;
+            this.btnCreateTables.Text = "Create Tables";
+            this.btnCreateTables.UseVisualStyleBackColor = true;
+            this.btnCreateTables.Visible = false;
+            this.btnCreateTables.Click += new System.EventHandler(this.btnCreateTables_Click);
+            // 
             // FormGiaoDienChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -458,6 +499,7 @@
             this.IsMdiContainer = true;
             this.Name = "FormGiaoDienChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormGiaoDienChinh_Load);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.nhapxuat.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
@@ -468,41 +510,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
-            // Nút Load Data
-            this.btnLoadData = new System.Windows.Forms.Button();
-            this.btnLoadData.Location = new System.Drawing.Point(600, 25);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(80, 40);
-            this.btnLoadData.TabIndex = 5;
-            this.btnLoadData.Text = "Load Data";
-            this.btnLoadData.UseVisualStyleBackColor = true;
-            this.btnLoadData.Visible = false;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
-            this.guna2GradientPanel3.Controls.Add(this.btnLoadData);
-
-            // Nút Check SQLite
-            this.btnCheckSQLite = new System.Windows.Forms.Button();
-            this.btnCheckSQLite.Location = new System.Drawing.Point(690, 25);
-            this.btnCheckSQLite.Name = "btnCheckSQLite";
-            this.btnCheckSQLite.Size = new System.Drawing.Size(90, 40);
-            this.btnCheckSQLite.TabIndex = 6;
-            this.btnCheckSQLite.Text = "Check SQLite";
-            this.btnCheckSQLite.UseVisualStyleBackColor = true;
-            this.btnCheckSQLite.Visible = false;
-            this.btnCheckSQLite.Click += new System.EventHandler(this.btnCheckSQLite_Click);
-            this.guna2GradientPanel3.Controls.Add(this.btnCheckSQLite);
-
-            // Nút Create Tables
-            this.btnCreateTables = new System.Windows.Forms.Button();
-            this.btnCreateTables.Location = new System.Drawing.Point(510, 25);
-            this.btnCreateTables.Name = "btnCreateTables";
-            this.btnCreateTables.Size = new System.Drawing.Size(80, 40);
-            this.btnCreateTables.TabIndex = 7;
-            this.btnCreateTables.Text = "Create Tables";
-            this.btnCreateTables.UseVisualStyleBackColor = true;
-            this.btnCreateTables.Visible = false;
-            this.btnCreateTables.Click += new System.EventHandler(this.btnCreateTables_Click);
-            this.guna2GradientPanel3.Controls.Add(this.btnCreateTables);
         }
 
         #endregion

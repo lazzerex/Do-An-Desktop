@@ -15,6 +15,10 @@ namespace DoAnCK
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Khởi tạo Logger
+            string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
+            Logger.Initialize(dbPath);
+
             try
             {
                 Application.Run(new FormGiaoDienChinh());

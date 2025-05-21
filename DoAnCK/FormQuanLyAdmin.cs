@@ -18,11 +18,12 @@ namespace DoAnCK
         public FormQuanLyAdmin(NhanVien nhanVien)
         {
             InitializeComponent();
-            currentNhanVien = nhanVien;
+            currentNhanVien = nhanVien; 
             kho.LoadData();
             LoadDanhSachNhanVien();
         }
 
+        
         private void LoadDanhSachNhanVien()
         {
             dataGridViewNhanVien.Rows.Clear();
@@ -52,6 +53,17 @@ namespace DoAnCK
                 {
                     nv.IsAdmin = !nv.IsAdmin;
                     kho.LuuDanhSachNV();
+
+                    // Ghi log hoạt động
+                    try
+                    {
+                        Logger.LogCapNhatQuyen(currentNhanVien, nv, nv.IsAdmin);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Lỗi ghi log: " + ex.Message);
+                    }
+
                     LoadDanhSachNhanVien();
                     MessageBox.Show($"Đã {(nv.IsAdmin ? "cấp" : "hủy")} quyền Admin cho nhân viên {nv.TenNv}");
                 }
@@ -61,6 +73,7 @@ namespace DoAnCK
                 MessageBox.Show("Vui lòng chọn nhân viên cần cấp/hủy quyền");
             }
         }
+
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -93,15 +106,33 @@ namespace DoAnCK
             }
         }
 
-        private void btnXemLog_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Tính năng này đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        //private void btnXemLog_Click(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show("Tính năng này đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //}
 
         private void btnXemThongTin_Click(object sender, EventArgs e)
         {
             FormThongTinNhanVien form = new FormThongTinNhanVien();
             form.ShowDialog();
         }
+        private void btnXemLog_Click(object sender, EventArgs e)
+        {
+            if (currentNhanVien != null && currentNhanVien.IsAdmin)
+            {
+                FormXemLog formXemLog = new FormXemLog();
+                formXemLog.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập tính năng này!",
+                    "Quyền truy cập bị từ chối", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+
+
     }
 }

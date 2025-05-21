@@ -29,6 +29,18 @@ namespace DoAnCK
 
                 if (current_nv != null)
                 {
+                    // Khởi tạo Logger và ghi log đăng nhập
+                    string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
+                    try
+                    {
+                        Logger.Initialize(dbPath);
+                        Logger.LogLogin(current_nv);
+                    }
+                    catch (Exception logEx)
+                    {
+                        Console.WriteLine("Lỗi khi ghi log: " + logEx.Message);
+                    }
+
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
@@ -113,5 +125,34 @@ namespace DoAnCK
                 MessageBox.Show("Lỗi khi tạo bảng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //private void DangNhap_bt_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        string username = TenDangNhap_tb.Text;
+        //        string password = MatKhau__tb.Text;
+
+        //        current_nv = kho.dang_nhap(username, password);
+
+        //        if (current_nv != null)
+        //        {
+        //            // Ghi log đăng nhập
+        //            Logger.LogLogin(current_nv);
+
+        //            this.DialogResult = DialogResult.OK;
+        //            this.Close();
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Sai tên tài khoản hoặc mật khẩu. Vui lòng thử lại.", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
     }
 }

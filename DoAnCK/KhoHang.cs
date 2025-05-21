@@ -19,6 +19,8 @@ namespace DoAnCK
         private SQLiteHelper dbHelper;
         private bool useDatabase = false;
 
+        public NhanVien CurrentNhanVien { get; set; }
+
         // constructor của lớp KhoHang
         public KhoHang()
         {
@@ -169,29 +171,54 @@ namespace DoAnCK
             }
         }
 
-        public void ThemHoaDonNhap(HoaDonNhap hoaDon)
-        {
-            ds_hoa_don_nhap.Add(hoaDon);
-            LuuDanhSachHDN();
-        }
-
-        public void ThemHoaDonXuat(HoaDonXuat hoaDon)
-        {
-            ds_hoa_don_xuat.Add(hoaDon);
-            LuuDanhSachHDX();
-        }
-
         public void them_hh(HangHoa hh)
         {
             ds_hang_hoa.Add(hh);
             LuuDanhSachHH();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogThemHangHoa(CurrentNhanVien, hh);
+            }
         }
 
         public void xoa_hh(HangHoa hh)
         {
             ds_hang_hoa.Remove(hh);
             LuuDanhSachHH();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogXoaHangHoa(CurrentNhanVien, hh);
+            }
         }
+
+        public void ThemHoaDonNhap(HoaDonNhap hoaDon)
+        {
+            ds_hoa_don_nhap.Add(hoaDon);
+            LuuDanhSachHDN();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogNhapHang(CurrentNhanVien, hoaDon);
+            }
+        }
+
+        public void ThemHoaDonXuat(HoaDonXuat hoaDon)
+        {
+            ds_hoa_don_xuat.Add(hoaDon);
+            LuuDanhSachHDX();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogXuatHang(CurrentNhanVien, hoaDon);
+            }
+        }
+
 
         public void LoadData(bool fromDatabase = false)
         {

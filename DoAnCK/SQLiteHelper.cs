@@ -148,6 +148,23 @@ namespace DoAnCK
             ExecuteNonQuery(query);
         }
 
+        public void CreateLogTable()
+        {
+            string query = @"
+            CREATE TABLE IF NOT EXISTS ActivityLog (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp TEXT NOT NULL,
+            id_nv TEXT NOT NULL,
+            activity_type TEXT NOT NULL,
+            description TEXT,
+            details TEXT,
+            FOREIGN KEY (id_nv) REFERENCES NhanVien(id_nv)
+             );";
+
+            ExecuteNonQuery(query);
+        }
+
+
         public void InsertNhaCungCap(NhaCungCap ncc)
         {
             string query = $@"
@@ -226,6 +243,98 @@ public void InsertNhanVien(NhanVien nv)
             }
         }
 
+        //Phương thức luu log
+
+        public void InsertLog(string idNv, string activityType, string description, string details = "")
+        {
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = $@"
+    INSERT INTO ActivityLog (timestamp, id_nv, activity_type, description, details)
+    VALUES ('{timestamp}', '{idNv}', '{activityType}', '{description}', '{details}');";
+
+            ExecuteNonQuery(query);
+        }
+
+        public DataTable GetLogsByEmployeeId(string idNv)
+        {
+            string query = $@"
+    SELECT timestamp, activity_type, description, details 
+    FROM ActivityLog 
+    WHERE id_nv = '{idNv}'
+    ORDER BY timestamp DESC";
+
+            return ExecuteQuery(query);
+        }
+
+        public DataTable GetAllLogs()
+        {
+            string query = @"
+    SELECT l.timestamp, n.ten_nv, l.activity_type, l.description, l.details 
+    FROM ActivityLog l
+    JOIN NhanVien n ON l.id_nv = n.id_nv
+    ORDER BY l.timestamp DESC";
+
+            return ExecuteQuery(query);
+        }
+
+
+
+        public DataTable GetLogsByFilter(string idNv = null, string activityType = null,
+    DateTime? fromDate = null, DateTime? toDate = null)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append(@"
+        SELECT l.timestamp, n.ten_nv, l.activity_type, l.description, l.details 
+        FROM ActivityLog l
+        JOIN NhanVien n ON l.id_nv = n.id_nv
+        WHERE 1=1");
+
+            // Thêm các điều kiện lọc
+            if (!string.IsNullOrEmpty(idNv) && idNv != "all")
+            {
+                queryBuilder.Append($" AND l.id_nv = '{idNv}'");
+            }
+
+            if (!string.IsNullOrEmpty(activityType) && activityType != "all")
+            {
+                queryBuilder.Append($" AND l.activity_type = '{activityType}'");
+            }
+
+            if (fromDate != null)
+            {
+                string fromDateStr = ((DateTime)fromDate).ToString("yyyy-MM-dd 00:00:00");
+                queryBuilder.Append($" AND l.timestamp >= '{fromDateStr}'");
+            }
+
+            if (toDate != null)
+            {
+                string toDateStr = ((DateTime)toDate).ToString("yyyy-MM-dd 23:59:59");
+                queryBuilder.Append($" AND l.timestamp <= '{toDateStr}'");
+            }
+
+            queryBuilder.Append(" ORDER BY l.timestamp DESC");
+
+            return ExecuteQuery(queryBuilder.ToString());
+        }
+
+        public List<string> GetActivityTypes()
+        {
+            string query = @"
+        SELECT DISTINCT activity_type
+        FROM ActivityLog
+        ORDER BY activity_type";
+
+            DataTable dataTable = ExecuteQuery(query);
+            List<string> activityTypes = new List<string>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                activityTypes.Add(row["activity_type"].ToString());
+            }
+
+            return activityTypes;
+        }
+
         // Phương thức để chuyển đổi từ XML sang SQLite
         public void MigrateFromXmlToSQLite(KhoHang khoHang)
         {
@@ -292,7 +401,7 @@ public void InsertNhanVien(NhanVien nv)
 
         public void CheckTablesBeforeMigration()
         {
-            string[] requiredTables = { "CuaHang", "NhaCungCap", "NhanVien", "HangHoa", "HoaDon", "ChiTietHoaDon" };
+            string[] requiredTables = { "CuaHang", "NhaCungCap", "NhanVien", "HangHoa", "HoaDon", "ChiTietHoaDon", "ActivityLog" };
 
             foreach (string tableName in requiredTables)
             {
@@ -319,10 +428,14 @@ public void InsertNhanVien(NhanVien nv)
                         case "ChiTietHoaDon":
                             CreateChiTietHoaDonTable();
                             break;
+                        case "ActivityLog":
+                            CreateLogTable();
+                            break;
                     }
                 }
             }
         }
+
 
 
 
