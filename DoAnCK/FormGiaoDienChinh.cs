@@ -60,16 +60,7 @@ namespace DoAnCK
                     if (btnAdmin != null)
                         btnAdmin.Visible = currentNhanVien.IsAdmin;
 
-                    // Ghi log đăng nhập
-                    try
-                    {
-                        Logger.LogLogin(currentNhanVien);
-                    }
-                    catch (Exception ex)
-                    {
-                        // Xử lý lỗi một cách im lặng để không ảnh hưởng đến trải nghiệm người dùng
-                        Console.WriteLine("Lỗi ghi log đăng nhập: " + ex.Message);
-                    }
+
                 }
             }
             catch (Exception ex)
@@ -373,8 +364,7 @@ namespace DoAnCK
                     string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
                     Logger.Initialize(dbPath);
 
-                    // Ghi log đăng nhập
-                    Logger.LogLogin(currentNhanVien);
+
 
                     // Thay vì sử dụng pnlAdmin không tồn tại, hãy sử dụng btnAdmin đã có trong form
                     btnAdmin.Visible = currentNhanVien.IsAdmin;
