@@ -183,7 +183,14 @@ namespace DoAnCK
         {
             try
             {
-                OpenChildForm(new FormTrangChu());
+                // Tạo FormTrangChu mới và truyền currentNhanVien
+                FormTrangChu formTrangChu = new FormTrangChu();
+                formTrangChu.CurrentNhanVien = currentNhanVien;
+                formTrangChu.SetCurrentNhanVien(currentNhanVien);
+
+                // Sử dụng form đã được cài đặt CurrentNhanVien
+                OpenChildForm(formTrangChu);
+
                 TrangChu_bt.Checked = true;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = false;
@@ -398,6 +405,7 @@ namespace DoAnCK
 
         private void FormGiaoDienChinh_FormClosing(object sender, FormClosingEventArgs e)
         {
+            kho.SaveToDatabase();
             // Ghi log đăng xuất
             try
             {
