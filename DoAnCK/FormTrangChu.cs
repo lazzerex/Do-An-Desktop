@@ -14,7 +14,7 @@ namespace DoAnCK
             InitializeComponent();
             kho.LoadData();
         }
-
+        public NhanVien CurrentNhanVien { get; set; }
         public void SetCurrentNhanVien(NhanVien nhanVien)
         {
             kho.CurrentNhanVien = nhanVien;
@@ -179,15 +179,9 @@ namespace DoAnCK
 
         private void ThemHangHoa_bt_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FormHangHoa formthem = new FormHangHoa(null, this);
-                formthem.Show(this);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            FormHangHoa formHangHoa = new FormHangHoa(null, this);
+            formHangHoa.SetCurrentNhanVien(CurrentNhanVien);  // Truyền CurrentNhanVien
+            formHangHoa.ShowDialog();
         }
 
         private void FormTrangChu_Load(object sender, EventArgs e)

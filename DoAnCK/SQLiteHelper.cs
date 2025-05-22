@@ -164,6 +164,18 @@ namespace DoAnCK
             ExecuteNonQuery(query);
         }
 
+        public void DeleteNhaCungCap(string idNcc)
+        {
+            string query = $"DELETE FROM NhaCungCap WHERE id_ncc = '{idNcc}'";
+            ExecuteNonQuery(query);
+        }
+
+        public void DeleteCuaHang(string idCh)
+        {
+            string query = $"DELETE FROM CuaHang WHERE id_ch = '{idCh}'";
+            ExecuteNonQuery(query);
+        }
+
 
         public void InsertNhaCungCap(NhaCungCap ncc)
         {
@@ -247,34 +259,42 @@ public void InsertNhanVien(NhanVien nv)
 
         public void InsertLog(string idNv, string activityType, string description, string details = "")
         {
-            string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string query = $@"
-    INSERT INTO ActivityLog (timestamp, id_nv, activity_type, description, details)
-    VALUES ('{timestamp}', '{idNv}', '{activityType}', '{description}', '{details}');";
+            try
+            {
+                // Kiểm tra xem nhân viên tồn tại không
+                string checkQuery = $"SELECT COUNT(*) FROM NhanVien WHERE id_nv = '{idNv}'";
+                int count = 0;
 
-            ExecuteNonQuery(query);
-        }
+                using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+                {
+                    connection.Open();
+                    using (SQLiteCommand command = new SQLiteCommand(checkQuery, connection))
+                    {
+                        count = Convert.ToInt32(command.ExecuteScalar());
+                    }
+                }
 
-        public DataTable GetLogsByEmployeeId(string idNv)
-        {
-            string query = $@"
-    SELECT timestamp, activity_type, description, details 
-    FROM ActivityLog 
-    WHERE id_nv = '{idNv}'
-    ORDER BY timestamp DESC";
+                if (count == 0)
+                {
+                    System.Diagnostics.Debug.WriteLine($"WARNING: Không tìm thấy nhân viên ID {idNv} trong database!");
+                    return;
+                }
 
-            return ExecuteQuery(query);
-        }
+                // Tiếp tục ghi log
+                string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                string query = $@"
+        INSERT INTO ActivityLog (timestamp, id_nv, activity_type, description, details)
+        VALUES ('{timestamp}', '{idNv}', '{activityType}', '{description}', '{details}');";
 
-        public DataTable GetAllLogs()
-        {
-            string query = @"
-    SELECT l.timestamp, n.ten_nv, l.activity_type, l.description, l.details 
-    FROM ActivityLog l
-    JOIN NhanVien n ON l.id_nv = n.id_nv
-    ORDER BY l.timestamp DESC";
-
-            return ExecuteQuery(query);
+                ExecuteNonQuery(query);
+                System.Diagnostics.Debug.WriteLine("InsertLog thành công!");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Lỗi trong InsertLog: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+                throw; // Ném lại ngoại lệ để caller xử lý
+            }
         }
 
 

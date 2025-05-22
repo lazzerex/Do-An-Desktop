@@ -67,8 +67,14 @@ namespace DoAnCK
                 index = DanhSachNhaCungCap_dgv.CurrentCell.RowIndex;
                 NhaCungCap nccToDelete = kho.ds_ncc[index];
 
+                // Xóa từ SQLite trước
+                kho.XoaNhaCungCap(nccToDelete.IdNcc);
+
+                // Sau đó xóa từ danh sách bộ nhớ và DataGridView
                 kho.ds_ncc.RemoveAt(index);
                 DanhSachNhaCungCap_dgv.Rows.RemoveAt(index);
+
+                // Lưu lại danh sách đã cập nhật vào file XML
                 kho.LuuDanhSachNCC();
 
                 // Thêm log khi xóa nhà cung cấp
@@ -83,6 +89,9 @@ namespace DoAnCK
                         Console.WriteLine("Lỗi ghi log: " + logEx.Message);
                     }
                 }
+
+                MessageBox.Show("Đã xóa nhà cung cấp thành công!", "Thông báo",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -107,7 +116,7 @@ namespace DoAnCK
                     return;
                 }
 
-                // Lưu trữ thông tin cũ trước khi cập nhật
+                // Lưu thông tin cũ trước khi cập nhật
                 NhaCungCap oldNCC = new NhaCungCap(
                     kho.ds_ncc[index].IdNcc,
                     kho.ds_ncc[index].TenNcc,

@@ -120,12 +120,32 @@ namespace DoAnCK
 
         public static void LogThemHangHoa(NhanVien nv, HangHoa hh)
         {
+            System.Diagnostics.Debug.WriteLine($"--- Bắt đầu ghi log thêm hàng hóa ---");
+            System.Diagnostics.Debug.WriteLine($"NhanVien: {(nv != null ? nv.TenNv : "null")}");
+            System.Diagnostics.Debug.WriteLine($"HangHoa: {(hh != null ? hh.TenHang : "null")}");
+
             if (IsInitialized() && nv != null)
             {
-                string details = $"Mã HH: {hh.Id}, Tên HH: {hh.TenHang}, Số lượng: {hh.SoLuong}, Đơn giá: {hh.DonGia}";
-                _dbHelper.InsertLog(nv.IdNv, "Thêm hàng hóa", $"Nhân viên {nv.TenNv} đã thêm hàng hóa mới", details);
+                try
+                {
+                    string details = $"Mã HH: {hh.Id}, Tên HH: {hh.TenHang}, Số lượng: {hh.SoLuong}, Đơn giá: {hh.DonGia}";
+                    _dbHelper.InsertLog(nv.IdNv, "Thêm hàng hóa", $"Nhân viên {nv.TenNv} đã thêm hàng hóa mới", details);
+                    System.Diagnostics.Debug.WriteLine("Ghi log thành công!");
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Lỗi ghi log: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+                }
             }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"Không thể ghi log: IsInitialized()={IsInitialized()}, nv={(nv != null ? "not null" : "null")}");
+            }
+
+            System.Diagnostics.Debug.WriteLine($"--- Kết thúc ghi log thêm hàng hóa ---");
         }
+
 
         public static void LogXoaHangHoa(NhanVien nv, HangHoa hh)
         {
@@ -187,26 +207,66 @@ namespace DoAnCK
 
         public static void LogSuaThongTinNCC(NhanVien nv, NhaCungCap oldNCC, NhaCungCap newNCC)
         {
+            System.Diagnostics.Debug.WriteLine($"--- Bắt đầu ghi log sửa NCC ---");
+            System.Diagnostics.Debug.WriteLine($"NhanVien: {(nv != null ? nv.TenNv : "null")}");
+            System.Diagnostics.Debug.WriteLine($"oldNCC: {(oldNCC != null ? oldNCC.TenNcc : "null")}");
+            System.Diagnostics.Debug.WriteLine($"newNCC: {(newNCC != null ? newNCC.TenNcc : "null")}");
+
             if (IsInitialized() && nv != null)
             {
-                string details = $"Mã NCC: {newNCC.IdNcc}, " +
-                    $"Tên: từ '{oldNCC.TenNcc}' thành '{newNCC.TenNcc}', " +
-                    $"SĐT: từ '{oldNCC.SdtNcc}' thành '{newNCC.SdtNcc}', " +
-                    $"Địa chỉ: từ '{oldNCC.DiaChiNcc}' thành '{newNCC.DiaChiNcc}'";
-                _dbHelper.InsertLog(nv.IdNv, "Sửa thông tin NCC", $"Nhân viên {nv.TenNv} đã cập nhật thông tin nhà cung cấp", details);
+                try
+                {
+                    string details = $"Mã NCC: {newNCC.IdNcc}, " +
+                        $"Tên: từ '{oldNCC.TenNcc}' thành '{newNCC.TenNcc}', " +
+                        $"SĐT: từ '{oldNCC.SdtNcc}' thành '{newNCC.SdtNcc}', " +
+                        $"Địa chỉ: từ '{oldNCC.DiaChiNcc}' thành '{newNCC.DiaChiNcc}'";
+                    _dbHelper.InsertLog(nv.IdNv, "Sửa thông tin NCC", $"Nhân viên {nv.TenNv} đã cập nhật thông tin nhà cung cấp", details);
+                    System.Diagnostics.Debug.WriteLine("Ghi log thành công!");
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Lỗi ghi log: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+                }
             }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"Không thể ghi log: IsInitialized()={IsInitialized()}, nv={(nv != null ? "not null" : "null")}");
+            }
+
+            System.Diagnostics.Debug.WriteLine($"--- Kết thúc ghi log sửa NCC ---");
         }
+
 
         public static void LogSuaThongTinCH(NhanVien nv, CuaHang oldCH, CuaHang newCH)
         {
+            System.Diagnostics.Debug.WriteLine($"--- Bắt đầu ghi log sửa cửa hàng ---");
+            System.Diagnostics.Debug.WriteLine($"NhanVien: {(nv != null ? nv.TenNv : "null")}");
+            System.Diagnostics.Debug.WriteLine($"oldCH: {(oldCH != null ? oldCH.TenCh : "null")}");
+            System.Diagnostics.Debug.WriteLine($"newCH: {(newCH != null ? newCH.TenCh : "null")}");
+
             if (IsInitialized() && nv != null)
             {
-                string details = $"Mã CH: {newCH.IdCh}, " +
-                    $"Tên: từ '{oldCH.TenCh}' thành '{newCH.TenCh}', " +
-                    $"SĐT: từ '{oldCH.SdtCh}' thành '{newCH.SdtCh}', " +
-                    $"Địa chỉ: từ '{oldCH.DiaChiCh}' thành '{newCH.DiaChiCh}'";
-                _dbHelper.InsertLog(nv.IdNv, "Sửa thông tin CH", $"Nhân viên {nv.TenNv} đã cập nhật thông tin cửa hàng", details);
+                try
+                {
+                    string details = $"Mã CH: {newCH.IdCh}, " +
+                        $"Tên: từ '{oldCH.TenCh}' thành '{newCH.TenCh}', " +
+                        $"SĐT: từ '{oldCH.SdtCh}' thành '{newCH.SdtCh}', " +
+                        $"Địa chỉ: từ '{oldCH.DiaChiCh}' thành '{newCH.DiaChiCh}'";
+                    _dbHelper.InsertLog(nv.IdNv, "Sửa thông tin CH", $"Nhân viên {nv.TenNv} đã cập nhật thông tin cửa hàng", details);
+                    System.Diagnostics.Debug.WriteLine("Ghi log thành công!");
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Lỗi ghi log: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+                }
             }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"Không thể ghi log: IsInitialized()={IsInitialized()}, nv={(nv != null ? "not null" : "null")}");
+            }
+            System.Diagnostics.Debug.WriteLine($"--- Kết thúc ghi log sửa cửa hàng ---");
         }
 
     }

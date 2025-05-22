@@ -50,17 +50,22 @@ namespace DoAnCK
 
                     NhanVien_lb.Text = "Nhân viên: " + currentNhanVien.TenNv;
                     Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
-                    OpenChildForm(new FormTrangChu());
 
-                    // Cập nhật CurrentNhanVien trong KhoHang
-                    KhoHang kho = new KhoHang();
+                    // Sử dụng đối tượng singleton KhoHang.Instance
                     kho.CurrentNhanVien = currentNhanVien;
+
+                    // Khởi tạo Logger
+                    string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
+                    Logger.Initialize(dbPath);
+
+                    // Hiển thị form trang chủ
+                    FormTrangChu formTrangChu = new FormTrangChu();
+                    formTrangChu.CurrentNhanVien = currentNhanVien;  // Truyền CurrentNhanVien
+                    OpenChildForm(formTrangChu);
 
                     // Hiển thị nút Admin nếu người dùng là admin
                     if (btnAdmin != null)
                         btnAdmin.Visible = currentNhanVien.IsAdmin;
-
-
                 }
             }
             catch (Exception ex)
@@ -235,9 +240,15 @@ namespace DoAnCK
         {
             try
             {
-                FormCuaHang formCuaHang = new FormCuaHang();
-                formCuaHang.SetCurrentNhanVien(currentNhanVien);
-                OpenChildForm(new FormCuaHang());
+                // Tạo và truyền currentNhanVien khi khởi tạo FormCuaHang
+                FormCuaHang formCuaHang = new FormCuaHang(currentNhanVien);
+
+          
+
+                // Mở form đã được khởi tạo với CurrentNhanVien
+                OpenChildForm(formCuaHang);
+
+                // Phần còn lại giữ nguyên
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = false;
@@ -252,11 +263,18 @@ namespace DoAnCK
             }
         }
 
+
         private void NhaCungCap_bt_Click(object sender, EventArgs e)
         {
             try
             {
-                OpenChildForm(new FormNhaCungCap());
+                // Tạo đối tượng FormNhaCungCap và truyền CurrentNhanVien
+                FormNhaCungCap formNhaCungCap = new FormNhaCungCap();
+                formNhaCungCap.SetCurrentNhanVien(currentNhanVien);
+
+                // Mở form đã được cài đặt CurrentNhanVien
+                OpenChildForm(formNhaCungCap);
+
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = false;
@@ -270,6 +288,7 @@ namespace DoAnCK
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void HoaDonNhap_bt_Click(object sender, EventArgs e)
         {

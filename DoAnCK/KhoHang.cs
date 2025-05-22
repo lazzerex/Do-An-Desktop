@@ -10,7 +10,7 @@ namespace DoAnCK
     public class KhoHang
     {
 
-        
+
         private static KhoHang _instance;
         public static KhoHang Instance
         {
@@ -106,6 +106,37 @@ namespace DoAnCK
             }
         }
 
+        public void XoaNhaCungCap(string idNcc)
+        {
+            // Xóa từ cơ sở dữ liệu SQLite
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    dbHelper.DeleteNhaCungCap(idNcc);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi xóa từ SQLite: {ex.Message}");
+                }
+            }
+        }
+
+        public void XoaCuaHang(string idCh)
+        {
+            // Xóa từ cơ sở dữ liệu SQLite
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    dbHelper.DeleteCuaHang(idCh);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi xóa từ SQLite: {ex.Message}");
+                }
+            }
+        }
         public bool kha_dung(QuanLyNhapXuat qlnx)
         {
             for (int i = 0; i < qlnx.ds_hang_hoa.Count; i++)
