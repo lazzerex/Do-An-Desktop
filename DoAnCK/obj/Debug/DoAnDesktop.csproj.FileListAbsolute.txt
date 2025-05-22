@@ -55,3 +55,6 @@ D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.pdb
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormQuanLyAdmin.resources
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormThongTinNhanVien.resources
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormXemLog.resources
+C:\Users\Admin\source\repos\Do-An-Desktop\DoAnCK\obj\Debug\DoAnCK.FormQuanLyAdmin.resources
+C:\Users\Admin\source\repos\Do-An-Desktop\DoAnCK\obj\Debug\DoAnCK.FormThongTinNhanVien.resources
+C:\Users\Admin\source\repos\Do-An-Desktop\DoAnCK\obj\Debug\DoAnCK.FormXemLog.resources

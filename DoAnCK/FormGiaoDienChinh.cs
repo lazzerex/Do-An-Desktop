@@ -31,8 +31,6 @@ namespace DoAnCK
         }
 
 
-        private System.Windows.Forms.Button btnAdmin;
-
         private NhanVien currentNhanVien;
         private void ShowLoginForm()
         {
@@ -64,8 +62,8 @@ namespace DoAnCK
                     OpenChildForm(formTrangChu);
 
                     // Hiển thị nút Admin nếu người dùng là admin
-                    if (btnAdmin != null)
-                        btnAdmin.Visible = currentNhanVien.IsAdmin;
+                    if (QuanLy_bt != null)
+                        QuanLy_bt.Visible = currentNhanVien.IsAdmin;
                 }
             }
             catch (Exception ex)
@@ -74,13 +72,29 @@ namespace DoAnCK
             }
         }
 
-
+        private void QuanLy_bt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenChildForm(new FormQuanLyAdmin(currentNhanVien));
+                TrangChu_bt.Checked = false;
+                NhapHang_bt.Checked = false;
+                XuatHang_bt.Checked = false;
+                CuaHang_bt.Checked = false;
+                NhaCungCap_bt.Checked = false;
+                HoaDonNhap_bt.Checked = false;
+                HoaDonXuat_bt.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             try
             {
                 OpenChildForm(new FormQuanLyAdmin(currentNhanVien));
-                // Bỏ check tất cả các nút menu khác
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = false;
@@ -393,7 +407,7 @@ namespace DoAnCK
 
 
                     // Thay vì sử dụng pnlAdmin không tồn tại, hãy sử dụng btnAdmin đã có trong form
-                    btnAdmin.Visible = currentNhanVien.IsAdmin;
+                    QuanLy_bt.Visible = currentNhanVien.IsAdmin;
                 }
             }
             catch (Exception ex)
@@ -431,6 +445,7 @@ namespace DoAnCK
                     "Quyền truy cập bị từ chối", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
 
         #endregion

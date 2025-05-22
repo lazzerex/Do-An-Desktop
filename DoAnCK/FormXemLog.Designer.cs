@@ -29,22 +29,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXuatExcel = new System.Windows.Forms.Button();
-
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLog)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewLog
             // 
-            this.dataGridViewLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dataGridViewLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLog.Location = new System.Drawing.Point(12, 120);
             this.dataGridViewLog.Name = "dataGridViewLog";
-            this.dataGridViewLog.Size = new System.Drawing.Size(876, 418);
-            this.dataGridViewLog.TabIndex = 0;
-            this.dataGridViewLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLog.ReadOnly = true;
+            this.dataGridViewLog.RowHeadersWidth = 51;
+            this.dataGridViewLog.Size = new System.Drawing.Size(946, 418);
+            this.dataGridViewLog.TabIndex = 0;
             // 
             // comboBoxNhanVien
             // 
@@ -56,7 +56,7 @@
             // 
             // btnXem
             // 
-            this.btnXem.Location = new System.Drawing.Point(600, 70);
+            this.btnXem.Location = new System.Drawing.Point(694, 20);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(120, 35);
             this.btnXem.TabIndex = 2;
@@ -69,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
+            this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Chọn nhân viên:";
             // 
@@ -86,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(350, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Loại hoạt động:";
             // 
@@ -109,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Từ ngày:";
             // 
@@ -118,13 +118,13 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(350, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Đến ngày:";
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(742, 70);
+            this.btnLamMoi.Location = new System.Drawing.Point(829, 20);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(120, 35);
             this.btnLamMoi.TabIndex = 10;
@@ -134,7 +134,7 @@
             // 
             // btnXuatExcel
             // 
-            this.btnXuatExcel.Location = new System.Drawing.Point(742, 15);
+            this.btnXuatExcel.Location = new System.Drawing.Point(829, 61);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Size = new System.Drawing.Size(120, 35);
             this.btnXuatExcel.TabIndex = 11;
@@ -146,7 +146,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 550);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(970, 550);
             this.Controls.Add(this.btnXuatExcel);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.label4);
@@ -159,6 +160,7 @@
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.comboBoxNhanVien);
             this.Controls.Add(this.dataGridViewLog);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormXemLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem Log Hoạt Động";
@@ -166,6 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

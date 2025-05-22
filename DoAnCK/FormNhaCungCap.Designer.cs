@@ -64,10 +64,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label5.Location = new System.Drawing.Point(473, 73);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(631, 90);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.Size = new System.Drawing.Size(77, 24);
             this.label5.TabIndex = 26;
             this.label5.Text = "Địa Chỉ";
             // 
@@ -77,10 +76,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(470, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(627, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 19);
+            this.label3.Size = new System.Drawing.Size(142, 24);
             this.label3.TabIndex = 25;
             this.label3.Text = "Số Điện Thoại";
             // 
@@ -90,10 +88,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label4.Location = new System.Drawing.Point(85, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(113, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 19);
+            this.label4.Size = new System.Drawing.Size(188, 24);
             this.label4.TabIndex = 24;
             this.label4.Text = "Tên Nhà Cung Cấp";
             // 
@@ -103,10 +100,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(85, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(113, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 19);
+            this.label2.Size = new System.Drawing.Size(29, 24);
             this.label2.TabIndex = 23;
             this.label2.Text = "ID";
             // 
@@ -123,12 +119,12 @@
             this.SdtNhaCungCap_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.SdtNhaCungCap_tb.Font = new System.Drawing.Font("Arial", 10F);
             this.SdtNhaCungCap_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SdtNhaCungCap_tb.Location = new System.Drawing.Point(590, 19);
-            this.SdtNhaCungCap_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.SdtNhaCungCap_tb.Location = new System.Drawing.Point(787, 23);
+            this.SdtNhaCungCap_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SdtNhaCungCap_tb.Name = "SdtNhaCungCap_tb";
             this.SdtNhaCungCap_tb.PlaceholderText = "";
             this.SdtNhaCungCap_tb.SelectedText = "";
-            this.SdtNhaCungCap_tb.Size = new System.Drawing.Size(172, 32);
+            this.SdtNhaCungCap_tb.Size = new System.Drawing.Size(229, 39);
             this.SdtNhaCungCap_tb.TabIndex = 22;
             // 
             // DiaChi_tb
@@ -144,12 +140,12 @@
             this.DiaChi_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.DiaChi_tb.Font = new System.Drawing.Font("Arial", 10F);
             this.DiaChi_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DiaChi_tb.Location = new System.Drawing.Point(590, 64);
-            this.DiaChi_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.DiaChi_tb.Location = new System.Drawing.Point(787, 79);
+            this.DiaChi_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DiaChi_tb.Name = "DiaChi_tb";
             this.DiaChi_tb.PlaceholderText = "";
             this.DiaChi_tb.SelectedText = "";
-            this.DiaChi_tb.Size = new System.Drawing.Size(172, 32);
+            this.DiaChi_tb.Size = new System.Drawing.Size(229, 39);
             this.DiaChi_tb.TabIndex = 21;
             // 
             // TenNhaCungCap_tb
@@ -165,12 +161,12 @@
             this.TenNhaCungCap_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TenNhaCungCap_tb.Font = new System.Drawing.Font("Arial", 10F);
             this.TenNhaCungCap_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TenNhaCungCap_tb.Location = new System.Drawing.Point(240, 64);
-            this.TenNhaCungCap_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TenNhaCungCap_tb.Location = new System.Drawing.Point(320, 79);
+            this.TenNhaCungCap_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TenNhaCungCap_tb.Name = "TenNhaCungCap_tb";
             this.TenNhaCungCap_tb.PlaceholderText = "";
             this.TenNhaCungCap_tb.SelectedText = "";
-            this.TenNhaCungCap_tb.Size = new System.Drawing.Size(172, 32);
+            this.TenNhaCungCap_tb.Size = new System.Drawing.Size(229, 39);
             this.TenNhaCungCap_tb.TabIndex = 20;
             // 
             // IdNhaCungCap_tb
@@ -186,14 +182,13 @@
             this.IdNhaCungCap_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.IdNhaCungCap_tb.Font = new System.Drawing.Font("Arial", 10F);
             this.IdNhaCungCap_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.IdNhaCungCap_tb.Location = new System.Drawing.Point(240, 19);
-            this.IdNhaCungCap_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.IdNhaCungCap_tb.Location = new System.Drawing.Point(320, 23);
+            this.IdNhaCungCap_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IdNhaCungCap_tb.Name = "IdNhaCungCap_tb";
             this.IdNhaCungCap_tb.PlaceholderText = "";
             this.IdNhaCungCap_tb.SelectedText = "";
-            this.IdNhaCungCap_tb.Size = new System.Drawing.Size(172, 32);
+            this.IdNhaCungCap_tb.Size = new System.Drawing.Size(229, 39);
             this.IdNhaCungCap_tb.TabIndex = 19;
- //           this.IdNhaCungCap_tb.TextChanged += new System.EventHandler(this.IdNhaCungCap_tb_TextChanged);
             // 
             // Huy_bt
             // 
@@ -207,10 +202,10 @@
             this.Huy_bt.FillColor = System.Drawing.Color.Transparent;
             this.Huy_bt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Huy_bt.ForeColor = System.Drawing.Color.Black;
-            this.Huy_bt.Location = new System.Drawing.Point(765, 122);
-            this.Huy_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Huy_bt.Location = new System.Drawing.Point(1020, 150);
+            this.Huy_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Huy_bt.Name = "Huy_bt";
-            this.Huy_bt.Size = new System.Drawing.Size(120, 35);
+            this.Huy_bt.Size = new System.Drawing.Size(160, 43);
             this.Huy_bt.TabIndex = 4;
             this.Huy_bt.Text = "Hủy";
             this.Huy_bt.Click += new System.EventHandler(this.Huy_bt_Click);
@@ -227,10 +222,10 @@
             this.Luu_bt.FillColor = System.Drawing.Color.Transparent;
             this.Luu_bt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Luu_bt.ForeColor = System.Drawing.Color.Black;
-            this.Luu_bt.Location = new System.Drawing.Point(590, 122);
-            this.Luu_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Luu_bt.Location = new System.Drawing.Point(787, 150);
+            this.Luu_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Luu_bt.Name = "Luu_bt";
-            this.Luu_bt.Size = new System.Drawing.Size(120, 35);
+            this.Luu_bt.Size = new System.Drawing.Size(160, 43);
             this.Luu_bt.TabIndex = 3;
             this.Luu_bt.Text = "Lưu";
             this.Luu_bt.Click += new System.EventHandler(this.Luu_bt_Click);
@@ -247,10 +242,10 @@
             this.CapNhap_bt.FillColor = System.Drawing.Color.Transparent;
             this.CapNhap_bt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CapNhap_bt.ForeColor = System.Drawing.Color.Black;
-            this.CapNhap_bt.Location = new System.Drawing.Point(402, 122);
-            this.CapNhap_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CapNhap_bt.Location = new System.Drawing.Point(536, 150);
+            this.CapNhap_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CapNhap_bt.Name = "CapNhap_bt";
-            this.CapNhap_bt.Size = new System.Drawing.Size(120, 35);
+            this.CapNhap_bt.Size = new System.Drawing.Size(160, 43);
             this.CapNhap_bt.TabIndex = 2;
             this.CapNhap_bt.Text = "Cập Nhật";
             this.CapNhap_bt.Click += new System.EventHandler(this.CapNhap_bt_Click);
@@ -266,10 +261,10 @@
             this.Xoa_bt.FillColor = System.Drawing.Color.Transparent;
             this.Xoa_bt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Xoa_bt.ForeColor = System.Drawing.Color.Black;
-            this.Xoa_bt.Location = new System.Drawing.Point(206, 122);
-            this.Xoa_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Xoa_bt.Location = new System.Drawing.Point(275, 150);
+            this.Xoa_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Xoa_bt.Name = "Xoa_bt";
-            this.Xoa_bt.Size = new System.Drawing.Size(120, 35);
+            this.Xoa_bt.Size = new System.Drawing.Size(160, 43);
             this.Xoa_bt.TabIndex = 1;
             this.Xoa_bt.Text = "Xóa";
             this.Xoa_bt.Click += new System.EventHandler(this.Xoa_bt_Click);
@@ -286,10 +281,10 @@
             this.Them_bt.FillColor = System.Drawing.Color.Transparent;
             this.Them_bt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Them_bt.ForeColor = System.Drawing.Color.Black;
-            this.Them_bt.Location = new System.Drawing.Point(28, 122);
-            this.Them_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Them_bt.Location = new System.Drawing.Point(37, 150);
+            this.Them_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Them_bt.Name = "Them_bt";
-            this.Them_bt.Size = new System.Drawing.Size(120, 35);
+            this.Them_bt.Size = new System.Drawing.Size(160, 43);
             this.Them_bt.TabIndex = 0;
             this.Them_bt.Text = "Thêm";
             this.Them_bt.Click += new System.EventHandler(this.Them_bt_Click);
@@ -302,9 +297,9 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(922, 63);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1229, 78);
             this.guna2GradientPanel1.TabIndex = 29;
             // 
             // label1
@@ -313,10 +308,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(431, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 26);
+            this.label1.Size = new System.Drawing.Size(362, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Nhà Cung Cấp";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,8 +345,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DanhSachNhaCungCap_dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.DanhSachNhaCungCap_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.DanhSachNhaCungCap_dgv.Location = new System.Drawing.Point(0, 64);
-            this.DanhSachNhaCungCap_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DanhSachNhaCungCap_dgv.Location = new System.Drawing.Point(0, 79);
+            this.DanhSachNhaCungCap_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DanhSachNhaCungCap_dgv.Name = "DanhSachNhaCungCap_dgv";
             this.DanhSachNhaCungCap_dgv.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -366,7 +360,7 @@
             this.DanhSachNhaCungCap_dgv.RowHeadersVisible = false;
             this.DanhSachNhaCungCap_dgv.RowHeadersWidth = 51;
             this.DanhSachNhaCungCap_dgv.RowTemplate.Height = 24;
-            this.DanhSachNhaCungCap_dgv.Size = new System.Drawing.Size(922, 264);
+            this.DanhSachNhaCungCap_dgv.Size = new System.Drawing.Size(1229, 329);
             this.DanhSachNhaCungCap_dgv.TabIndex = 30;
             this.DanhSachNhaCungCap_dgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Dark;
             this.DanhSachNhaCungCap_dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
@@ -440,23 +434,23 @@
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 334);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 412);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(922, 184);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1229, 226);
             this.guna2GradientPanel2.TabIndex = 31;
             // 
             // FormNhaCungCap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(922, 518);
+            this.ClientSize = new System.Drawing.Size(1229, 638);
             this.Controls.Add(this.DanhSachNhaCungCap_dgv);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.guna2GradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormNhaCungCap";
             this.Text = "FormNhaCungCap";
             this.Load += new System.EventHandler(this.NhaCungCap_Load);
