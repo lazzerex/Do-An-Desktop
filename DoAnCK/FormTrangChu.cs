@@ -188,13 +188,10 @@ namespace DoAnCK
         {
             try
             {
-                string filePath_hh = "Resources/hang_hoa.dat";
-                using (StreamReader reader = new StreamReader(filePath_hh))
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-                    kho.ds_hang_hoa = (List<HangHoa>)serializer.Deserialize(reader);
-                }
+                // Đảm bảo dữ liệu đã được tải mới nhất
+                kho.LoadData();
 
+                // Hiển thị dữ liệu từ kho.ds_hang_hoa đã được cập nhật
                 foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
@@ -209,6 +206,7 @@ namespace DoAnCK
             }
         }
         #endregion
+
     }
 }
 

@@ -60,13 +60,13 @@
             this.KhungTimKiem_tb.IconRight = ((System.Drawing.Image)(resources.GetObject("KhungTimKiem_tb.IconRight")));
             this.KhungTimKiem_tb.IconRightOffset = new System.Drawing.Point(5, 0);
             this.KhungTimKiem_tb.IconRightSize = new System.Drawing.Size(25, 25);
-            this.KhungTimKiem_tb.Location = new System.Drawing.Point(919, 12);
-            this.KhungTimKiem_tb.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.KhungTimKiem_tb.Location = new System.Drawing.Point(689, 10);
+            this.KhungTimKiem_tb.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.KhungTimKiem_tb.Name = "KhungTimKiem_tb";
             this.KhungTimKiem_tb.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             this.KhungTimKiem_tb.PlaceholderText = "";
             this.KhungTimKiem_tb.SelectedText = "";
-            this.KhungTimKiem_tb.Size = new System.Drawing.Size(267, 34);
+            this.KhungTimKiem_tb.Size = new System.Drawing.Size(200, 28);
             this.KhungTimKiem_tb.TabIndex = 5;
             this.KhungTimKiem_tb.TextChanged += new System.EventHandler(this.KhungTimKiem_tb_TextChanged);
             this.KhungTimKiem_tb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.KhungTimKiem_tb_MouseClick);
@@ -87,11 +87,12 @@
             this.ThoiTrang_bt.ForeColor = System.Drawing.Color.Black;
             this.ThoiTrang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ThoiTrang_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.ThoiTrang_bt.Location = new System.Drawing.Point(957, 81);
+            this.ThoiTrang_bt.Location = new System.Drawing.Point(718, 66);
+            this.ThoiTrang_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ThoiTrang_bt.Name = "ThoiTrang_bt";
             this.ThoiTrang_bt.PressedColor = System.Drawing.Color.White;
             this.ThoiTrang_bt.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.ThoiTrang_bt.Size = new System.Drawing.Size(203, 44);
+            this.ThoiTrang_bt.Size = new System.Drawing.Size(152, 36);
             this.ThoiTrang_bt.TabIndex = 17;
             this.ThoiTrang_bt.Text = "Thời Trang";
             this.ThoiTrang_bt.Click += new System.EventHandler(this.ThoiTrang_bt_Click);
@@ -112,11 +113,12 @@
             this.DienTu_bt.ForeColor = System.Drawing.Color.Black;
             this.DienTu_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DienTu_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.DienTu_bt.Location = new System.Drawing.Point(651, 81);
+            this.DienTu_bt.Location = new System.Drawing.Point(488, 66);
+            this.DienTu_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DienTu_bt.Name = "DienTu_bt";
             this.DienTu_bt.PressedColor = System.Drawing.Color.White;
             this.DienTu_bt.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.DienTu_bt.Size = new System.Drawing.Size(203, 44);
+            this.DienTu_bt.Size = new System.Drawing.Size(152, 36);
             this.DienTu_bt.TabIndex = 16;
             this.DienTu_bt.Text = "Điện Tử";
             this.DienTu_bt.Click += new System.EventHandler(this.DienTu_bt_Click);
@@ -137,11 +139,12 @@
             this.GiaDung_bt.ForeColor = System.Drawing.Color.Black;
             this.GiaDung_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.GiaDung_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.GiaDung_bt.Location = new System.Drawing.Point(336, 81);
+            this.GiaDung_bt.Location = new System.Drawing.Point(252, 66);
+            this.GiaDung_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GiaDung_bt.Name = "GiaDung_bt";
             this.GiaDung_bt.PressedColor = System.Drawing.Color.White;
             this.GiaDung_bt.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.GiaDung_bt.Size = new System.Drawing.Size(203, 44);
+            this.GiaDung_bt.Size = new System.Drawing.Size(152, 36);
             this.GiaDung_bt.TabIndex = 15;
             this.GiaDung_bt.Text = "Gia Dụng";
             this.GiaDung_bt.Click += new System.EventHandler(this.GiaDung_bt_Click);
@@ -162,11 +165,12 @@
             this.TatCaHangHoa_bt.ForeColor = System.Drawing.Color.Black;
             this.TatCaHangHoa_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TatCaHangHoa_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.TatCaHangHoa_bt.Location = new System.Drawing.Point(36, 81);
+            this.TatCaHangHoa_bt.Location = new System.Drawing.Point(27, 66);
+            this.TatCaHangHoa_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TatCaHangHoa_bt.Name = "TatCaHangHoa_bt";
             this.TatCaHangHoa_bt.PressedColor = System.Drawing.Color.White;
             this.TatCaHangHoa_bt.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.TatCaHangHoa_bt.Size = new System.Drawing.Size(203, 44);
+            this.TatCaHangHoa_bt.Size = new System.Drawing.Size(152, 36);
             this.TatCaHangHoa_bt.TabIndex = 14;
             this.TatCaHangHoa_bt.Text = "Tất Cả";
             this.TatCaHangHoa_bt.Click += new System.EventHandler(this.TatCaHangHoa_bt_Click);
@@ -174,10 +178,9 @@
             // DanhSachHangHoa_flp
             // 
             this.DanhSachHangHoa_flp.AutoScroll = true;
-            this.DanhSachHangHoa_flp.Location = new System.Drawing.Point(13, 148);
-            this.DanhSachHangHoa_flp.Margin = new System.Windows.Forms.Padding(4);
+            this.DanhSachHangHoa_flp.Location = new System.Drawing.Point(10, 120);
             this.DanhSachHangHoa_flp.Name = "DanhSachHangHoa_flp";
-            this.DanhSachHangHoa_flp.Size = new System.Drawing.Size(1203, 480);
+            this.DanhSachHangHoa_flp.Size = new System.Drawing.Size(902, 390);
             this.DanhSachHangHoa_flp.TabIndex = 14;
             // 
             // guna2GradientPanel1
@@ -188,9 +191,10 @@
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(6, 3);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(4, 2);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1211, 60);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(908, 49);
             this.guna2GradientPanel1.TabIndex = 18;
             // 
             // ThemHangHoa_bt
@@ -210,9 +214,10 @@
             this.ThemHangHoa_bt.ForeColor = System.Drawing.Color.Black;
             this.ThemHangHoa_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.ThemHangHoa_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ThemHangHoa_bt.Location = new System.Drawing.Point(13, 9);
+            this.ThemHangHoa_bt.Location = new System.Drawing.Point(10, 7);
+            this.ThemHangHoa_bt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ThemHangHoa_bt.Name = "ThemHangHoa_bt";
-            this.ThemHangHoa_bt.Size = new System.Drawing.Size(245, 42);
+            this.ThemHangHoa_bt.Size = new System.Drawing.Size(184, 34);
             this.ThemHangHoa_bt.TabIndex = 17;
             this.ThemHangHoa_bt.Text = "Thêm Hàng Hóa";
             this.ThemHangHoa_bt.Click += new System.EventHandler(this.ThemHangHoa_bt_Click);
@@ -223,18 +228,20 @@
             this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1210, 60);
+            this.label1.Size = new System.Drawing.Size(908, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Hàng Hóa";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            
             // 
             // FormTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1229, 637);
+            this.ClientSize = new System.Drawing.Size(922, 518);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.ThoiTrang_bt);
             this.Controls.Add(this.DienTu_bt);
@@ -242,7 +249,6 @@
             this.Controls.Add(this.TatCaHangHoa_bt);
             this.Controls.Add(this.DanhSachHangHoa_flp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTrangChu";
             this.Text = "FormTrangChu";
             this.Load += new System.EventHandler(this.FormTrangChu_Load);
