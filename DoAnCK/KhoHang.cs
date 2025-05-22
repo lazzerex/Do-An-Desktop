@@ -9,6 +9,19 @@ namespace DoAnCK
 {
     public class KhoHang
     {
+
+
+        private static KhoHang _instance;
+        public static KhoHang Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new KhoHang();
+                return _instance;
+            }
+        }
+
         public List<HangHoa> ds_hang_hoa = new List<HangHoa>();
         public List<NhanVien> ds_nhan_vien = new List<NhanVien>();
         public List<CuaHang> ds_cua_hang = new List<CuaHang>();
@@ -18,6 +31,8 @@ namespace DoAnCK
 
         private SQLiteHelper dbHelper;
         private bool useDatabase = false;
+
+        public NhanVien CurrentNhanVien { get; set; }
 
         // constructor của lớp KhoHang
         public KhoHang()
@@ -35,6 +50,9 @@ namespace DoAnCK
             try
             {
                 dbHelper = new SQLiteHelper(dbFilePath);
+
+                // Khởi tạo Logger sớm
+                Logger.Initialize(dbFilePath);
 
                 // Kiểm tra kết nối
                 if (dbHelper.TestConnection())
@@ -88,6 +106,37 @@ namespace DoAnCK
             }
         }
 
+        public void XoaNhaCungCap(string idNcc)
+        {
+            // Xóa từ cơ sở dữ liệu SQLite
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    dbHelper.DeleteNhaCungCap(idNcc);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi xóa từ SQLite: {ex.Message}");
+                }
+            }
+        }
+
+        public void XoaCuaHang(string idCh)
+        {
+            // Xóa từ cơ sở dữ liệu SQLite
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    dbHelper.DeleteCuaHang(idCh);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi xóa từ SQLite: {ex.Message}");
+                }
+            }
+        }
         public bool kha_dung(QuanLyNhapXuat qlnx)
         {
             for (int i = 0; i < qlnx.ds_hang_hoa.Count; i++)
@@ -169,29 +218,54 @@ namespace DoAnCK
             }
         }
 
-        public void ThemHoaDonNhap(HoaDonNhap hoaDon)
-        {
-            ds_hoa_don_nhap.Add(hoaDon);
-            LuuDanhSachHDN();
-        }
-
-        public void ThemHoaDonXuat(HoaDonXuat hoaDon)
-        {
-            ds_hoa_don_xuat.Add(hoaDon);
-            LuuDanhSachHDX();
-        }
-
         public void them_hh(HangHoa hh)
         {
             ds_hang_hoa.Add(hh);
             LuuDanhSachHH();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogThemHangHoa(CurrentNhanVien, hh);
+            }
         }
 
         public void xoa_hh(HangHoa hh)
         {
             ds_hang_hoa.Remove(hh);
             LuuDanhSachHH();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogXoaHangHoa(CurrentNhanVien, hh);
+            }
         }
+
+        public void ThemHoaDonNhap(HoaDonNhap hoaDon)
+        {
+            ds_hoa_don_nhap.Add(hoaDon);
+            LuuDanhSachHDN();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogNhapHang(CurrentNhanVien, hoaDon);
+            }
+        }
+
+        public void ThemHoaDonXuat(HoaDonXuat hoaDon)
+        {
+            ds_hoa_don_xuat.Add(hoaDon);
+            LuuDanhSachHDX();
+
+            // Ghi log
+            if (CurrentNhanVien != null)
+            {
+                Logger.LogXuatHang(CurrentNhanVien, hoaDon);
+            }
+        }
+
 
         public void LoadData(bool fromDatabase = false)
         {
@@ -371,6 +445,8 @@ namespace DoAnCK
                     throw new Exception($"Không thể lưu dữ liệu nhân viên: {ex.Message}", ex);
                 }
             }
+            
+            
         }
 
         public void LuuDanhSachNCC()
@@ -407,6 +483,8 @@ namespace DoAnCK
                     throw new Exception($"Không thể lưu dữ liệu nhà cung cấp: {ex.Message}", ex);
                 }
             }
+
+       
         }
 
         private void LuuDanhSach(string filePath, object data)

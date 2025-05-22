@@ -76,6 +76,12 @@
     <Compile Include="FormThongTinNhanVien.Designer.cs">
       <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemLog.Designer.cs">
+      <DependentUpon>FormXemLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon2Component.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +170,7 @@
     </Compile>
     <Compile Include="HoaDon.cs" />
     <Compile Include="KhoHang.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="NhaCungCap.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
@@ -177,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinNhanVien.resx">
       <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemLog.resx">
+      <DependentUpon>FormXemLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon2Component.resx">
       <DependentUpon>HoaDon2Component.cs</DependentUpon>

@@ -12,7 +12,7 @@ namespace DoAnCK
 {
     public partial class FormThongTinNhanVien : Form
     {
-        private KhoHang kho = new KhoHang();
+        private KhoHang kho = KhoHang.Instance;
 
         public FormThongTinNhanVien()
         {
@@ -20,7 +20,10 @@ namespace DoAnCK
             kho.LoadData();
             LoadDanhSachNhanVien();
         }
-
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         private void LoadDanhSachNhanVien()
         {
             dataGridViewNhanVien.Rows.Clear();

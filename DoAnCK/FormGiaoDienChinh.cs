@@ -7,6 +7,11 @@ namespace DoAnCK
 {
     public partial class FormGiaoDienChinh : System.Windows.Forms.Form
     {
+        private KhoHang kho = KhoHang.Instance;
+        public void SetCurrentNhanVien(NhanVien nhanVien)
+        {
+            kho.CurrentNhanVien = nhanVien;
+        }
         public FormGiaoDienChinh()
         {
             InitializeComponent();
@@ -28,7 +33,7 @@ namespace DoAnCK
 
         private System.Windows.Forms.Button btnAdmin;
 
-        private NhanVien current_nv;
+        private NhanVien currentNhanVien;
         private void ShowLoginForm()
         {
             try
@@ -40,26 +45,27 @@ namespace DoAnCK
                 }
                 else
                 {
-                    NhanVien_lb.Text = "Nhân viên: " + formDangNhap.current_nv.TenNv;
-                    Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
-                    OpenChildForm(new FormTrangChu());
-                    current_nv = formDangNhap.current_nv;
+                    // Đảm bảo đã có biến current_nv từ formDangNhap
+                    currentNhanVien = formDangNhap.current_nv;
 
-                    // Hiển thị nút Admin và các nút SQLite nếu người dùng là admin
-                    if (current_nv.IsAdmin)
-                    {
-                        btnAdmin.Visible = true;
-                        btnLoadData.Visible = true;
-                        btnCheckSQLite.Visible = true;
-                        btnCreateTables.Visible = true;
-                    }
-                    else
-                    {
-                        btnAdmin.Visible = false;
-                        btnLoadData.Visible = false;
-                        btnCheckSQLite.Visible = false;
-                        btnCreateTables.Visible = false;
-                    }
+                    NhanVien_lb.Text = "Nhân viên: " + currentNhanVien.TenNv;
+                    Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
+
+                    // Sử dụng đối tượng singleton KhoHang.Instance
+                    kho.CurrentNhanVien = currentNhanVien;
+
+                    // Khởi tạo Logger
+                    string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
+                    Logger.Initialize(dbPath);
+
+                    // Hiển thị form trang chủ
+                    FormTrangChu formTrangChu = new FormTrangChu();
+                    formTrangChu.CurrentNhanVien = currentNhanVien;  // Truyền CurrentNhanVien
+                    OpenChildForm(formTrangChu);
+
+                    // Hiển thị nút Admin nếu người dùng là admin
+                    if (btnAdmin != null)
+                        btnAdmin.Visible = currentNhanVien.IsAdmin;
                 }
             }
             catch (Exception ex)
@@ -68,11 +74,12 @@ namespace DoAnCK
             }
         }
 
+
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             try
             {
-                OpenChildForm(new FormQuanLyAdmin(current_nv));
+                OpenChildForm(new FormQuanLyAdmin(currentNhanVien));
                 // Bỏ check tất cả các nút menu khác
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
@@ -195,7 +202,7 @@ namespace DoAnCK
         {
             try
             {
-                OpenChildForm(new FormNhapXuat(current_nv, true));
+                OpenChildForm(new FormNhapXuat(currentNhanVien, true));
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = true;
                 XuatHang_bt.Checked = false;
@@ -214,7 +221,7 @@ namespace DoAnCK
         {
             try
             {
-                OpenChildForm(new FormNhapXuat(current_nv, false));
+                OpenChildForm(new FormNhapXuat(currentNhanVien, false));
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = true;
@@ -233,7 +240,15 @@ namespace DoAnCK
         {
             try
             {
-                OpenChildForm(new FormCuaHang());
+                // Tạo và truyền currentNhanVien khi khởi tạo FormCuaHang
+                FormCuaHang formCuaHang = new FormCuaHang(currentNhanVien);
+
+          
+
+                // Mở form đã được khởi tạo với CurrentNhanVien
+                OpenChildForm(formCuaHang);
+
+                // Phần còn lại giữ nguyên
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = false;
@@ -248,11 +263,18 @@ namespace DoAnCK
             }
         }
 
+
         private void NhaCungCap_bt_Click(object sender, EventArgs e)
         {
             try
             {
-                OpenChildForm(new FormNhaCungCap());
+                // Tạo đối tượng FormNhaCungCap và truyền CurrentNhanVien
+                FormNhaCungCap formNhaCungCap = new FormNhaCungCap();
+                formNhaCungCap.SetCurrentNhanVien(currentNhanVien);
+
+                // Mở form đã được cài đặt CurrentNhanVien
+                OpenChildForm(formNhaCungCap);
+
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
                 XuatHang_bt.Checked = false;
@@ -266,6 +288,7 @@ namespace DoAnCK
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void HoaDonNhap_bt_Click(object sender, EventArgs e)
         {
@@ -345,6 +368,62 @@ namespace DoAnCK
                 MessageBox.Show("Lỗi khi tạo bảng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void FormGiaoDienChinh_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // Thay vì sử dụng TenNV_lbl, ChucVu_lbl không tồn tại, hãy sử dụng NhanVien_lb đã có
+                if (currentNhanVien != null)
+                {
+                    NhanVien_lb.Text = "Nhân viên: " + currentNhanVien.TenNv;
+                    // Ngay_lb hiện tại đã có trong form, không cần thay đổi
+
+                    // Khởi tạo Logger
+                    string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
+                    Logger.Initialize(dbPath);
+
+
+
+                    // Thay vì sử dụng pnlAdmin không tồn tại, hãy sử dụng btnAdmin đã có trong form
+                    btnAdmin.Visible = currentNhanVien.IsAdmin;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải form: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void FormGiaoDienChinh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Ghi log đăng xuất
+            try
+            {
+                if (currentNhanVien != null)
+                    Logger.LogLogout(currentNhanVien);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi một cách im lặng để không ảnh hưởng đến trải nghiệm người dùng
+                Console.WriteLine("Lỗi ghi log đăng xuất: " + ex.Message);
+            }
+        }
+        private void btnXemLog_Click(object sender, EventArgs e)
+        {
+            if (currentNhanVien != null && currentNhanVien.IsAdmin)
+            {
+                FormXemLog formXemLog = new FormXemLog();
+                formXemLog.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập tính năng này!",
+                    "Quyền truy cập bị từ chối", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         #endregion
 

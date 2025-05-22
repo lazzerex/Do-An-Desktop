@@ -54,3 +54,4 @@ D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.exe
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.pdb
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormQuanLyAdmin.resources
 D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormThongTinNhanVien.resources
+D:\Desktop\HocTrenTruong\LapTrinhDesktop\prj\DoAnCK\obj\Debug\DoAnCK.FormXemLog.resources
