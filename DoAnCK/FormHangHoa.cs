@@ -107,7 +107,7 @@ namespace DoAnCK
             {
                 string loai_hh = LoaiHangHoa_cb.Text;
 
-                if (TenHangHoa_tb.Text == "" || IdHangHoa_tb.Text == "" || DonGia_tb.Text == "" || LoaiHangHoa_cb.Text == "")
+                if (TenHangHoa_tb.Text == "" || IdHangHoa_tb.Text == "" || DonGia_tb.Text == "" || GiaBan_tb.Text == "" || LoaiHangHoa_cb.Text == "")
                 {
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -123,7 +123,8 @@ namespace DoAnCK
                                 TenHangHoa_tb.Text,
                                 Convert.ToUInt32(SoLuong_tb.Text),
                                 Convert.ToUInt64(DonGia_tb.Text),
-                                img_filepath);
+                                img_filepath,
+                                Convert.ToUInt64(GiaBan_tb.Text));
 
                             kho.them_hh(hh);
                         }
@@ -134,7 +135,8 @@ namespace DoAnCK
                                 TenHangHoa_tb.Text,
                                 Convert.ToUInt32(SoLuong_tb.Text),
                                 Convert.ToUInt64(DonGia_tb.Text),
-                                img_filepath);
+                                img_filepath,
+                                Convert.ToUInt64(GiaBan_tb.Text));
 
                             kho.them_hh(hh);
                         }
@@ -145,11 +147,11 @@ namespace DoAnCK
                                 TenHangHoa_tb.Text,
                                 Convert.ToUInt32(SoLuong_tb.Text),
                                 Convert.ToUInt64(DonGia_tb.Text),
-                                img_filepath);
+                                img_filepath,
+                                Convert.ToUInt64(GiaBan_tb.Text));
 
                             kho.them_hh(hh);
                         }
-
 
                         formTrangChu.Reload_flp();
                         this.Close();
@@ -161,6 +163,7 @@ namespace DoAnCK
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void XoaHang_tb_Click(object sender, EventArgs e)
         {
@@ -219,13 +222,15 @@ namespace DoAnCK
                     TenHangHoa_tb.Text = hh.TenHang;
                     SoLuong_tb.Text = hh.SoLuong.ToString();
                     DonGia_tb.Text = hh.DonGia.ToString();
+                    GiaBan_tb.Text = hh.GiaBan.ToString();
+
                     if (hh is DienTu)
                     {
                         LoaiHangHoa_cb.Text = "Điện tử";
                     }
                     else if (hh is ThoiTrang)
                     {
-                        LoaiHangHoa_cb.Text = "Thởi trang";
+                        LoaiHangHoa_cb.Text = "Thời trang";
                     }
                     else if (hh is GiaDung)
                     {
@@ -236,10 +241,11 @@ namespace DoAnCK
                     IdHangHoa_tb.Enabled = false;
                     TenHangHoa_tb.Enabled = false;
                     DonGia_tb.Enabled = false;
+                    GiaBan_tb.Enabled = false;
                     LoaiHangHoa_cb.Enabled = false;
                     SoLuong_tb.Enabled = false;
                     Themhang_bt.Visible = false;
-                    XoaHang_bt.Visible = true; 
+                    XoaHang_bt.Visible = true;
                 }
             }
             catch (Exception ex)

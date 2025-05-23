@@ -5,7 +5,7 @@ namespace DoAnCK
 {
     public partial class FormNhapXuat : System.Windows.Forms.Form
     {
-        private bool isnhap;
+        public bool isnhap { get; private set; }
         private KhoHang kho = KhoHang.Instance;
         private QuanLyNhapXuat qlnx = new QuanLyNhapXuat();
         private NhanVien currentNhanVien = new NhanVien();

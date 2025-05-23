@@ -355,5 +355,7 @@
         private Guna.UI2.WinForms.Guna2TextBox SoLuong_tb;
         private Guna.UI2.WinForms.Guna2Button XoaHang_bt;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2TextBox GiaBan_tb;
+        private Guna.UI2.WinForms.Guna2HtmlLabel GiaBan_lb;
     }
 }

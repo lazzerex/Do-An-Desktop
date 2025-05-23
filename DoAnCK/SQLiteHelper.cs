@@ -55,6 +55,54 @@ namespace DoAnCK
             }
         }
 
+        public void AddGiaBanColumnIfNotExists()
+        {
+            try
+            {
+                // Kiểm tra xem cột gia_ban đã tồn tại trong bảng ChiTietHoaDon chưa
+                bool giaBanColumnExistsInCTHD = false;
+                DataTable tableInfoCTHD = GetTableStructure("ChiTietHoaDon");
+                foreach (DataRow row in tableInfoCTHD.Rows)
+                {
+                    if (row["name"].ToString().ToLower() == "gia_ban")
+                    {
+                        giaBanColumnExistsInCTHD = true;
+                        break;
+                    }
+                }
+
+                // Nếu cột gia_ban chưa tồn tại trong bảng ChiTietHoaDon, thêm vào
+                if (!giaBanColumnExistsInCTHD)
+                {
+                    ExecuteNonQuery("ALTER TABLE ChiTietHoaDon ADD COLUMN gia_ban INTEGER DEFAULT 0;");
+                    Console.WriteLine("Đã thêm cột gia_ban vào bảng ChiTietHoaDon");
+                }
+
+                // Kiểm tra xem cột gia_ban đã tồn tại trong bảng HangHoa chưa
+                bool giaBanColumnExistsInHH = false;
+                DataTable tableInfoHH = GetTableStructure("HangHoa");
+                foreach (DataRow row in tableInfoHH.Rows)
+                {
+                    if (row["name"].ToString().ToLower() == "gia_ban")
+                    {
+                        giaBanColumnExistsInHH = true;
+                        break;
+                    }
+                }
+
+                // Nếu cột gia_ban chưa tồn tại trong bảng HangHoa, thêm vào
+                if (!giaBanColumnExistsInHH)
+                {
+                    ExecuteNonQuery("ALTER TABLE HangHoa ADD COLUMN gia_ban INTEGER DEFAULT 0;");
+                    Console.WriteLine("Đã thêm cột gia_ban vào bảng HangHoa");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi thêm cột gia_ban: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void CreateNhaCungCapTable()
         {
             string query = @"
@@ -93,6 +141,7 @@ namespace DoAnCK
                 ten_hang TEXT NOT NULL,
                 so_luong INTEGER,
                 don_gia INTEGER,
+                gia_ban INTEGER,
                 img TEXT,
                 loai TEXT
             );";
@@ -136,14 +185,15 @@ namespace DoAnCK
         {
             string query = @"
             CREATE TABLE IF NOT EXISTS ChiTietHoaDon (
-                id_hoa_don TEXT,
-                id_hang_hoa TEXT,
-                so_luong INTEGER,
-                don_gia INTEGER,
-                PRIMARY KEY (id_hoa_don, id_hang_hoa),
-                FOREIGN KEY (id_hoa_don) REFERENCES HoaDon(id_hoa_don),
-                FOREIGN KEY (id_hang_hoa) REFERENCES HangHoa(id)
-            );";
+            id_hoa_don TEXT,
+            id_hang_hoa TEXT,
+            so_luong INTEGER,
+            don_gia INTEGER,
+            gia_ban INTEGER,
+            PRIMARY KEY (id_hoa_don, id_hang_hoa),
+            FOREIGN KEY (id_hoa_don) REFERENCES HoaDon(id_hoa_don),
+            FOREIGN KEY (id_hang_hoa) REFERENCES HangHoa(id)
+    );";
 
             ExecuteNonQuery(query);
         }
@@ -215,8 +265,8 @@ public void InsertNhanVien(NhanVien nv)
                 loai = "ThoiTrang";
 
             string query = $@"
-            INSERT OR REPLACE INTO HangHoa (id, ten_hang, so_luong, don_gia, img, loai)
-            VALUES ('{hh.Id}', '{hh.TenHang}', {hh.SoLuong}, {hh.DonGia}, '{hh.Img}', '{loai}');";
+            INSERT OR REPLACE INTO HangHoa (id, ten_hang, so_luong, don_gia, img, loai, gia_ban)
+            VALUES ('{hh.Id}', '{hh.TenHang}', {hh.SoLuong}, {hh.DonGia}, '{hh.Img}', '{loai}',{hh.GiaBan});";
 
             ExecuteNonQuery(query);
         }
@@ -248,8 +298,8 @@ public void InsertNhanVien(NhanVien nv)
             foreach (HangHoa hh in hoaDon.Qlnx.ds_hang_hoa)
             {
                 string detailQuery = $@"
-                INSERT OR REPLACE INTO ChiTietHoaDon (id_hoa_don, id_hang_hoa, so_luong, don_gia)
-                VALUES ('{hoaDon.IdHoaDon}', '{hh.Id}', {hh.SoLuong}, {hh.DonGia});";
+INSERT OR REPLACE INTO ChiTietHoaDon (id_hoa_don, id_hang_hoa, so_luong, don_gia,gia_ban)
+VALUES ('{hoaDon.IdHoaDon}', '{hh.Id}', {hh.SoLuong}, {hh.DonGia}, {hh.GiaBan});";
 
                 ExecuteNonQuery(detailQuery);
             }
@@ -283,8 +333,8 @@ public void InsertNhanVien(NhanVien nv)
                 // Tiếp tục ghi log
                 string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 string query = $@"
-        INSERT INTO ActivityLog (timestamp, id_nv, activity_type, description, details)
-        VALUES ('{timestamp}', '{idNv}', '{activityType}', '{description}', '{details}');";
+                INSERT INTO ActivityLog (timestamp, id_nv, activity_type, description, details)
+                VALUES ('{timestamp}', '{idNv}', '{activityType}', '{description}', '{details}');";
 
                 ExecuteNonQuery(query);
                 System.Diagnostics.Debug.WriteLine("InsertLog thành công!");
@@ -300,7 +350,7 @@ public void InsertNhanVien(NhanVien nv)
 
 
         public DataTable GetLogsByFilter(string idNv = null, string activityType = null,
-    DateTime? fromDate = null, DateTime? toDate = null)
+             DateTime? fromDate = null, DateTime? toDate = null)
         {
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append(@"
@@ -451,6 +501,9 @@ public void InsertNhanVien(NhanVien nv)
                     }
                 }
             }
+
+            // Kiểm tra và thêm cột gia_ban vào bảng HangHoa và ChiTietHoaDon nếu chưa có
+            AddGiaBanColumnIfNotExists();
         }
 
 
@@ -582,6 +635,7 @@ public void InsertNhanVien(NhanVien nv)
                 string ten = row["ten_hang"].ToString();
                 uint soLuong = Convert.ToUInt32(row["so_luong"]);
                 ulong donGia = Convert.ToUInt64(row["don_gia"]);
+                ulong giaBan = Convert.ToUInt64(row["gia_ban"]);
                 string img = row["img"].ToString();
                 string loai = row["loai"].ToString();
 
@@ -590,13 +644,13 @@ public void InsertNhanVien(NhanVien nv)
                 switch (loai)
                 {
                     case "DienTu":
-                        hh = new DienTu(id, ten, soLuong, donGia, img);
+                        hh = new DienTu(id, ten, soLuong, donGia, img, giaBan);
                         break;
                     case "GiaDung":
-                        hh = new GiaDung(id, ten, soLuong, donGia, img);
+                        hh = new GiaDung(id, ten, soLuong, donGia, img,giaBan);
                         break;
                     case "ThoiTrang":
-                        hh = new ThoiTrang(id, ten, soLuong, donGia, img);
+                        hh = new ThoiTrang(id, ten, soLuong, donGia, img,giaBan);
                         break;
                 }
 
@@ -692,7 +746,7 @@ public void InsertNhanVien(NhanVien nv)
             QuanLyNhapXuat qlnx = new QuanLyNhapXuat();
 
             string query = $@"
-                SELECT ct.*, h.id, h.ten_hang, h.so_luong, h.don_gia, h.img, h.loai
+                SELECT ct.*, h.id, h.ten_hang, h.so_luong, h.don_gia, h.img, h.loai,h.gia_ban
                 FROM ChiTietHoaDon ct
                 JOIN HangHoa h ON ct.id_hang_hoa = h.id
                 WHERE ct.id_hoa_don = '{idHoaDon}'";
@@ -705,6 +759,7 @@ public void InsertNhanVien(NhanVien nv)
                 string ten = row["ten_hang"].ToString();
                 uint soLuong = Convert.ToUInt32(row["so_luong"]);
                 ulong donGia = Convert.ToUInt64(row["don_gia"]);
+                ulong giaBan = Convert.ToUInt64(row["gia_ban"]);
                 string img = row["img"].ToString();
                 string loai = row["loai"].ToString();
 
@@ -713,13 +768,13 @@ public void InsertNhanVien(NhanVien nv)
                 switch (loai)
                 {
                     case "DienTu":
-                        hh = new DienTu(id, ten, soLuong, donGia, img);
+                        hh = new DienTu(id, ten, soLuong, donGia, img,giaBan);
                         break;
                     case "GiaDung":
-                        hh = new GiaDung(id, ten, soLuong, donGia, img);
+                        hh = new GiaDung(id, ten, soLuong, donGia, img,giaBan);
                         break;
                     case "ThoiTrang":
-                        hh = new ThoiTrang(id, ten, soLuong, donGia, img);
+                        hh = new ThoiTrang(id, ten, soLuong, donGia, img,giaBan);
                         break;
                 }
 

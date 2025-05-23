@@ -13,10 +13,24 @@ namespace DoAnCK
         }
         private FormNhapXuat NhapHang;
         public HangHoa hh;
+
         public void SetProductInfo(HangHoa hh)
         {
+            this.hh = hh;
             ten_lbl.Text = hh.TenHang;
-            dongia_lbl.Text = String.Format("{0:N0}", hh.DonGia);
+
+            // Hiển thị đơn giá hoặc giá bán tùy theo context nhập/xuất hàng
+            if (NhapHang.isnhap)
+            {
+                // Nếu là nhập hàng, hiển thị đơn giá (giá nhập)
+                dongia_lbl.Text = String.Format("{0:N0}", hh.DonGia);
+            }
+            else
+            {
+                // Nếu là xuất hàng, hiển thị giá bán
+                dongia_lbl.Text = String.Format("{0:N0}", hh.GiaBan);
+            }
+
             soluong_lbl.Text = "SL: " + hh.SoLuong.ToString();
             if (hh.Img != null)
             {
