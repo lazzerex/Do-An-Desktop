@@ -646,6 +646,8 @@ public void InsertNhanVien(NhanVien nv)
 
                 // Tạo hóa đơn nhập
                 HoaDonNhap hdn = new HoaDonNhap(qlnx, idHD, nv, ncc, tongTien);
+                DateTime ngayTaoDon = DateTime.Parse(row["ngay_tao_don"].ToString());
+                hdn.NgayTaoDon = ngayTaoDon;
                 khoHang.ds_hoa_don_nhap.Add(hdn);
             }
         }
@@ -683,6 +685,8 @@ public void InsertNhanVien(NhanVien nv)
 
                 // Tạo hóa đơn xuất
                 HoaDonXuat hdx = new HoaDonXuat(qlnx, idHD, nv, ch, tongTien);
+                DateTime ngayTaoDon = DateTime.Parse(row["ngay_tao_don"].ToString());
+                hdx.NgayTaoDon = ngayTaoDon;
                 khoHang.ds_hoa_don_xuat.Add(hdx);
             }
         }
