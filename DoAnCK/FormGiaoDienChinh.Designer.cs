@@ -20,10 +20,6 @@
             base.Dispose(disposing);
         }
 
-        private System.Windows.Forms.Button btnLoadData;
-        private System.Windows.Forms.Button btnCheckSQLite;
-        private System.Windows.Forms.Button btnCreateTables;
-
 
 
         #region Windows Form Designer generated code
@@ -48,15 +44,13 @@
             this.CuaHang_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.HoaDon_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.QuanLy_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.NhaCungCap_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLoadData = new System.Windows.Forms.Button();
-            this.btnCheckSQLite = new System.Windows.Forms.Button();
-            this.btnCreateTables = new System.Windows.Forms.Button();
-            this.QuanLy_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.BaoCao_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientPanel2.SuspendLayout();
             this.nhapxuat.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -136,7 +130,7 @@
             this.HoaDonXuat_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.HoaDonXuat_bt.FillColor = System.Drawing.Color.Transparent;
             this.HoaDonXuat_bt.FillColor2 = System.Drawing.Color.Transparent;
-            this.HoaDonXuat_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoaDonXuat_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoaDonXuat_bt.ForeColor = System.Drawing.Color.Black;
             this.HoaDonXuat_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.HoaDonXuat_bt.HoverState.FillColor = System.Drawing.Color.Transparent;
@@ -169,7 +163,7 @@
             this.HoaDonNhap_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.HoaDonNhap_bt.FillColor = System.Drawing.Color.Transparent;
             this.HoaDonNhap_bt.FillColor2 = System.Drawing.Color.Transparent;
-            this.HoaDonNhap_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoaDonNhap_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoaDonNhap_bt.ForeColor = System.Drawing.Color.Black;
             this.HoaDonNhap_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.HoaDonNhap_bt.HoverState.FillColor = System.Drawing.Color.Transparent;
@@ -192,7 +186,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBody.BackColor = System.Drawing.Color.Transparent;
             this.panelBody.Location = new System.Drawing.Point(20, 124);
-            this.panelBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBody.Margin = new System.Windows.Forms.Padding(4);
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1136, 645);
             this.panelBody.TabIndex = 5;
@@ -209,7 +203,7 @@
             this.NhapHang_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.NhapHang_bt.FillColor = System.Drawing.Color.White;
             this.NhapHang_bt.FillColor2 = System.Drawing.Color.White;
-            this.NhapHang_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhapHang_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhapHang_bt.ForeColor = System.Drawing.Color.Black;
             this.NhapHang_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.NhapHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
@@ -237,7 +231,7 @@
             this.TrangChu_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.TrangChu_bt.FillColor = System.Drawing.Color.White;
             this.TrangChu_bt.FillColor2 = System.Drawing.Color.White;
-            this.TrangChu_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TrangChu_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TrangChu_bt.ForeColor = System.Drawing.Color.Black;
             this.TrangChu_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.TrangChu_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
@@ -265,7 +259,7 @@
             this.XuatHang_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.XuatHang_bt.FillColor = System.Drawing.Color.White;
             this.XuatHang_bt.FillColor2 = System.Drawing.Color.White;
-            this.XuatHang_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XuatHang_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XuatHang_bt.ForeColor = System.Drawing.Color.Black;
             this.XuatHang_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.XuatHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
@@ -293,7 +287,7 @@
             this.CuaHang_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.CuaHang_bt.FillColor = System.Drawing.Color.White;
             this.CuaHang_bt.FillColor2 = System.Drawing.Color.White;
-            this.CuaHang_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CuaHang_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CuaHang_bt.ForeColor = System.Drawing.Color.Black;
             this.CuaHang_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.CuaHang_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
@@ -321,7 +315,7 @@
             this.HoaDon_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.HoaDon_bt.FillColor = System.Drawing.Color.White;
             this.HoaDon_bt.FillColor2 = System.Drawing.Color.White;
-            this.HoaDon_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoaDon_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoaDon_bt.ForeColor = System.Drawing.Color.Black;
             this.HoaDon_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.HoaDon_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
@@ -341,6 +335,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.BaoCao_bt);
             this.guna2Panel1.Controls.Add(this.QuanLy_bt);
             this.guna2Panel1.Controls.Add(this.NhaCungCap_bt);
             this.guna2Panel1.Controls.Add(this.HoaDon_bt);
@@ -355,6 +350,34 @@
             this.guna2Panel1.Size = new System.Drawing.Size(176, 781);
             this.guna2Panel1.TabIndex = 9;
             // 
+            // QuanLy_bt
+            // 
+            this.QuanLy_bt.BorderRadius = 15;
+            this.QuanLy_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.QuanLy_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.QuanLy_bt.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.QuanLy_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
+            this.QuanLy_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.QuanLy_bt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.QuanLy_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.QuanLy_bt.FillColor = System.Drawing.Color.White;
+            this.QuanLy_bt.FillColor2 = System.Drawing.Color.White;
+            this.QuanLy_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLy_bt.ForeColor = System.Drawing.Color.Black;
+            this.QuanLy_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.QuanLy_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.QuanLy_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.QuanLy_bt.Image = ((System.Drawing.Image)(resources.GetObject("QuanLy_bt.Image")));
+            this.QuanLy_bt.ImageOffset = new System.Drawing.Point(0, 10);
+            this.QuanLy_bt.ImageSize = new System.Drawing.Size(40, 40);
+            this.QuanLy_bt.Location = new System.Drawing.Point(23, 613);
+            this.QuanLy_bt.Margin = new System.Windows.Forms.Padding(2);
+            this.QuanLy_bt.Name = "QuanLy_bt";
+            this.QuanLy_bt.Size = new System.Drawing.Size(135, 75);
+            this.QuanLy_bt.TabIndex = 12;
+            this.QuanLy_bt.Text = "Quản Lý";
+            this.QuanLy_bt.Click += new System.EventHandler(this.QuanLy_bt_Click);
+            // 
             // NhaCungCap_bt
             // 
             this.NhaCungCap_bt.BorderRadius = 15;
@@ -367,7 +390,7 @@
             this.NhaCungCap_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.NhaCungCap_bt.FillColor = System.Drawing.Color.White;
             this.NhaCungCap_bt.FillColor2 = System.Drawing.Color.White;
-            this.NhaCungCap_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhaCungCap_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhaCungCap_bt.ForeColor = System.Drawing.Color.Black;
             this.NhaCungCap_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.NhaCungCap_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
@@ -418,9 +441,6 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox1);
             this.guna2GradientPanel3.Controls.Add(this.NhanVien_lb);
             this.guna2GradientPanel3.Controls.Add(this.Ngay_lb);
-            this.guna2GradientPanel3.Controls.Add(this.btnLoadData);
-            this.guna2GradientPanel3.Controls.Add(this.btnCheckSQLite);
-            this.guna2GradientPanel3.Controls.Add(this.btnCreateTables);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -445,69 +465,32 @@
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // btnLoadData
+            // BaoCao_bt
             // 
-            this.btnLoadData.Location = new System.Drawing.Point(750, 31);
-            this.btnLoadData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(100, 50);
-            this.btnLoadData.TabIndex = 5;
-            this.btnLoadData.Text = "Load Data";
-            this.btnLoadData.UseVisualStyleBackColor = true;
-            this.btnLoadData.Visible = false;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
-            // 
-            // btnCheckSQLite
-            // 
-            this.btnCheckSQLite.Location = new System.Drawing.Point(862, 31);
-            this.btnCheckSQLite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCheckSQLite.Name = "btnCheckSQLite";
-            this.btnCheckSQLite.Size = new System.Drawing.Size(112, 50);
-            this.btnCheckSQLite.TabIndex = 6;
-            this.btnCheckSQLite.Text = "Check SQLite";
-            this.btnCheckSQLite.UseVisualStyleBackColor = true;
-            this.btnCheckSQLite.Visible = false;
-            this.btnCheckSQLite.Click += new System.EventHandler(this.btnCheckSQLite_Click);
-            // 
-            // btnCreateTables
-            // 
-            this.btnCreateTables.Location = new System.Drawing.Point(638, 31);
-            this.btnCreateTables.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCreateTables.Name = "btnCreateTables";
-            this.btnCreateTables.Size = new System.Drawing.Size(100, 50);
-            this.btnCreateTables.TabIndex = 7;
-            this.btnCreateTables.Text = "Create Tables";
-            this.btnCreateTables.UseVisualStyleBackColor = true;
-            this.btnCreateTables.Visible = false;
-            this.btnCreateTables.Click += new System.EventHandler(this.btnCreateTables_Click);
-            // 
-            // QuanLy_bt
-            // 
-            this.QuanLy_bt.BorderRadius = 15;
-            this.QuanLy_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
-            this.QuanLy_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.QuanLy_bt.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.QuanLy_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
-            this.QuanLy_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.QuanLy_bt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.QuanLy_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.QuanLy_bt.FillColor = System.Drawing.Color.White;
-            this.QuanLy_bt.FillColor2 = System.Drawing.Color.White;
-            this.QuanLy_bt.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuanLy_bt.ForeColor = System.Drawing.Color.Black;
-            this.QuanLy_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.QuanLy_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
-            this.QuanLy_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.QuanLy_bt.Image = ((System.Drawing.Image)(resources.GetObject("QuanLy_bt.Image")));
-            this.QuanLy_bt.ImageOffset = new System.Drawing.Point(0, 10);
-            this.QuanLy_bt.ImageSize = new System.Drawing.Size(40, 40);
-            this.QuanLy_bt.Location = new System.Drawing.Point(21, 547);
-            this.QuanLy_bt.Margin = new System.Windows.Forms.Padding(2);
-            this.QuanLy_bt.Name = "QuanLy_bt";
-            this.QuanLy_bt.Size = new System.Drawing.Size(135, 75);
-            this.QuanLy_bt.TabIndex = 12;
-            this.QuanLy_bt.Text = "Quản lý";
-            this.QuanLy_bt.Click += new System.EventHandler(this.QuanLy_bt_Click);
+            this.BaoCao_bt.BorderRadius = 15;
+            this.BaoCao_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.BaoCao_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.BaoCao_bt.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.BaoCao_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
+            this.BaoCao_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BaoCao_bt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BaoCao_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BaoCao_bt.FillColor = System.Drawing.Color.White;
+            this.BaoCao_bt.FillColor2 = System.Drawing.Color.White;
+            this.BaoCao_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaoCao_bt.ForeColor = System.Drawing.Color.Black;
+            this.BaoCao_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.BaoCao_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.BaoCao_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.BaoCao_bt.Image = ((System.Drawing.Image)(resources.GetObject("BaoCao_bt.Image")));
+            this.BaoCao_bt.ImageOffset = new System.Drawing.Point(0, 10);
+            this.BaoCao_bt.ImageSize = new System.Drawing.Size(40, 40);
+            this.BaoCao_bt.Location = new System.Drawing.Point(23, 534);
+            this.BaoCao_bt.Margin = new System.Windows.Forms.Padding(2);
+            this.BaoCao_bt.Name = "BaoCao_bt";
+            this.BaoCao_bt.Size = new System.Drawing.Size(135, 75);
+            this.BaoCao_bt.TabIndex = 13;
+            this.BaoCao_bt.Text = "Báo Cáo";
             // 
             // FormGiaoDienChinh
             // 
@@ -519,7 +502,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormGiaoDienChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormGiaoDienChinh_Load);
@@ -555,6 +538,7 @@
         public System.Windows.Forms.Panel panelBody;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2GradientTileButton QuanLy_bt;
+        private Guna.UI2.WinForms.Guna2GradientTileButton BaoCao_bt;
     }
 }
 
