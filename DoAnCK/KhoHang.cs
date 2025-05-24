@@ -612,5 +612,32 @@ namespace DoAnCK
                 return (List<T>)serializer.Deserialize(reader);
             }
         }
+        public string SinhIdHoaDonNhap()
+        {
+            int max = 0;
+            foreach (var hd in ds_hoa_don_nhap)
+            {
+                if (!string.IsNullOrEmpty(hd.IdHoaDon) && hd.IdHoaDon.StartsWith("HDN"))
+                {
+                    if (int.TryParse(hd.IdHoaDon.Substring(3), out int so))
+                        if (so > max) max = so;
+                }
+            }
+            return "HDN" + (max + 1);
+        }
+
+        public string SinhIdHoaDonXuat()
+        {
+            int max = 0;
+            foreach (var hd in ds_hoa_don_xuat)
+            {
+                if (!string.IsNullOrEmpty(hd.IdHoaDon) && hd.IdHoaDon.StartsWith("HDX"))
+                {
+                    if (int.TryParse(hd.IdHoaDon.Substring(3), out int so))
+                        if (so > max) max = so;
+                }
+            }
+            return "HDX" + (max + 1);
+        }
     }
 }

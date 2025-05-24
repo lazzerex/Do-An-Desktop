@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfNhanVien xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NhanVien>
-    <IdNv>AD20250520202749</IdNv>
+    <IdNv>AD20250524155940</IdNv>
     <TenNv>Admin</TenNv>
     <Tuoi>30</Tuoi>
     <GioiTinh>true</GioiTinh>

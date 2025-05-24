@@ -242,8 +242,8 @@ namespace DoAnCK
                         kho.capnhatkho(qlnx, true);
 
                         HoaDonNhap hoaDonNhap = new HoaDonNhap(qlnx, null, currentNhanVien, current_ncc, qlnx.tinh_tong_tien());
-                        string id_hoa_don = hoaDonNhap.SetID() + (kho.ds_hoa_don_nhap.Count + 1);
-                        hoaDonNhap.IdHoaDon = id_hoa_don;
+                        hoaDonNhap.IdHoaDon = kho.SinhIdHoaDonNhap();
+
 
                         kho.ThemHoaDonNhap(hoaDonNhap);
 
@@ -260,9 +260,10 @@ namespace DoAnCK
 
                         FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                         formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
-                        formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + DateTime.Now.ToString();
-                        formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + currentNhanVien.IdNv;
-                        formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
+
+                        formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + hoaDonNhap.NgayTaoDon.ToString();
+
+                        formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + kho.SinhIdHoaDonNhap();
                         formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + current_ncc.IdNcc;
                         formHoaDon.them_dshh(qlnx);
                         formHoaDon.Show();
@@ -295,18 +296,17 @@ namespace DoAnCK
                             kho.capnhatkho(qlnx, false);
 
                             HoaDonXuat hoaDonXuat = new HoaDonXuat(qlnx, null, currentNhanVien, current_ch, qlnx.tinh_tong_tien());
-                            string id_hoa_don = hoaDonXuat.SetID() + (kho.ds_hoa_don_xuat.Count + 1);
-                            hoaDonXuat.IdHoaDon = id_hoa_don;
+                            hoaDonXuat.IdHoaDon = kho.SinhIdHoaDonXuat();
 
                             kho.ThemHoaDonXuat(hoaDonXuat);
 
-
-
                             FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                             formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";
-                            formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + DateTime.Now.ToString();
+
+                            formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + hoaDonXuat.NgayTaoDon.ToString();
+
                             formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + currentNhanVien.IdNv;
-                            formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
+                            formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + kho.SinhIdHoaDonXuat();
                             formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + current_ch.IdCh;
                             formHoaDon.them_dshh(qlnx);
                             formHoaDon.Show();
