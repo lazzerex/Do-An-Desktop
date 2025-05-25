@@ -44,13 +44,13 @@
             this.CuaHang_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.HoaDon_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.BaoCao_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.QuanLy_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.NhaCungCap_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.BaoCao_bt = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientPanel2.SuspendLayout();
             this.nhapxuat.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -350,6 +350,34 @@
             this.guna2Panel1.Size = new System.Drawing.Size(176, 781);
             this.guna2Panel1.TabIndex = 9;
             // 
+            // BaoCao_bt
+            // 
+            this.BaoCao_bt.BorderRadius = 15;
+            this.BaoCao_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.BaoCao_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.BaoCao_bt.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.BaoCao_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
+            this.BaoCao_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BaoCao_bt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BaoCao_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BaoCao_bt.FillColor = System.Drawing.Color.White;
+            this.BaoCao_bt.FillColor2 = System.Drawing.Color.White;
+            this.BaoCao_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaoCao_bt.ForeColor = System.Drawing.Color.Black;
+            this.BaoCao_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.BaoCao_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
+            this.BaoCao_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.BaoCao_bt.Image = ((System.Drawing.Image)(resources.GetObject("BaoCao_bt.Image")));
+            this.BaoCao_bt.ImageOffset = new System.Drawing.Point(0, 10);
+            this.BaoCao_bt.ImageSize = new System.Drawing.Size(55, 55);
+            this.BaoCao_bt.Location = new System.Drawing.Point(23, 534);
+            this.BaoCao_bt.Margin = new System.Windows.Forms.Padding(2);
+            this.BaoCao_bt.Name = "BaoCao_bt";
+            this.BaoCao_bt.Size = new System.Drawing.Size(135, 75);
+            this.BaoCao_bt.TabIndex = 13;
+            this.BaoCao_bt.Text = "Báo Cáo";
+            this.BaoCao_bt.Click += new System.EventHandler(this.BaoCao_bt_Click);
+            // 
             // QuanLy_bt
             // 
             this.QuanLy_bt.BorderRadius = 15;
@@ -403,7 +431,7 @@
             this.NhaCungCap_bt.Name = "NhaCungCap_bt";
             this.NhaCungCap_bt.Size = new System.Drawing.Size(135, 75);
             this.NhaCungCap_bt.TabIndex = 11;
-            this.NhaCungCap_bt.Text = "Nhà Cung Cấp";
+            this.NhaCungCap_bt.Text = "CungCap";
             this.NhaCungCap_bt.Click += new System.EventHandler(this.NhaCungCap_bt_Click);
             // 
             // guna2Panel2
@@ -464,33 +492,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // BaoCao_bt
-            // 
-            this.BaoCao_bt.BorderRadius = 15;
-            this.BaoCao_bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
-            this.BaoCao_bt.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.BaoCao_bt.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.BaoCao_bt.DisabledState.CustomBorderColor = System.Drawing.Color.White;
-            this.BaoCao_bt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BaoCao_bt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BaoCao_bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BaoCao_bt.FillColor = System.Drawing.Color.White;
-            this.BaoCao_bt.FillColor2 = System.Drawing.Color.White;
-            this.BaoCao_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaoCao_bt.ForeColor = System.Drawing.Color.Black;
-            this.BaoCao_bt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.BaoCao_bt.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(183)))), ((int)(((byte)(172)))));
-            this.BaoCao_bt.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            this.BaoCao_bt.Image = ((System.Drawing.Image)(resources.GetObject("BaoCao_bt.Image")));
-            this.BaoCao_bt.ImageOffset = new System.Drawing.Point(0, 10);
-            this.BaoCao_bt.ImageSize = new System.Drawing.Size(40, 40);
-            this.BaoCao_bt.Location = new System.Drawing.Point(23, 534);
-            this.BaoCao_bt.Margin = new System.Windows.Forms.Padding(2);
-            this.BaoCao_bt.Name = "BaoCao_bt";
-            this.BaoCao_bt.Size = new System.Drawing.Size(135, 75);
-            this.BaoCao_bt.TabIndex = 13;
-            this.BaoCao_bt.Text = "Báo Cáo";
             // 
             // FormGiaoDienChinh
             // 

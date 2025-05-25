@@ -58,6 +58,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoCH.Designer.cs">
+      <DependentUpon>FormBaoCaoCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoNCC.Designer.cs">
+      <DependentUpon>FormBaoCaoNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoNV.Designer.cs">
+      <DependentUpon>FormBaoCaoNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuanLyAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +200,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteHelper.cs" />
+    <EmbeddedResource Include="FormBaoCao.resx">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoCH.resx">
+      <DependentUpon>FormBaoCaoCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoNCC.resx">
+      <DependentUpon>FormBaoCaoNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoNV.resx">
+      <DependentUpon>FormBaoCaoNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyAdmin.resx">
       <DependentUpon>FormQuanLyAdmin.cs</DependentUpon>
     </EmbeddedResource>
