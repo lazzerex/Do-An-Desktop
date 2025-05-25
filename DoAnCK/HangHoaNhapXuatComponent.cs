@@ -13,12 +13,12 @@ namespace DoAnCK
         }
         private FormNhapXuat NhapHang;
         public HangHoa hh;
-        public void SetProductInfo(HangHoa hh)
+        public void SetProductInfo(HangHoa hh, bool isNhap)
         {
             ten_lbl.Text = hh.TenHang;
-            dongia_lbl.Text = String.Format("{0:N0}", hh.DonGia);
+            dongia_lbl.Text = String.Format("{0:N0}", isNhap ? hh.DonGia : hh.GiaXuat);
             soluong_lbl.Text = "SL: " + hh.SoLuong.ToString();
-            if (hh.Img != null)
+            if (!string.IsNullOrEmpty(hh.Img))
             {
                 hanghoa_img.ImageLocation = hh.Img;
             }

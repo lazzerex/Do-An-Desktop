@@ -93,6 +93,7 @@ namespace DoAnCK
                 ten_hang TEXT NOT NULL,
                 so_luong INTEGER,
                 don_gia INTEGER,
+                gia_xuat INTEGER, -- fix
                 img TEXT,
                 loai TEXT
             );";
@@ -140,6 +141,7 @@ namespace DoAnCK
                 id_hang_hoa TEXT,
                 so_luong INTEGER,
                 don_gia INTEGER,
+                gia_xuat INTEGER, -- fix
                 PRIMARY KEY (id_hoa_don, id_hang_hoa),
                 FOREIGN KEY (id_hoa_don) REFERENCES HoaDon(id_hoa_don),
                 FOREIGN KEY (id_hang_hoa) REFERENCES HangHoa(id)
@@ -215,8 +217,8 @@ public void InsertNhanVien(NhanVien nv)
                 loai = "ThoiTrang";
 
             string query = $@"
-            INSERT OR REPLACE INTO HangHoa (id, ten_hang, so_luong, don_gia, img, loai)
-            VALUES ('{hh.Id}', '{hh.TenHang}', {hh.SoLuong}, {hh.DonGia}, '{hh.Img}', '{loai}');";
+            INSERT OR REPLACE INTO HangHoa (id, ten_hang, so_luong, don_gia, gia_xuat, img, loai)
+            VALUES ('{hh.Id}', '{hh.TenHang}', {hh.SoLuong}, {hh.DonGia}, {hh.GiaXuat}, '{hh.Img}', '{loai}');";
 
             ExecuteNonQuery(query);
         }
@@ -247,9 +249,19 @@ public void InsertNhanVien(NhanVien nv)
             // Lưu chi tiết hóa đơn
             foreach (HangHoa hh in hoaDon.Qlnx.ds_hang_hoa)
             {
+                ulong Gia = 0;
+                if (hoaDon.IdHoaDon.StartsWith("HDN"))
+                {
+                    Gia = hh.DonGia; // Hóa đơn nhập: dùng DonGia
+                }
+                else if (hoaDon.IdHoaDon.StartsWith("HDX"))
+                {
+                    Gia = hh.GiaXuat; // Hóa đơn xuất: dùng GiaXuat
+                }
+
                 string detailQuery = $@"
-                INSERT OR REPLACE INTO ChiTietHoaDon (id_hoa_don, id_hang_hoa, so_luong, don_gia)
-                VALUES ('{hoaDon.IdHoaDon}', '{hh.Id}', {hh.SoLuong}, {hh.DonGia});";
+        INSERT OR REPLACE INTO ChiTietHoaDon (id_hoa_don, id_hang_hoa, so_luong, don_gia, gia_xuat)
+        VALUES ('{hoaDon.IdHoaDon}', '{hh.Id}', {hh.SoLuong}, {hh.DonGia}, {Gia});";
 
                 ExecuteNonQuery(detailQuery);
             }
@@ -582,6 +594,7 @@ public void InsertNhanVien(NhanVien nv)
                 string ten = row["ten_hang"].ToString();
                 uint soLuong = Convert.ToUInt32(row["so_luong"]);
                 ulong donGia = Convert.ToUInt64(row["don_gia"]);
+                ulong giaXuat = Convert.ToUInt64(row["gia_xuat"]); //fix
                 string img = row["img"].ToString();
                 string loai = row["loai"].ToString();
 
@@ -590,13 +603,13 @@ public void InsertNhanVien(NhanVien nv)
                 switch (loai)
                 {
                     case "DienTu":
-                        hh = new DienTu(id, ten, soLuong, donGia, img);
+                        hh = new DienTu(id, ten, soLuong, donGia, giaXuat, img);
                         break;
                     case "GiaDung":
-                        hh = new GiaDung(id, ten, soLuong, donGia, img);
+                        hh = new GiaDung(id, ten, soLuong, donGia, giaXuat, img);
                         break;
                     case "ThoiTrang":
-                        hh = new ThoiTrang(id, ten, soLuong, donGia, img);
+                        hh = new ThoiTrang(id, ten, soLuong, donGia, giaXuat, img);
                         break;
                 }
 
@@ -696,7 +709,7 @@ public void InsertNhanVien(NhanVien nv)
             QuanLyNhapXuat qlnx = new QuanLyNhapXuat();
 
             string query = $@"
-                SELECT ct.*, h.id, h.ten_hang, h.so_luong, h.don_gia, h.img, h.loai
+                SELECT ct.*, h.id, h.ten_hang, h.so_luong, h.don_gia, h.gia_xuat, h.img, h.loai
                 FROM ChiTietHoaDon ct
                 JOIN HangHoa h ON ct.id_hang_hoa = h.id
                 WHERE ct.id_hoa_don = '{idHoaDon}'";
@@ -709,6 +722,7 @@ public void InsertNhanVien(NhanVien nv)
                 string ten = row["ten_hang"].ToString();
                 uint soLuong = Convert.ToUInt32(row["so_luong"]);
                 ulong donGia = Convert.ToUInt64(row["don_gia"]);
+                ulong giaXuat = Convert.ToUInt64(row["gia_xuat"]); //fix
                 string img = row["img"].ToString();
                 string loai = row["loai"].ToString();
 
@@ -717,13 +731,13 @@ public void InsertNhanVien(NhanVien nv)
                 switch (loai)
                 {
                     case "DienTu":
-                        hh = new DienTu(id, ten, soLuong, donGia, img);
+                        hh = new DienTu(id, ten, soLuong, donGia, giaXuat, img);
                         break;
                     case "GiaDung":
-                        hh = new GiaDung(id, ten, soLuong, donGia, img);
+                        hh = new GiaDung(id, ten, soLuong, donGia, giaXuat, img);
                         break;
                     case "ThoiTrang":
-                        hh = new ThoiTrang(id, ten, soLuong, donGia, img);
+                        hh = new ThoiTrang(id, ten, soLuong, donGia, giaXuat, img);
                         break;
                 }
 

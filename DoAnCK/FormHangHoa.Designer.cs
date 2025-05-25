@@ -38,12 +38,14 @@
             this.label6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.IdHangHoa_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.TenHangHoa_tb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DonGia_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GiaNhap_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.LoaiHangHoa_cb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SoLuong_tb = new Guna.UI2.WinForms.Guna2TextBox();
             this.XoaHang_bt = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.GiaXuat_tb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.AnhHangHoa_bt)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +95,7 @@
             this.Themhang_bt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Themhang_bt.Font = new System.Drawing.Font("Arial", 12F);
             this.Themhang_bt.ForeColor = System.Drawing.Color.White;
-            this.Themhang_bt.Location = new System.Drawing.Point(129, 378);
+            this.Themhang_bt.Location = new System.Drawing.Point(247, 350);
             this.Themhang_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Themhang_bt.Name = "Themhang_bt";
             this.Themhang_bt.Size = new System.Drawing.Size(157, 41);
@@ -130,7 +132,7 @@
             this.label4.AutoSize = false;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 12F);
-            this.label4.Location = new System.Drawing.Point(28, 175);
+            this.label4.Location = new System.Drawing.Point(28, 158);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(232, 25);
@@ -142,19 +144,19 @@
             this.label5.AutoSize = false;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 12F);
-            this.label5.Location = new System.Drawing.Point(28, 270);
+            this.label5.Location = new System.Drawing.Point(28, 239);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 25);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Đơn giá:";
+            this.label5.Text = "Đơn giá nhập:";
             // 
             // label6
             // 
             this.label6.AutoSize = false;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 12F);
-            this.label6.Location = new System.Drawing.Point(239, 270);
+            this.label6.Location = new System.Drawing.Point(28, 319);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(211, 25);
@@ -197,7 +199,7 @@
             this.TenHangHoa_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TenHangHoa_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TenHangHoa_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TenHangHoa_tb.Location = new System.Drawing.Point(28, 206);
+            this.TenHangHoa_tb.Location = new System.Drawing.Point(28, 189);
             this.TenHangHoa_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TenHangHoa_tb.Name = "TenHangHoa_tb";
             this.TenHangHoa_tb.PlaceholderText = "";
@@ -205,27 +207,27 @@
             this.TenHangHoa_tb.Size = new System.Drawing.Size(376, 36);
             this.TenHangHoa_tb.TabIndex = 9;
             // 
-            // DonGia_tb
+            // GiaNhap_tb
             // 
-            this.DonGia_tb.BackColor = System.Drawing.Color.Transparent;
-            this.DonGia_tb.BorderRadius = 15;
-            this.DonGia_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DonGia_tb.DefaultText = "";
-            this.DonGia_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.DonGia_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.DonGia_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.DonGia_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.DonGia_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DonGia_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DonGia_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DonGia_tb.Location = new System.Drawing.Point(28, 301);
-            this.DonGia_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DonGia_tb.Name = "DonGia_tb";
-            this.DonGia_tb.PlaceholderText = "";
-            this.DonGia_tb.SelectedText = "";
-            this.DonGia_tb.Size = new System.Drawing.Size(165, 36);
-            this.DonGia_tb.TabIndex = 10;
-            this.DonGia_tb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keypress_DonGia_tb);
+            this.GiaNhap_tb.BackColor = System.Drawing.Color.Transparent;
+            this.GiaNhap_tb.BorderRadius = 15;
+            this.GiaNhap_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GiaNhap_tb.DefaultText = "";
+            this.GiaNhap_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GiaNhap_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GiaNhap_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GiaNhap_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GiaNhap_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GiaNhap_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GiaNhap_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GiaNhap_tb.Location = new System.Drawing.Point(28, 270);
+            this.GiaNhap_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GiaNhap_tb.Name = "GiaNhap_tb";
+            this.GiaNhap_tb.PlaceholderText = "";
+            this.GiaNhap_tb.SelectedText = "";
+            this.GiaNhap_tb.Size = new System.Drawing.Size(165, 36);
+            this.GiaNhap_tb.TabIndex = 10;
+            this.GiaNhap_tb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keypress_DonGia_tb);
             // 
             // LoaiHangHoa_cb
             // 
@@ -238,7 +240,7 @@
             this.LoaiHangHoa_cb.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LoaiHangHoa_cb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.LoaiHangHoa_cb.ItemHeight = 30;
-            this.LoaiHangHoa_cb.Location = new System.Drawing.Point(239, 301);
+            this.LoaiHangHoa_cb.Location = new System.Drawing.Point(28, 350);
             this.LoaiHangHoa_cb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoaiHangHoa_cb.Name = "LoaiHangHoa_cb";
             this.LoaiHangHoa_cb.Size = new System.Drawing.Size(165, 36);
@@ -289,7 +291,7 @@
             this.XoaHang_bt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.XoaHang_bt.Font = new System.Drawing.Font("Arial", 12F);
             this.XoaHang_bt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.XoaHang_bt.Location = new System.Drawing.Point(129, 378);
+            this.XoaHang_bt.Location = new System.Drawing.Point(247, 350);
             this.XoaHang_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.XoaHang_bt.Name = "XoaHang_bt";
             this.XoaHang_bt.Size = new System.Drawing.Size(157, 41);
@@ -299,6 +301,8 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.GiaXuat_tb);
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.Controls.Add(this.ThemAnh_bt);
             this.guna2GradientPanel1.Controls.Add(this.AnhHangHoa_bt);
             this.guna2GradientPanel1.Controls.Add(this.XoaHang_bt);
@@ -308,7 +312,7 @@
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Controls.Add(this.LoaiHangHoa_cb);
             this.guna2GradientPanel1.Controls.Add(this.label4);
-            this.guna2GradientPanel1.Controls.Add(this.DonGia_tb);
+            this.guna2GradientPanel1.Controls.Add(this.GiaNhap_tb);
             this.guna2GradientPanel1.Controls.Add(this.label5);
             this.guna2GradientPanel1.Controls.Add(this.TenHangHoa_tb);
             this.guna2GradientPanel1.Controls.Add(this.label6);
@@ -320,6 +324,39 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(799, 449);
             this.guna2GradientPanel1.TabIndex = 15;
+            // 
+            // GiaXuat_tb
+            // 
+            this.GiaXuat_tb.BackColor = System.Drawing.Color.Transparent;
+            this.GiaXuat_tb.BorderRadius = 15;
+            this.GiaXuat_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GiaXuat_tb.DefaultText = "";
+            this.GiaXuat_tb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GiaXuat_tb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GiaXuat_tb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GiaXuat_tb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GiaXuat_tb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GiaXuat_tb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GiaXuat_tb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GiaXuat_tb.Location = new System.Drawing.Point(239, 270);
+            this.GiaXuat_tb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GiaXuat_tb.Name = "GiaXuat_tb";
+            this.GiaXuat_tb.PlaceholderText = "";
+            this.GiaXuat_tb.SelectedText = "";
+            this.GiaXuat_tb.Size = new System.Drawing.Size(165, 36);
+            this.GiaXuat_tb.TabIndex = 16;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial", 12F);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(239, 239);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(165, 25);
+            this.guna2HtmlLabel1.TabIndex = 15;
+            this.guna2HtmlLabel1.Text = "Đơn giá xuất:";
             // 
             // FormHangHoa
             // 
@@ -349,11 +386,13 @@
         private Guna.UI2.WinForms.Guna2TextBox IdHangHoa_tb;
         private Guna.UI2.WinForms.Guna2TextBox TenHangHoa_tb;
         private Guna.UI2.WinForms.Guna2ComboBox LoaiHangHoa_cb;
-        private Guna.UI2.WinForms.Guna2TextBox DonGia_tb;
+        private Guna.UI2.WinForms.Guna2TextBox GiaNhap_tb;
         private Guna.UI2.WinForms.Guna2PictureBox AnhHangHoa_bt;
         private Guna.UI2.WinForms.Guna2Button Themhang_bt;
         private Guna.UI2.WinForms.Guna2TextBox SoLuong_tb;
         private Guna.UI2.WinForms.Guna2Button XoaHang_bt;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2TextBox GiaXuat_tb;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
