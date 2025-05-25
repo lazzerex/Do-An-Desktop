@@ -13,6 +13,7 @@ public abstract class HangHoa : ISerializable, ICloneable
     private string ten_hang;
     private uint so_luong;
     private ulong don_gia;
+    private ulong gia_xuat;
     private string img;
 
     public string Id
@@ -39,6 +40,12 @@ public abstract class HangHoa : ISerializable, ICloneable
         set { don_gia = value; }
     }
 
+    public ulong GiaXuat
+    {
+        get { return gia_xuat; }
+        set { gia_xuat = value; }
+    }
+
     public string Img
     {
         get { return img; }
@@ -47,12 +54,13 @@ public abstract class HangHoa : ISerializable, ICloneable
 
     protected HangHoa() { }
 
-    public HangHoa(string id, string ten_hang, uint so_luong, ulong don_gia, string img)
+    public HangHoa(string id, string ten_hang, uint so_luong, ulong don_gia, ulong gia_xuat, string img)
     {
         this.id = id;
         this.ten_hang = ten_hang;
         this.so_luong = so_luong;
         this.don_gia = don_gia;
+        this.gia_xuat = gia_xuat;
         this.img = img;
     }
 
@@ -62,6 +70,7 @@ public abstract class HangHoa : ISerializable, ICloneable
         clone.id = this.id;
         clone.ten_hang = this.ten_hang;
         clone.don_gia = this.don_gia;
+        clone.gia_xuat = this.gia_xuat;
         return clone;
     }
 
@@ -71,6 +80,7 @@ public abstract class HangHoa : ISerializable, ICloneable
         info.AddValue("ten_hang", ten_hang);
         info.AddValue("so_luong", so_luong);
         info.AddValue("don_gia", don_gia);
+        info.AddValue("gia_xuat", gia_xuat);
         info.AddValue("img", img);
     }
 
@@ -80,6 +90,7 @@ public abstract class HangHoa : ISerializable, ICloneable
         ten_hang = info.GetString("ten_hang");
         so_luong = info.GetUInt32("so_luong");
         don_gia = info.GetUInt64("don_gia");
+        gia_xuat = info.GetUInt64("gia_xuat");
         img = info.GetString("img");
     }
 }
@@ -89,7 +100,7 @@ public class DienTu : HangHoa
 {
     private DienTu() { }
 
-    public DienTu(string id, string ten_hang, uint so_luong, ulong don_gia, string img) : base(id, ten_hang, so_luong, don_gia, img)
+    public DienTu(string id, string ten_hang, uint so_luong, ulong don_gia, ulong gia_xuat, string img) : base(id, ten_hang, so_luong, don_gia, gia_xuat, img)
     {
     }
 
@@ -108,7 +119,7 @@ public class GiaDung : HangHoa
 {
     private GiaDung() { }
 
-    public GiaDung(string id, string ten_hang, uint so_luong, ulong don_gia, string img) : base(id, ten_hang, so_luong, don_gia, img)
+    public GiaDung(string id, string ten_hang, uint so_luong, ulong don_gia, ulong gia_xuat, string img) : base(id, ten_hang, so_luong, don_gia, gia_xuat, img)
     {
     }
 
@@ -127,7 +138,7 @@ public class ThoiTrang : HangHoa
 {
     private ThoiTrang() { }
 
-    public ThoiTrang(string id, string ten_hang, uint so_luong, ulong don_gia, string img) : base(id, ten_hang, so_luong, don_gia, img)
+    public ThoiTrang(string id, string ten_hang, uint so_luong, ulong don_gia, ulong gia_xuat, string img) : base(id, ten_hang, so_luong, don_gia, gia_xuat, img)
     {
     }
 

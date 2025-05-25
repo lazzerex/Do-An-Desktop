@@ -107,7 +107,7 @@ namespace DoAnCK
             {
                 string loai_hh = LoaiHangHoa_cb.Text;
 
-                if (TenHangHoa_tb.Text == "" || IdHangHoa_tb.Text == "" || DonGia_tb.Text == "" || LoaiHangHoa_cb.Text == "")
+                if (TenHangHoa_tb.Text == "" || IdHangHoa_tb.Text == "" || GiaNhap_tb.Text == "" || GiaXuat_tb.Text == "" || LoaiHangHoa_cb.Text == "")
                 {
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -122,7 +122,8 @@ namespace DoAnCK
                                 IdHangHoa_tb.Text,
                                 TenHangHoa_tb.Text,
                                 Convert.ToUInt32(SoLuong_tb.Text),
-                                Convert.ToUInt64(DonGia_tb.Text),
+                                Convert.ToUInt64(GiaNhap_tb.Text),
+                                Convert.ToUInt64(GiaXuat_tb.Text),
                                 img_filepath);
 
                             kho.them_hh(hh);
@@ -133,7 +134,8 @@ namespace DoAnCK
                                 IdHangHoa_tb.Text,
                                 TenHangHoa_tb.Text,
                                 Convert.ToUInt32(SoLuong_tb.Text),
-                                Convert.ToUInt64(DonGia_tb.Text),
+                                Convert.ToUInt64(GiaNhap_tb.Text),
+                                Convert.ToUInt64(GiaXuat_tb.Text),
                                 img_filepath);
 
                             kho.them_hh(hh);
@@ -144,7 +146,8 @@ namespace DoAnCK
                                 IdHangHoa_tb.Text,
                                 TenHangHoa_tb.Text,
                                 Convert.ToUInt32(SoLuong_tb.Text),
-                                Convert.ToUInt64(DonGia_tb.Text),
+                                Convert.ToUInt64(GiaNhap_tb.Text),
+                                Convert.ToUInt64(GiaXuat_tb.Text),
                                 img_filepath);
 
                             kho.them_hh(hh);
@@ -218,7 +221,8 @@ namespace DoAnCK
                     IdHangHoa_tb.Text = hh.Id;
                     TenHangHoa_tb.Text = hh.TenHang;
                     SoLuong_tb.Text = hh.SoLuong.ToString();
-                    DonGia_tb.Text = hh.DonGia.ToString();
+                    GiaNhap_tb.Text = hh.DonGia.ToString();
+                    GiaXuat_tb.Text = hh.GiaXuat.ToString();
                     if (hh is DienTu)
                     {
                         LoaiHangHoa_cb.Text = "Điện tử";
@@ -235,7 +239,8 @@ namespace DoAnCK
                     ThemAnh_bt.Enabled = false;
                     IdHangHoa_tb.Enabled = false;
                     TenHangHoa_tb.Enabled = false;
-                    DonGia_tb.Enabled = false;
+                    GiaNhap_tb.Enabled = false;
+                    GiaXuat_tb.Enabled = false;
                     LoaiHangHoa_cb.Enabled = false;
                     SoLuong_tb.Enabled = false;
                     Themhang_bt.Visible = false;
@@ -248,5 +253,7 @@ namespace DoAnCK
             }
         }
         #endregion
+
+
     }
 }

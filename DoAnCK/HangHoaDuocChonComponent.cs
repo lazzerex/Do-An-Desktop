@@ -13,12 +13,13 @@ namespace DoAnCK
         private FormNhapXuat NhapXuat;
         public HangHoa hh;
 
-        public void SetProductInfo()
+        public void SetProductInfo(bool isNhap)
         {
             id_lbl.Text = hh.Id.ToString();
             ten_lbl.Text = hh.TenHang;
             soluong_tb.Text = hh.SoLuong.ToString();
-            thanhtien_lbl.Text = String.Format("{0:N0}",hh.DonGia * hh.SoLuong);
+            ulong gia = isNhap ? hh.DonGia : hh.GiaXuat;
+            thanhtien_lbl.Text = String.Format("{0:N0}", gia * hh.SoLuong);
         }
 
         #region Event
@@ -33,7 +34,8 @@ namespace DoAnCK
             {
                 hh.SoLuong = Convert.ToUInt32(soluong_tb.Text);
                 soluong_tb.Text = hh.SoLuong.ToString();
-                thanhtien_lbl.Text = String.Format("{0:N0}", hh.DonGia * hh.SoLuong);
+                ulong gia = NhapXuat.isNhap ? hh.DonGia : hh.GiaXuat;
+                thanhtien_lbl.Text = String.Format("{0:N0}", gia * hh.SoLuong);
                 NhapXuat.nhap_sl(this);
             }
         }

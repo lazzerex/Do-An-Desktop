@@ -14,7 +14,7 @@ namespace DoAnCK
         {
             kho.CurrentNhanVien = nhanVien;
         }
-        public void them_dshh(QuanLyNhapXuat qlnx)
+        public void them_dshh(QuanLyNhapXuat qlnx, bool isNhap)
         {
             try
             {
@@ -22,7 +22,7 @@ namespace DoAnCK
                 {
                     HoaDon1Component billComponent = new HoaDon1Component(this);
                     billComponent.hh = hh;
-                    billComponent.SetProductInfo(hh);
+                    billComponent.SetProductInfo(hh, isNhap);
                     dshd_flp.Controls.Add(billComponent);
                 }
 
@@ -30,7 +30,7 @@ namespace DoAnCK
                 ulong so_luong = 0;
                 foreach (HangHoa hh in qlnx.ds_hang_hoa)
                 {
-                    tong_tien += hh.DonGia * hh.SoLuong;
+                    tong_tien += (isNhap ? hh.DonGia : hh.GiaXuat) * hh.SoLuong;
                     so_luong += hh.SoLuong;
                 }
 

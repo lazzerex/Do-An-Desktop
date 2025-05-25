@@ -92,12 +92,12 @@ public class QuanLyNhapXuat
         return false;
     }
 
-    public ulong tinh_tong_tien()
+    public ulong tinh_tong_tien(bool isNhap)
     {
         ulong tong_tien = 0;
         foreach (HangHoa hh in ds_hang_hoa)
         {
-            tong_tien += hh.DonGia * hh.SoLuong;
+            tong_tien += (isNhap ? hh.DonGia : hh.GiaXuat) * hh.SoLuong;
         }
         return tong_tien;
     }

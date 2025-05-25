@@ -83,7 +83,7 @@ namespace DoAnCK
                     formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdn.NvLap.IdNv;
                     formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdn.IdHoaDon;
                     formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdn.NhaCungCap.IdNcc;
-                    formHoaDon.them_dshh(hdn.Qlnx);
+                    formHoaDon.them_dshh(hdn.Qlnx, isnhap);
                     formHoaDon.Show();
                 }
                 else
@@ -95,7 +95,7 @@ namespace DoAnCK
                     formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdx.NvLap.IdNv;
                     formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdx.IdHoaDon;
                     formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + hdx.CuaHang.IdCh;
-                    formHoaDon.them_dshh(hdx.Qlnx);
+                    formHoaDon.them_dshh(hdx.Qlnx, isnhap);
                     formHoaDon.Show();
                 }
             }
