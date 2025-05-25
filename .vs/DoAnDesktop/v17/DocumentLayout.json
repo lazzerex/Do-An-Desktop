@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|e:\\[cuoiky-desktop]\\do-an-desktop\\doanck\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\formgiaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\formgiaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\hanghoatrangchucomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\hanghoatrangchucomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\hanghoanhapxuatcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\hanghoanhapxuatcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\hanghoanhapxuatcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\hanghoanhapxuatcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\sqlitehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\sqlitehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\hanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\hanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\formhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\formhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\formgiaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\formgiaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|E:\\[CuoiKy-desktop]\\Do-An-Desktop\\doanck\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{82D4C93E-70F7-4346-BB47-7AFCDD028DD9}|DoAnCK\\DoAnDesktop.csproj|solutionrelative:doanck\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NhaCungCap.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\NhaCungCap.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\NhaCungCap.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\NhaCungCap.cs",
+              "RelativeToolTip": "DoAnCK\\NhaCungCap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T14:53:39.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HangHoaTrangChuComponent.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoaTrangChuComponent.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\HangHoaTrangChuComponent.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoaTrangChuComponent.cs",
+              "RelativeToolTip": "DoAnCK\\HangHoaTrangChuComponent.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T09:20:26.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HangHoaNhapXuatComponent.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoaNhapXuatComponent.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\HangHoaNhapXuatComponent.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoaNhapXuatComponent.cs",
+              "RelativeToolTip": "DoAnCK\\HangHoaNhapXuatComponent.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:57:38.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HangHoaNhapXuatComponent.cs [Design]",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoaNhapXuatComponent.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\HangHoaNhapXuatComponent.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoaNhapXuatComponent.cs [Design]",
+              "RelativeToolTip": "DoAnCK\\HangHoaNhapXuatComponent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:57:28.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormGiaoDienChinh.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormGiaoDienChinh.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\FormGiaoDienChinh.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormGiaoDienChinh.cs",
+              "RelativeToolTip": "DoAnCK\\FormGiaoDienChinh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:18:28.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormGiaoDienChinh.cs [Design]",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormGiaoDienChinh.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\FormGiaoDienChinh.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormGiaoDienChinh.cs [Design]",
+              "RelativeToolTip": "DoAnCK\\FormGiaoDienChinh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:07:55.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormTrangChu.cs [Design]",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormTrangChu.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\FormTrangChu.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormTrangChu.cs [Design]",
+              "RelativeToolTip": "DoAnCK\\FormTrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:07:18.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SQLiteHelper.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\SQLiteHelper.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\SQLiteHelper.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\SQLiteHelper.cs",
+              "RelativeToolTip": "DoAnCK\\SQLiteHelper.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAmwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:01:39.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormHangHoa.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormHangHoa.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\FormHangHoa.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\FormHangHoa.cs",
+              "RelativeToolTip": "DoAnCK\\FormHangHoa.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAQwMAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T07:52:05.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HangHoa.cs",
+              "DocumentMoniker": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoa.cs",
+              "RelativeDocumentMoniker": "DoAnCK\\HangHoa.cs",
+              "ToolTip": "E:\\[CuoiKy-desktop]\\Do-An-Desktop\\DoAnCK\\HangHoa.cs",
+              "RelativeToolTip": "DoAnCK\\HangHoa.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T07:48:29.188Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
