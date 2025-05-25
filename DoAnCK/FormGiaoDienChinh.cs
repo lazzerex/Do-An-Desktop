@@ -72,42 +72,7 @@ namespace DoAnCK
             }
         }
 
-        private void QuanLy_bt_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenChildForm(new FormQuanLyAdmin(currentNhanVien));
-                TrangChu_bt.Checked = false;
-                NhapHang_bt.Checked = false;
-                XuatHang_bt.Checked = false;
-                CuaHang_bt.Checked = false;
-                NhaCungCap_bt.Checked = false;
-                HoaDonNhap_bt.Checked = false;
-                HoaDonXuat_bt.Checked = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenChildForm(new FormQuanLyAdmin(currentNhanVien));
-                TrangChu_bt.Checked = false;
-                NhapHang_bt.Checked = false;
-                XuatHang_bt.Checked = false;
-                CuaHang_bt.Checked = false;
-                NhaCungCap_bt.Checked = false;
-                HoaDonNhap_bt.Checked = false;
-                HoaDonXuat_bt.Checked = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         private System.Windows.Forms.Form currentFormChild;
         private void OpenChildForm(System.Windows.Forms.Form childForm)
@@ -157,11 +122,19 @@ namespace DoAnCK
         {
             try
             {
+                TrangChu_bt.Checked = false;
+                NhapHang_bt.Checked = false;
+                XuatHang_bt.Checked = false;
+                CuaHang_bt.Checked = false;
+                NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = true;
+                HoaDonNhap_bt.Checked = false;
+                HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
                 nhapxuat.Visible = true;
-                int startPosition = HoaDon_bt.Left - nhapxuat.Width; // Đặt ở bên trái
+                int startPosition = HoaDon_bt.Left - nhapxuat.Width; 
                 nhapxuat.Left = startPosition;
-
-                // Hiệu ứng trượt từ trái sang phải
                 for (int i = 0; i <= nhapxuat.Width; i += 10)
                 {
                     nhapxuat.Left = startPosition + i;
@@ -178,7 +151,7 @@ namespace DoAnCK
         {
             try
             {
-                await Task.Delay(3000); // Đợi xem chuột có quay lại không
+                await Task.Delay(3000); 
                 int startPosition = nhapxuat.Left;
                 for (int i = nhapxuat.Width; i >= 0; i -= 10)
                 {
@@ -210,8 +183,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = false;
                 CuaHang_bt.Checked = false;
                 NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = false;
                 HoaDonNhap_bt.Checked = false;
                 HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -229,8 +205,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = false;
                 CuaHang_bt.Checked = false;
                 NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = false;
                 HoaDonNhap_bt.Checked = false;
                 HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -248,8 +227,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = true;
                 CuaHang_bt.Checked = false;
                 NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = false;
                 HoaDonNhap_bt.Checked = false;
                 HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -275,8 +257,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = false;
                 CuaHang_bt.Checked = true;
                 NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = false;
                 HoaDonNhap_bt.Checked = false;
                 HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -301,8 +286,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = false;
                 CuaHang_bt.Checked = false;
                 NhaCungCap_bt.Checked = true;
+                HoaDon_bt.Checked = false;
                 HoaDonNhap_bt.Checked = false;
                 HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -321,8 +309,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = false;
                 CuaHang_bt.Checked = false;
                 NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = true;
                 HoaDonNhap_bt.Checked = true;
                 HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -340,8 +331,11 @@ namespace DoAnCK
                 XuatHang_bt.Checked = false;
                 CuaHang_bt.Checked = false;
                 NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = true;
                 HoaDonNhap_bt.Checked = false;
                 HoaDonXuat_bt.Checked = true;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = false;
             }
             catch (Exception ex)
             {
@@ -349,6 +343,49 @@ namespace DoAnCK
             }
         }
 
+        private void QuanLy_bt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenChildForm(new FormQuanLyAdmin(currentNhanVien));
+                TrangChu_bt.Checked = false;
+                NhapHang_bt.Checked = false;
+                XuatHang_bt.Checked = false;
+                CuaHang_bt.Checked = false;
+                NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = false;
+                HoaDonNhap_bt.Checked = false;
+                HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = true;
+                BaoCao_bt.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BaoCao_bt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenChildForm(new FormBaoCao());
+                TrangChu_bt.Checked = false;
+                NhapHang_bt.Checked = false;
+                XuatHang_bt.Checked = false;
+                CuaHang_bt.Checked = false;
+                NhaCungCap_bt.Checked = false;
+                HoaDon_bt.Checked = false;
+                HoaDonNhap_bt.Checked = false;
+                HoaDonXuat_bt.Checked = false;
+                QuanLy_bt.Checked = false;
+                BaoCao_bt.Checked = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         // Sự kiện Load Data
         private void btnLoadData_Click(object sender, EventArgs e)
         {
@@ -448,8 +485,8 @@ namespace DoAnCK
 
 
 
-        #endregion
 
+        #endregion
 
     }
 }

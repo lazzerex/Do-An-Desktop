@@ -119,3 +119,7 @@ C:\Users\Admin\Source\Repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnDesktop.csproj.C
 C:\Users\Admin\Source\Repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnDesk.41993D8B.Up2Date
 C:\Users\Admin\Source\Repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnCK.exe
 C:\Users\Admin\Source\Repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnCK.pdb
+C:\Users\Admin\Source\Repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnCK.FormBaoCao.resources
+C:\Users\Admin\source\repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnCK.FormBaoCaoCH.resources
+C:\Users\Admin\source\repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnCK.FormBaoCaoNCC.resources
+C:\Users\Admin\source\repos\Do-An-Desktop1\DoAnCK\obj\Debug\DoAnCK.FormBaoCaoNV.resources
