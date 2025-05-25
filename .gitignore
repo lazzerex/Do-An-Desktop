@@ -1,2 +1,65 @@
-# Visual Studio
+## Ignore build results
+[Bb]in/
+[Oo]bj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Mono Auto Generated Files
+mono_crash.*
+
+## Build Results of VS
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+
+## VS Code settings
+.vscode/
+
+## Visual Studio 2019 - 2022
 .vs/
+
+## Backup and temporary files
+*~
+*.tmp
+*.bak
+*.old
+*.swp
+
+## NuGet Packages
+*.nupkg
+packages/
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+## DotCover
+.idea/
+
+## Rider
+.idea/
+
+## ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Others
+TestResults/
+*.dbmdl
+*.sdf
+*.mdb
+*.sqlite    # Nếu bạn muốn giữ file SQLite thì bỏ dòng này đi
+*.mdf
+*.ldf
+*.vshost.*
