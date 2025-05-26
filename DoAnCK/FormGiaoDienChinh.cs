@@ -64,6 +64,8 @@ namespace DoAnCK
                     // Hiển thị nút Admin nếu người dùng là admin
                     if (QuanLy_bt != null)
                         QuanLy_bt.Visible = currentNhanVien.IsAdmin;
+                    if (BaoCao_bt != null)
+                        BaoCao_bt.Visible = currentNhanVien.IsAdmin;
                 }
             }
             catch (Exception ex)
@@ -369,6 +371,12 @@ namespace DoAnCK
         {
             try
             {
+                if (currentNhanVien != null && !currentNhanVien.IsAdmin)
+                {
+                    MessageBox.Show("Bạn không có quyền truy cập tính năng này!",
+                        "Quyền truy cập bị từ chối", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 OpenChildForm(new FormBaoCao());
                 TrangChu_bt.Checked = false;
                 NhapHang_bt.Checked = false;
@@ -431,20 +439,18 @@ namespace DoAnCK
         {
             try
             {
-                // Thay vì sử dụng TenNV_lbl, ChucVu_lbl không tồn tại, hãy sử dụng NhanVien_lb đã có
+                
                 if (currentNhanVien != null)
                 {
                     NhanVien_lb.Text = "Nhân viên: " + currentNhanVien.TenNv;
-                    // Ngay_lb hiện tại đã có trong form, không cần thay đổi
+                    
 
                     // Khởi tạo Logger
                     string dbPath = System.IO.Path.Combine(Application.StartupPath, "CuaHang.db");
                     Logger.Initialize(dbPath);
-
-
-
-                    // Thay vì sử dụng pnlAdmin không tồn tại, hãy sử dụng btnAdmin đã có trong form
+              
                     QuanLy_bt.Visible = currentNhanVien.IsAdmin;
+                    BaoCao_bt.Visible = currentNhanVien.IsAdmin;
                 }
             }
             catch (Exception ex)
