@@ -1,4 +1,9 @@
-﻿namespace DoAnCK
+﻿using Guna.UI2.WinForms;
+using System.Drawing;
+using System.Windows.Forms;
+using System;
+
+namespace DoAnCK
 {
     partial class FormBaoCaoCH
     {
@@ -28,132 +33,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
-            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
-            this.cboLoaiHangHoa = new System.Windows.Forms.ComboBox();
-            this.dgvBaoCaoCH = new System.Windows.Forms.DataGridView();
-            this.btnXemBaoCao = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblTuNgay = new System.Windows.Forms.Label();
-            this.lblDenNgay = new System.Windows.Forms.Label();
-            this.lblLoaiHang = new System.Windows.Forms.Label();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dtpTuNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpDenNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cboLoaiHangHoa = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnXemBaoCao = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvBaoCaoCH = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lblTuNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDenNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblLoaiHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnExportExcel = new Guna.UI2.WinForms.Guna2Button();
 
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoCH)).BeginInit();
             this.SuspendLayout();
 
             // lblTitle
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Text = "THỐNG KÊ SỐ LƯỢNG VÀ DOANH THU THEO LOẠI HÀNG";
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             this.lblTitle.Location = new System.Drawing.Point(20, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(513, 29);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Thống kê số lượng và doanh thu theo loại hàng";
+            this.lblTitle.Size = new System.Drawing.Size(600, 40);
 
             // lblTuNgay
-            this.lblTuNgay.AutoSize = true;
-            this.lblTuNgay.Location = new System.Drawing.Point(22, 72);
-            this.lblTuNgay.Name = "lblTuNgay";
-            this.lblTuNgay.Size = new System.Drawing.Size(64, 17);
-            this.lblTuNgay.TabIndex = 1;
             this.lblTuNgay.Text = "Từ ngày:";
+            this.lblTuNgay.Location = new System.Drawing.Point(20, 80);
+            this.lblTuNgay.Size = new System.Drawing.Size(70, 20);
 
             // dtpTuNgay
+            this.dtpTuNgay.Location = new System.Drawing.Point(100, 75);
+            this.dtpTuNgay.Size = new System.Drawing.Size(150, 30);
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTuNgay.Location = new System.Drawing.Point(100, 70);
-            this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(150, 22);
-            this.dtpTuNgay.TabIndex = 2;
+            this.dtpTuNgay.FillColor = System.Drawing.Color.White;
 
             // lblDenNgay
-            this.lblDenNgay.AutoSize = true;
-            this.lblDenNgay.Location = new System.Drawing.Point(272, 72);
-            this.lblDenNgay.Name = "lblDenNgay";
-            this.lblDenNgay.Size = new System.Drawing.Size(71, 17);
-            this.lblDenNgay.TabIndex = 3;
             this.lblDenNgay.Text = "Đến ngày:";
+            this.lblDenNgay.Location = new System.Drawing.Point(270, 80);
+            this.lblDenNgay.Size = new System.Drawing.Size(70, 20);
 
             // dtpDenNgay
+            this.dtpDenNgay.Location = new System.Drawing.Point(350, 75);
+            this.dtpDenNgay.Size = new System.Drawing.Size(150, 30);
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDenNgay.Location = new System.Drawing.Point(350, 70);
-            this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(150, 22);
-            this.dtpDenNgay.TabIndex = 4;
+            this.dtpDenNgay.FillColor = System.Drawing.Color.White;
 
             // lblLoaiHang
-            this.lblLoaiHang.AutoSize = true;
-            this.lblLoaiHang.Location = new System.Drawing.Point(520, 72);
-            this.lblLoaiHang.Name = "lblLoaiHang";
-            this.lblLoaiHang.Size = new System.Drawing.Size(72, 17);
-            this.lblLoaiHang.TabIndex = 5;
             this.lblLoaiHang.Text = "Loại hàng:";
+            this.lblLoaiHang.Location = new System.Drawing.Point(520, 80);
+            this.lblLoaiHang.Size = new System.Drawing.Size(80, 20);
 
             // cboLoaiHangHoa
+            this.cboLoaiHangHoa.Location = new System.Drawing.Point(610, 75);
+            this.cboLoaiHangHoa.Size = new System.Drawing.Size(160, 30);
+            this.cboLoaiHangHoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboLoaiHangHoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLoaiHangHoa.FormattingEnabled = true;
-            this.cboLoaiHangHoa.Location = new System.Drawing.Point(600, 70);
-            this.cboLoaiHangHoa.Name = "cboLoaiHangHoa";
-            this.cboLoaiHangHoa.Size = new System.Drawing.Size(150, 24);
-            this.cboLoaiHangHoa.TabIndex = 6;
 
             // btnXemBaoCao
-            this.btnXemBaoCao.Location = new System.Drawing.Point(780, 70);
-            this.btnXemBaoCao.Name = "btnXemBaoCao";
-            this.btnXemBaoCao.Size = new System.Drawing.Size(120, 30);
-            this.btnXemBaoCao.TabIndex = 7;
             this.btnXemBaoCao.Text = "Xem báo cáo";
-            this.btnXemBaoCao.UseVisualStyleBackColor = true;
+            this.btnXemBaoCao.Location = new System.Drawing.Point(790, 75);
+            this.btnXemBaoCao.Size = new System.Drawing.Size(120, 30);
+            this.btnXemBaoCao.FillColor = System.Drawing.Color.FromArgb(0, 71, 160);
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
 
+            // btnExportExcel
+            this.btnExportExcel.Text = "Xuất Excel";
+            this.btnExportExcel.Location = new System.Drawing.Point(920, 75);
+            this.btnExportExcel.Size = new System.Drawing.Size(100, 30);
+            this.btnExportExcel.FillColor = System.Drawing.Color.FromArgb(31, 137, 62);
+
             // dgvBaoCaoCH
+            this.dgvBaoCaoCH.Location = new System.Drawing.Point(20, 130);
+            this.dgvBaoCaoCH.Size = new System.Drawing.Size(950, 390);
+            this.dgvBaoCaoCH.ReadOnly = true;
             this.dgvBaoCaoCH.AllowUserToAddRows = false;
             this.dgvBaoCaoCH.AllowUserToDeleteRows = false;
-            this.dgvBaoCaoCH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBaoCaoCH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBaoCaoCH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaoCaoCH.Location = new System.Drawing.Point(20, 120);
-            this.dgvBaoCaoCH.Name = "dgvBaoCaoCH";
-            this.dgvBaoCaoCH.ReadOnly = true;
-            this.dgvBaoCaoCH.RowHeadersWidth = 51;
-            this.dgvBaoCaoCH.RowTemplate.Height = 24;
-            this.dgvBaoCaoCH.Size = new System.Drawing.Size(880, 400);
-            this.dgvBaoCaoCH.TabIndex = 8;
+            this.dgvBaoCaoCH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBaoCaoCH.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(0, 71, 160);
+            this.dgvBaoCaoCH.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvBaoCaoCH.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
 
-            // FormBaoCaoCH
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 550);
-            this.Controls.Add(this.dgvBaoCaoCH);
-            this.Controls.Add(this.btnXemBaoCao);
-            this.Controls.Add(this.cboLoaiHangHoa);
-            this.Controls.Add(this.lblLoaiHang);
-            this.Controls.Add(this.dtpDenNgay);
-            this.Controls.Add(this.lblDenNgay);
-            this.Controls.Add(this.dtpTuNgay);
-            this.Controls.Add(this.lblTuNgay);
+            // Form settings
+            this.ClientSize = new System.Drawing.Size(1040, 550);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblTuNgay);
+            this.Controls.Add(this.dtpTuNgay);
+            this.Controls.Add(this.lblDenNgay);
+            this.Controls.Add(this.dtpDenNgay);
+            this.Controls.Add(this.lblLoaiHang);
+            this.Controls.Add(this.cboLoaiHangHoa);
+            this.Controls.Add(this.btnXemBaoCao);
+            this.Controls.Add(this.btnExportExcel);
+            this.Controls.Add(this.dgvBaoCaoCH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormBaoCaoCH";
-            this.Text = "FormBaoCaoCH";
             this.Load += new System.EventHandler(this.FormBaoCaoCH_Load);
+            this.Text = "FormBaoCaoCH";
 
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoCH)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblTuNgay;
-        private System.Windows.Forms.DateTimePicker dtpTuNgay;
-        private System.Windows.Forms.Label lblDenNgay;
-        private System.Windows.Forms.DateTimePicker dtpDenNgay;
-        private System.Windows.Forms.Label lblLoaiHang;
-        private System.Windows.Forms.ComboBox cboLoaiHangHoa;
-        private System.Windows.Forms.Button btnXemBaoCao;
-        private System.Windows.Forms.DataGridView dgvBaoCaoCH;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTuNgay;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTuNgay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDenNgay;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDenNgay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLoaiHang;
+        private Guna.UI2.WinForms.Guna2ComboBox cboLoaiHangHoa;
+        private Guna.UI2.WinForms.Guna2Button btnXemBaoCao;
+        private Guna.UI2.WinForms.Guna2Button btnExportExcel;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvBaoCaoCH;
     }
 }
