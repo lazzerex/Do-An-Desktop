@@ -53,3 +53,7 @@ _ReSharper*/
 *.db
 *.sqlite
 *.sqlite3
+
+*.FileListAbsolute.txt
+
+

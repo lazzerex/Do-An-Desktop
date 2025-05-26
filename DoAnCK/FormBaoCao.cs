@@ -12,14 +12,29 @@ namespace DoAnCK
 {
     public partial class FormBaoCao : Form
     {
+        private KhoHang kho = KhoHang.Instance;
+        private Form currentFormChild;
+
         public FormBaoCao()
         {
             InitializeComponent();
             OpenChildForm(new FormBaoCaoNV());
         }
 
-        private System.Windows.Forms.Form currentFormChild;
-        private void OpenChildForm(System.Windows.Forms.Form childForm)
+        // Kiểm tra quyền admin
+        private bool KiemTraQuyenAdmin()
+        {
+            if (kho.CurrentNhanVien != null && kho.CurrentNhanVien.IsAdmin)
+            {
+                return true;
+            }
+
+            MessageBox.Show("Bạn không có quyền xem báo cáo này!",
+                "Quyền truy cập bị từ chối", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
+        }
+
+        private void OpenChildForm(Form childForm)
         {
             try
             {
@@ -40,18 +55,22 @@ namespace DoAnCK
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void BaoCaoNV_bt_Click(object sender, EventArgs e)
         {
+            if (!KiemTraQuyenAdmin()) return;
             OpenChildForm(new FormBaoCaoNV());
         }
 
         private void BaoCaoCH_bt_Click(object sender, EventArgs e)
         {
+            if (!KiemTraQuyenAdmin()) return;
             OpenChildForm(new FormBaoCaoCH());
         }
 
         private void BaoCaoNCC_bt_Click(object sender, EventArgs e)
         {
+            if (!KiemTraQuyenAdmin()) return;
             OpenChildForm(new FormBaoCaoNCC());
         }
     }

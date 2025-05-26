@@ -13,7 +13,7 @@ namespace DoAnCK
     {
         private readonly string _connectionString;
         private readonly string _databasePath;
-
+        public string DatabasePath => _databasePath;
         public SQLiteHelper(string dbFilePath)
         {
             _databasePath = dbFilePath;
