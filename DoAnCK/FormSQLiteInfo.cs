@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using DoAnCK.Models;
+using DoAnCK.Utils;
 
 namespace DoAnCK
 {

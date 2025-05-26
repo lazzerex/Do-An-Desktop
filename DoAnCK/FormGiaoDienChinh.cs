@@ -2,6 +2,8 @@
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnCK.Models;
+using DoAnCK.Utils;
 
 namespace DoAnCK
 {

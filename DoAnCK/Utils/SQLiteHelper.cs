@@ -6,8 +6,8 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-
-namespace DoAnCK
+using DoAnCK.Models;
+namespace DoAnCK.Utils
 {
     public class SQLiteHelper
     {

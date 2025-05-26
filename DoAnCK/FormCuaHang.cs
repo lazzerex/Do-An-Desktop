@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using DoAnCK.Models;
+using DoAnCK.Utils;
 namespace DoAnCK
 {
     public partial class FormCuaHang : System.Windows.Forms.Form
