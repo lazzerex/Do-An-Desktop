@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnCK.Models;
 
-namespace DoAnCK
+namespace DoAnCK.Utils
 {
     public static class Logger
     {

@@ -112,7 +112,6 @@
     <Compile Include="HoaDon2Component.Designer.cs">
       <DependentUpon>HoaDon2Component.cs</DependentUpon>
     </Compile>
-    <Compile Include="CuaHang.cs" />
     <Compile Include="FormGiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,7 +166,6 @@
     <Compile Include="FormTrangChu.Designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="HangHoa.cs" />
     <Compile Include="HoaDon1Component.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,14 +190,16 @@
     <Compile Include="HangHoaTrangChuComponent.Designer.cs">
       <DependentUpon>HangHoaTrangChuComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs" />
-    <Compile Include="KhoHang.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="NhaCungCap.cs" />
-    <Compile Include="NhanVien.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Models\CuaHang.cs" />
+    <Compile Include="Models\HangHoa.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\KhoHang.cs" />
+    <Compile Include="Models\NhaCungCap.cs" />
+    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="Utils\SQLiteHelper.cs" />
     <EmbeddedResource Include="FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </EmbeddedResource>

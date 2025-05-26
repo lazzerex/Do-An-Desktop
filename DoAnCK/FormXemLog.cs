@@ -4,6 +4,8 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using DoAnCK.Models;
+using DoAnCK.Utils;
 
 namespace DoAnCK
 {

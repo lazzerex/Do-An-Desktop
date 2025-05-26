@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using DoAnCK.Models;
+using DoAnCK.Utils;
 namespace DoAnCK
 {
     public partial class FormPhieuHoaDon : System.Windows.Forms.Form

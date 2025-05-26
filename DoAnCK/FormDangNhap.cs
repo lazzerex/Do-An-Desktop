@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using DoAnCK.Models;
+using DoAnCK.Utils;
 
 namespace DoAnCK
 {

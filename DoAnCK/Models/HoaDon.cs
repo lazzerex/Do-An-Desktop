@@ -2,7 +2,8 @@
 using System.Xml.Serialization;
 using System;
 
-namespace DoAnCK
+namespace DoAnCK.Models
+
 {
     [XmlInclude(typeof(HoaDonNhap))]
     [XmlInclude(typeof(HoaDonXuat))]
