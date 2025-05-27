@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using DoAnCK.Utils;
+using System.Data.SQLite;
 
 namespace DoAnCK.Models
 
@@ -235,7 +236,18 @@ namespace DoAnCK.Models
         public void xoa_hh(HangHoa hh)
         {
             ds_hang_hoa.Remove(hh);
-            LuuDanhSachHH();
+            if (useDatabase && dbHelper != null)
+            {
+                try
+                {
+                    dbHelper.DeleteHangHoa(hh.Id); // Xóa trong database
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lỗi khi xóa hàng hóa từ SQLite: {ex.Message}");
+                }
+            }
+            LuuDanhSachHH(); // Lưu danh sách còn lại
 
             // Ghi log
             if (CurrentNhanVien != null)
@@ -498,15 +510,17 @@ namespace DoAnCK.Models
             }
         }
 
-        private void LuuDanhSachHH()
+        public void LuuDanhSachHH()
         {
             bool luuSQLiteThanhCong = false;
 
-            // Ưu tiên lưu vào SQLite trước
+            // Xóa tất cả hàng hóa trong database trước khi lưu mới
             if (useDatabase && dbHelper != null)
             {
                 try
                 {
+                    // Xóa toàn bộ bảng HangHoa để đồng bộ với ds_hang_hoa
+                    ExecuteNonQuery("DELETE FROM HangHoa");
                     foreach (HangHoa hh in ds_hang_hoa)
                     {
                         dbHelper.InsertHangHoa(hh);
@@ -640,6 +654,18 @@ namespace DoAnCK.Models
                 }
             }
             return "HDX" + (max + 1);
+        }
+
+        private void ExecuteNonQuery(string query)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(dbHelper.DatabasePath))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

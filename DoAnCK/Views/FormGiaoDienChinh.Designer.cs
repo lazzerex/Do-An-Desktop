@@ -477,7 +477,6 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1136, 110);
             this.guna2GradientPanel3.TabIndex = 10;
-            this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
             // 
             // guna2PictureBox1
             // 

@@ -806,5 +806,19 @@ public void InsertNhanVien(NhanVien nv)
                 }
             }
         }
+
+        public void DeleteHangHoa(string id)
+        {
+            string query = $"DELETE FROM HangHoa WHERE id = @Id";
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

@@ -134,7 +134,6 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(184, 276);
             this.guna2GradientPanel1.TabIndex = 2;
             this.guna2GradientPanel1.Click += new System.EventHandler(this.Mouse_Click);
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             this.guna2GradientPanel1.MouseEnter += new System.EventHandler(this.Mouse_Enter);
             this.guna2GradientPanel1.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
@@ -146,7 +145,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HangHoaTrangChuComponent";
             this.Size = new System.Drawing.Size(184, 276);
-            this.Load += new System.EventHandler(this.HangHoaTrangChuComponent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hanghoa_img)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();

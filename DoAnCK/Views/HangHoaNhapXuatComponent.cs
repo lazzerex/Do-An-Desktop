@@ -2,28 +2,33 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DoAnCK.Models;
-using DoAnCK.Utils;
 
 namespace DoAnCK
 {
-    public partial class HangHoaTrangChuComponent : UserControl
+    public partial class HangHoaNhapXuatComponent : UserControl
     {
-        public HangHoaTrangChuComponent(FormTrangChu TrangChu)
+        private FormNhapXuat nhapXuat;
+        public HangHoa hh;
+
+        public HangHoaNhapXuatComponent(FormNhapXuat nhapXuat)
         {
             InitializeComponent();
-            this.TrangChu = TrangChu;
+            this.nhapXuat = nhapXuat;
         }
-        private FormTrangChu TrangChu;
-        public HangHoa hh;
-        public void SetProductInfo(HangHoa hh)
+
+        public void SetProductInfo(HangHoa hh, bool isNhap)
         {
-            id_lbl.Text = hh.Id;
+            this.hh = hh;
             ten_lbl.Text = hh.TenHang;
-            dongia_lbl.Text = String.Format("{0:N0}", hh.DonGia);
+            dongia_lbl.Text = String.Format("{0:N0}", isNhap ? hh.DonGia : hh.GiaXuat);
             soluong_lbl.Text = "SL: " + hh.SoLuong.ToString();
-            if (hh.Img != null)
+            if (!string.IsNullOrEmpty(hh.Img))
             {
                 hanghoa_img.ImageLocation = hh.Img;
+            }
+            else
+            {
+                hanghoa_img.ImageLocation = "Resources/default.jpg";
             }
         }
 
@@ -32,6 +37,7 @@ namespace DoAnCK
         {
             guna2GradientPanel1.FillColor = Color.Gray;
         }
+
         private void Mouse_Leave(object sender, EventArgs e)
         {
             guna2GradientPanel1.FillColor = Color.FromArgb(169, 183, 172);
@@ -39,20 +45,8 @@ namespace DoAnCK
 
         private void Mouse_Click(object sender, EventArgs e)
         {
-            FormHangHoa formHangHoa = new FormHangHoa(hh, TrangChu);
-
-            formHangHoa.Show();
+            nhapXuat.AddProduct(hh);
         }
         #endregion
-
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void HangHoaTrangChuComponent_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

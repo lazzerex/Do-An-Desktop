@@ -2,31 +2,30 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DoAnCK.Models;
-using DoAnCK.Utils;
 
 namespace DoAnCK
 {
-    public partial class HangHoaNhapXuatComponent : UserControl
+    public partial class HangHoaTrangChuComponent : UserControl
     {
-        public HangHoaNhapXuatComponent(FormNhapXuat NhapHang)
+        private FormTrangChu trangChu;
+        public HangHoa hh;
+
+        public HangHoaTrangChuComponent(FormTrangChu trangChu)
         {
             InitializeComponent();
-            this.NhapHang = NhapHang;
+            this.trangChu = trangChu;
         }
-        private FormNhapXuat NhapHang;
-        public HangHoa hh;
-        public void SetProductInfo(HangHoa hh, bool isNhap)
+
+        public void SetProductInfo(HangHoa hh)
         {
+            this.hh = hh;
+            id_lbl.Text = hh.Id;
             ten_lbl.Text = hh.TenHang;
-            dongia_lbl.Text = String.Format("{0:N0}", isNhap ? hh.DonGia : hh.GiaXuat);
+            dongia_lbl.Text = String.Format("{0:N0}", hh.DonGia);
             soluong_lbl.Text = "SL: " + hh.SoLuong.ToString();
             if (!string.IsNullOrEmpty(hh.Img))
             {
                 hanghoa_img.ImageLocation = hh.Img;
-            }
-            else
-            {
-                hanghoa_img.ImageLocation = "Resources/default.jpg";
             }
         }
 
@@ -34,8 +33,8 @@ namespace DoAnCK
         private void Mouse_Enter(object sender, EventArgs e)
         {
             guna2GradientPanel1.FillColor = Color.Gray;
-
         }
+
         private void Mouse_Leave(object sender, EventArgs e)
         {
             guna2GradientPanel1.FillColor = Color.FromArgb(169, 183, 172);
@@ -43,13 +42,8 @@ namespace DoAnCK
 
         private void Mouse_Click(object sender, EventArgs e)
         {
-            NhapHang.them_hh_lo(hh);
+            trangChu.ShowHangHoaDetails(hh);
         }
         #endregion
-
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
