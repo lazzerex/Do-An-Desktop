@@ -49,7 +49,7 @@
             // comboBoxNhanVien
             // 
             this.comboBoxNhanVien.FormattingEnabled = true;
-            this.comboBoxNhanVien.Location = new System.Drawing.Point(128, 20);
+            this.comboBoxNhanVien.Location = new System.Drawing.Point(117, 20);
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
             this.comboBoxNhanVien.Size = new System.Drawing.Size(200, 24);
             this.comboBoxNhanVien.TabIndex = 1;
@@ -67,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 23);
+            this.label1.Location = new System.Drawing.Point(15, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // dateTimePickerTu
             // 
-            this.dateTimePickerTu.Location = new System.Drawing.Point(128, 60);
+            this.dateTimePickerTu.Location = new System.Drawing.Point(117, 60);
             this.dateTimePickerTu.Name = "dateTimePickerTu";
             this.dateTimePickerTu.Size = new System.Drawing.Size(200, 22);
             this.dateTimePickerTu.TabIndex = 6;
