@@ -19,12 +19,12 @@ namespace DoAnCK
             InitializeComponent();
             Ngay_lb.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
 
-            
+            // Khởi tạo SQLite nhưng không tạo bảng tự động
             string dbPath = Path.Combine(Application.StartupPath, "CuaHang.db");
             KhoHang kho = new KhoHang();
             kho.InitSQLite(dbPath);
 
-            
+            // Tạo tài khoản admin nếu chưa có
             kho.TaoTaiKhoanAdmin();
 
             OpenChildForm(new FormTrangChu());
