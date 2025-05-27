@@ -306,7 +306,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormNhapXuat";
             this.Text = "FormNhapHang";
-            this.Load += new System.EventHandler(this.FormNhapXuat_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);

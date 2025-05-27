@@ -106,7 +106,6 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(143, 188);
             this.guna2GradientPanel1.TabIndex = 2;
             this.guna2GradientPanel1.Click += new System.EventHandler(this.Mouse_Click);
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             this.guna2GradientPanel1.MouseEnter += new System.EventHandler(this.Mouse_Enter);
             this.guna2GradientPanel1.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
