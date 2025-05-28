@@ -20,12 +20,12 @@ namespace DoAnCK
             try
             {
                 // Load combo box loại hàng hóa
-                cboLoaiHangHoa.Items.Clear();
-                cboLoaiHangHoa.Items.Add("Tất cả loại hàng");
-                cboLoaiHangHoa.Items.Add("Điện tử");
-                cboLoaiHangHoa.Items.Add("Gia dụng");
-                cboLoaiHangHoa.Items.Add("Thời trang");
-                cboLoaiHangHoa.SelectedIndex = 0;
+                //cboLoaiHangHoa.Items.Clear();
+                //cboLoaiHangHoa.Items.Add("Tất cả loại hàng");
+                //cboLoaiHangHoa.Items.Add("Điện tử");
+                //cboLoaiHangHoa.Items.Add("Gia dụng");
+                //cboLoaiHangHoa.Items.Add("Thời trang");
+                //cboLoaiHangHoa.SelectedIndex = 0;
 
                 // Thiết lập giá trị mặc định cho DateTimePicker
                 dtpTuNgay.Value = DateTime.Now.AddMonths(-1);
@@ -65,14 +65,14 @@ namespace DoAnCK
             {
                 dgvBaoCaoCH.Rows.Clear();
 
-                string loaiHang = null;
-                if (cboLoaiHangHoa.SelectedIndex > 0)
-                {
-                    loaiHang = cboLoaiHangHoa.SelectedItem.ToString();
-                }
+                //string loaiHang = null;
+                //if (cboLoaiHangHoa.SelectedIndex > 0)
+                //{
+                //    loaiHang = cboLoaiHangHoa.SelectedItem.ToString();
+                //}
 
                 var (data, tongSoLuongBan, tongDoanhThu) =
-                    service.TaiDuLieuBaoCaoHangHoa(dtpTuNgay.Value, dtpDenNgay.Value, loaiHang);
+                    service.TaiDuLieuBaoCaoHangHoa(dtpTuNgay.Value, dtpDenNgay.Value);
 
                 foreach (var item in data)
                 {

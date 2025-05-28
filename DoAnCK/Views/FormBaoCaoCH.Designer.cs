@@ -39,13 +39,10 @@ namespace DoAnCK
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dtpTuNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpDenNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cboLoaiHangHoa = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnXemBaoCao = new Guna.UI2.WinForms.Guna2Button();
             this.dgvBaoCaoCH = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblTuNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblDenNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblLoaiHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnExportExcel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXemBaoCao = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoCH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +53,7 @@ namespace DoAnCK
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblTitle.Location = new System.Drawing.Point(20, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(734, 39);
+            this.lblTitle.Size = new System.Drawing.Size(579, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "THỐNG KÊ SỐ LƯỢNG VÀ DOANH THU THEO LOẠI HÀNG";
             // 
@@ -87,32 +84,6 @@ namespace DoAnCK
             this.dtpDenNgay.Size = new System.Drawing.Size(150, 30);
             this.dtpDenNgay.TabIndex = 4;
             this.dtpDenNgay.Value = new System.DateTime(2025, 5, 27, 11, 38, 33, 501);
-            // 
-            // cboLoaiHangHoa
-            // 
-            this.cboLoaiHangHoa.BackColor = System.Drawing.Color.Transparent;
-            this.cboLoaiHangHoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboLoaiHangHoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLoaiHangHoa.FocusedColor = System.Drawing.Color.Empty;
-            this.cboLoaiHangHoa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboLoaiHangHoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboLoaiHangHoa.ItemHeight = 30;
-            this.cboLoaiHangHoa.Location = new System.Drawing.Point(519, 75);
-            this.cboLoaiHangHoa.Name = "cboLoaiHangHoa";
-            this.cboLoaiHangHoa.Size = new System.Drawing.Size(160, 36);
-            this.cboLoaiHangHoa.TabIndex = 6;
-            // 
-            // btnXemBaoCao
-            // 
-            this.btnXemBaoCao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnXemBaoCao.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXemBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnXemBaoCao.Location = new System.Drawing.Point(685, 75);
-            this.btnXemBaoCao.Name = "btnXemBaoCao";
-            this.btnXemBaoCao.Size = new System.Drawing.Size(120, 30);
-            this.btnXemBaoCao.TabIndex = 7;
-            this.btnXemBaoCao.Text = "Xem báo cáo";
-            this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
             // dgvBaoCaoCH
             // 
@@ -173,7 +144,7 @@ namespace DoAnCK
             this.lblTuNgay.BackColor = System.Drawing.Color.Transparent;
             this.lblTuNgay.Location = new System.Drawing.Point(20, 80);
             this.lblTuNgay.Name = "lblTuNgay";
-            this.lblTuNgay.Size = new System.Drawing.Size(55, 18);
+            this.lblTuNgay.Size = new System.Drawing.Size(45, 15);
             this.lblTuNgay.TabIndex = 1;
             this.lblTuNgay.Text = "Từ ngày:";
             // 
@@ -182,29 +153,21 @@ namespace DoAnCK
             this.lblDenNgay.BackColor = System.Drawing.Color.Transparent;
             this.lblDenNgay.Location = new System.Drawing.Point(239, 80);
             this.lblDenNgay.Name = "lblDenNgay";
-            this.lblDenNgay.Size = new System.Drawing.Size(63, 18);
+            this.lblDenNgay.Size = new System.Drawing.Size(52, 15);
             this.lblDenNgay.TabIndex = 3;
             this.lblDenNgay.Text = "Đến ngày:";
             // 
-            // lblLoaiHang
+            // btnXemBaoCao
             // 
-            this.lblLoaiHang.BackColor = System.Drawing.Color.Transparent;
-            this.lblLoaiHang.Location = new System.Drawing.Point(458, 80);
-            this.lblLoaiHang.Name = "lblLoaiHang";
-            this.lblLoaiHang.Size = new System.Drawing.Size(65, 18);
-            this.lblLoaiHang.TabIndex = 5;
-            this.lblLoaiHang.Text = "Loại hàng:";
-            // 
-            // btnExportExcel
-            // 
-            this.btnExportExcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(137)))), ((int)(((byte)(62)))));
-            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExportExcel.Location = new System.Drawing.Point(811, 75);
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(100, 30);
-            this.btnExportExcel.TabIndex = 8;
-            this.btnExportExcel.Text = "Xuất Excel";
+            this.btnXemBaoCao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnXemBaoCao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXemBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnXemBaoCao.Location = new System.Drawing.Point(479, 75);
+            this.btnXemBaoCao.Name = "btnXemBaoCao";
+            this.btnXemBaoCao.Size = new System.Drawing.Size(120, 30);
+            this.btnXemBaoCao.TabIndex = 7;
+            this.btnXemBaoCao.Text = "Xem báo cáo";
+            this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
             // FormBaoCaoCH
             // 
@@ -214,10 +177,7 @@ namespace DoAnCK
             this.Controls.Add(this.dtpTuNgay);
             this.Controls.Add(this.lblDenNgay);
             this.Controls.Add(this.dtpDenNgay);
-            this.Controls.Add(this.lblLoaiHang);
-            this.Controls.Add(this.cboLoaiHangHoa);
             this.Controls.Add(this.btnXemBaoCao);
-            this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.dgvBaoCaoCH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormBaoCaoCH";
@@ -235,10 +195,7 @@ namespace DoAnCK
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpTuNgay;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDenNgay;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDenNgay;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblLoaiHang;
-        private Guna.UI2.WinForms.Guna2ComboBox cboLoaiHangHoa;
-        private Guna.UI2.WinForms.Guna2Button btnXemBaoCao;
-        private Guna.UI2.WinForms.Guna2Button btnExportExcel;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBaoCaoCH;
+        private Guna2Button btnXemBaoCao;
     }
 }
